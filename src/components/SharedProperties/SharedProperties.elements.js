@@ -51,6 +51,13 @@ export const Heading = styled.h1`
     margin-bottom:24px;
     max-width:400px;
     font-family:'Roboto', sans-serif;
+    @media screen and (max-width:768px){
+        font-family:'Lexend', sans-serif;
+        text-align:center;
+        color: #1F2936;
+        max-width:400px;
+
+    }
 
 `
 export const Subtitle = styled.p`
@@ -60,6 +67,11 @@ export const Subtitle = styled.p`
     margin-bottom:35px;
     max-width:400px;
     font-family:'Roboto', sans-serif;
+    @media screen and (max-width:768px){
+        text-align:center;
+        font-size:16px;
+
+    }
 `
 
 export const ImgWrapper = styled.div`
@@ -69,12 +81,12 @@ export const ImgWrapper = styled.div`
 
 `
 export const Image = styled.img`
-    padding-right: -20px;
+    padding-right: 0;
     border:0;
-    width:calc(70% + 20vw);
+    max-width:100%;
     vertical-align:middle;
     display:inline-block;
-    height:auto;
+    max-height:600px;
 `
 
 export const BackgroundHouse = styled.div`

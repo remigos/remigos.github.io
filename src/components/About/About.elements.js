@@ -48,6 +48,14 @@ export const Heading = styled.h1`
     max-width:400px;
     font-family:'Roboto', sans-serif;
 
+    @media screen and (max-width:768px){
+        font-family:'Lexend', sans-serif;
+        text-align:center;
+        color: #1F2936;
+        max-width:350px;
+
+    }
+
 `
 export const Subtitle = styled.p`
     color: ${({lightTextDesc}) => (lightTextDesc ? '#fff' : '#000')};
@@ -56,6 +64,12 @@ export const Subtitle = styled.p`
     margin-bottom:35px;
     max-width:400px;
     font-family:'Roboto', sans-serif;
+    @media screen and (max-width:768px){
+        font-size:16px;
+        text-align:center;
+
+    }
+    
 
 `
 

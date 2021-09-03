@@ -67,7 +67,7 @@ export const Title = styled.h1`
     @media screen and (max-width:768px) {
         font-size:36px;
         font-family:'Lexend', sans-serif;
-
+        color:#1f2936;
     }
 
 `
@@ -80,6 +80,12 @@ export const Text = styled.p`
     font-weight:bold;
     font-family:'Inter', sans-serif;
     text-align:center;
+    @media screen and (max-width:768px) {
+        font-size:16px;
+        font-weight:400;
+        font-family:'Roboto', sans-serif;
+        color:#1f2936;
+    }
 `
 export const SubText = styled.p`
     color: #000;
@@ -90,5 +96,9 @@ export const SubText = styled.p`
     max-width:440px;
     font-family:'Inter', sans-serif;
     text-align:center;
-
+    @media screen and (max-width:768px) {
+        font-size:14px;
+        font-family:'Roboto', sans-serif;
+        color:#1f2936;
+    }
 `

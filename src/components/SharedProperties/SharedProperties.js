@@ -20,9 +20,9 @@ const SharedProperties = ({lightBg, imgStart, lightTopLine, lightText,lightTextD
                     </InfoColumn>
                     </InfoRow> 
                 </Container>
-                <BackgroundHouse>
+                {/*<BackgroundHouse>
                     <ImageHousePng src-={require('../../assets/housePng.png').default} alt='house-png'/>
-                </BackgroundHouse>
+                </BackgroundHouse>*/}
             </InfoSec>
         </>
     )

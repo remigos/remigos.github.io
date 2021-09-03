@@ -29,6 +29,9 @@ export const FeedbackHeading = styled.h1`
     margin-bottom:24px;
     font-family:'Roboto', sans-serif;
 
+    @media screen and (max-width:768px){
+        font-family:'Lexend', sans-serif;
+    }
 `
 export const FeedbackText = styled.p`
     color: #fff;
@@ -38,12 +41,15 @@ export const FeedbackText = styled.p`
     font-family:'Roboto', sans-serif;
     max-width:900px;
     text-align:center;
+    @media screen and (max-width:768px){
+        font-size:16px;
+    }
 `
 
 export const ImageContainer = styled.div`
     justify-content:center;
     align-items:center;
-    margin-bottom:-20px;
+    margin-bottom:-10px;
     
 `
 
@@ -90,14 +96,22 @@ export const Subtitle = styled.h2`
     margin-bottom:24px;
     font-family:'Inter', sans-serif;
 
+    @media screen and (max-width:768px){
+        font-family:'Lexend', sans-serif;
+        text-align:center;
+    }
+
 `
 export const Text = styled.p`
     color: #fff;
     font-size:16px;
-    line-height:24px;
+    line-height:32px;
     margin-bottom:35px;
     max-width:1600px;
     font-family:'Inter', sans-serif;
+    @media screen and (max-width:768px){
+        font-family:'Roboto', sans-serif;
+        text-align:center;
 
-
+    }
 `
