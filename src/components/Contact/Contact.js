@@ -14,7 +14,7 @@ const Contact = () => {
           <TextContainer>
                   <Title>Coming soon!</Title>
                   <Text>Reimaging the way Agents, Buyers, and Sellers to communicate about and share Real-Estate</Text>
-                  <SubText>SIGN UP FOR RELEASE DATES AND UPDATES.</SubText>
+                  <SubText><span>SIGN UP</span> FOR RELEASE DATES AND UPDATES.</SubText>
                   <Forms/>
             </TextContainer>
       </MainContent>

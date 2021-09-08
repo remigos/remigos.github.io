@@ -1,8 +1,15 @@
-import styled from 'styled-components';
+import styled,{keyframes} from 'styled-components';
+
+const move = keyframes`
+    0% { transform:translateY(-5px)}
+    50% { transform:translateY(10px)}
+    100% { transform:translateY(-5px)}
+
+`
 
 export const InfoSec = styled.div`
     color:#fff;
-    padding: 40px 0px;
+    padding: 10px 0px;
     background: ${({lightBg}) => (lightBg ? '#fff' : '#1F2936')};
     border-radius: 100%/0 0 30px 30px;
     box-shadow: 0px 150px 0px white;
@@ -36,7 +43,9 @@ export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top: 0;
     padding-bottom:60px;
-
+    span {
+          color:#C90000;
+        }
     @media screen and (max-width:768px){
         padding-bottom:65px;
     }
@@ -75,12 +84,17 @@ export const SignUpText = styled.p`
         margin-bottom:35px;
         max-width:440px;
         font-family:'Inter', sans-serif;
+        span {
+            color: #28B8A7;
+        }
 `
 
 export const ImgWrapper = styled.div`
     max-width:750px;
     display:flex;
     justify-content:${({start}) => (start ? 'flex-start' : 'flex-end')};
+    animation: ${move} 3s ease infinite;
+
 
 `
 export const Image = styled.img`

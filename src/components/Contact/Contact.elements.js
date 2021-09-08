@@ -1,5 +1,11 @@
-import styled from 'styled-components'
+import styled,{keyframes} from 'styled-components'
 
+const move = keyframes`
+    0% { transform:translateY(-5px)}
+    50% { transform:translateY(35px)}
+    100% { transform:translateY(-5px)}
+
+`
 export const Contactsection = styled.div`
     padding: 250px 0 250px;
     display:flex;
@@ -33,6 +39,7 @@ export const SkydiverImage = styled.img`
     max-height:300px;
     margin-top:-30%;
     right:0;
+    animation: ${move} 4.5s ease infinite;
 
     @media screen and (max-width:1100px) {
         margin-top:-30%;
@@ -49,7 +56,9 @@ export const TextContainer = styled.div`
     flex-direction:column;
     align-items:center;
     margin: 0 auto;
-
+    span {
+          color:#C90000;
+        }
     @media screen and (max-width: 768px) {
         margin: 0 30px;
         display:flex;
@@ -96,6 +105,9 @@ export const SubText = styled.p`
     max-width:440px;
     font-family:'Inter', sans-serif;
     text-align:center;
+    span {
+        color:#28B8A7;
+    }
     @media screen and (max-width:768px) {
         font-size:14px;
         font-family:'Roboto', sans-serif;

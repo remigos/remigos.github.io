@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const InfoSec = styled.div`
     color:#fff;
-    padding: 40px 0px;
+    padding: 0px 0px 100px;
     background: ${({lightBg}) => (lightBg ? '#fff' : '#1F2936')};
 `
 
 export const InfoRow = styled.div`
     display:flex;
-    margin: 0 -15px -15px -15px;
+    margin: 0px -15px -55px -15px;
     flex-wrap:wrap;
     align-items:center;
     flex-direction: ${({imgStart}) => (imgStart ? 'row-reverse' : 'row')};
@@ -19,7 +19,6 @@ export const InfoRow = styled.div`
 `
 
 export const InfoColumn = styled.div`
-    margin-bottom: 15px;
     padding-right:0px;
     padding-left:0px;
     flex:1;
@@ -83,20 +82,56 @@ export const ImgWrapper = styled.div`
 export const Image = styled.img`
     padding-right: 0;
     border:0;
-    max-width:100%;
+    max-width:130%;
     vertical-align:middle;
     display:inline-block;
     max-height:600px;
+    margin-top: 100px;
+    position: relative;
+    z-index:100;
+
+    @media screen and (max-width:768px){
+        max-width:100%;
+        margin-top: 0px;
+    }
+    @media screen and (max-width:540px){
+        max-width:100%;
+        margin-top: 130px;
+    }
+    @media screen and (max-width:415px){
+        max-width:100%;
+        margin-top: 10px;
+    }
+    @media screen and (max-width:320px){
+        max-width:100%;
+        margin-top: 50px;
+    }
+
 `
+export const Image1 = styled.img`
+    padding-right: 0;
+    border:0;
+    max-width:100%;
+    vertical-align:middle;
+    display:flex;
+    max-height:auto;
+    margin-top: -240px;
+    position: absolute;
+    @media screen and (min-width:4000px){
+        display:none;
 
-export const BackgroundHouse = styled.div`
-  width: 50%;
-  height: 100%;
-  background: #fff;
-  float: left;
-  position: relative;
-`
+    }
+    @media screen and (max-width:540px){
+        margin-top: -800px;
+        margin-bottom:300px;
 
-export const ImageHousePng = styled.img`
+    }
+    @media screen and (max-width:415px){
+        margin-top: -590px;
 
+    }
+    @media screen and (max-width:320px){
+        margin-top: -500px;
+
+    }
 `

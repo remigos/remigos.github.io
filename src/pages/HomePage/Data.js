@@ -6,7 +6,8 @@ export const homeObjOne = {
     lightTextDesc:true, 
     description:'Reimaging the way Agents,Buyers, and Sellers to communicate about and share Real-Estate',
     headline: 'Coming soon!',
-    signUpText: 'SIGN UP FOR RELEASE DATES AND UPDATES.',
+    signUpText: 'FOR RELEASE DATES AND UPDATES.',
+    signUpText1: 'SIGN UP ',
     img:require('../../assets/iphone-login.png').default,
     start:'',
     alt:'Image'

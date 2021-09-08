@@ -24,6 +24,7 @@ const Form = styled.form`
            color: #444444;
            opacity: 0.8;
         }
+
     }         
     input[type='submit'] {
         background: linear-gradient(#444444, #222222);

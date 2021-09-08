@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
 export const FeedbackSection = styled.div`
-    padding: 100px 0 50px;
+    padding: 300px 0 50px;
     display:flex;
     flex-direction:column;
     justify-content: center;
     background: #00AEEF;
+    @media screen and (max-width:768px){
+        padding: 100px 0 50px;
+
+    }
 `
 
 export const FeedbackWrapper = styled.div`
