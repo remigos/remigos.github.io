@@ -102,9 +102,9 @@ export const Image = styled.img`
         max-width:100%;
         margin-top: 10px;
     }
-    @media screen and (max-width:320px){
+    @media screen and (max-width:330px){
         max-width:100%;
-        margin-top: 50px;
+        margin-top: 0px;
     }
 
 `
@@ -115,7 +115,7 @@ export const Image1 = styled.img`
     vertical-align:middle;
     display:flex;
     max-height:auto;
-    margin-top: -240px;
+    margin-top: -220px;
     position: absolute;
     @media screen and (min-width:4000px){
         display:none;
@@ -126,12 +126,12 @@ export const Image1 = styled.img`
         margin-bottom:300px;
 
     }
-    @media screen and (max-width:415px){
-        margin-top: -590px;
+    @media screen and (max-width:414px){
+        margin-top: -500px;
 
     }
-    @media screen and (max-width:320px){
-        margin-top: -500px;
+    @media screen and (max-width:340px){
+        margin-top: -400px;
 
     }
 `

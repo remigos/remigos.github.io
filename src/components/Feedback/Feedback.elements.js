@@ -35,6 +35,7 @@ export const FeedbackHeading = styled.h1`
 
     @media screen and (max-width:768px){
         font-family:'Lexend', sans-serif;
+        text-align:center;
     }
 `
 export const FeedbackText = styled.p`
