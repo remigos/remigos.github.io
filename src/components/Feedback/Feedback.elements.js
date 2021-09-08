@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const FeedbackSection = styled.div`
-    padding: 300px 0 50px;
+    padding: 300px 0px 50px;
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -71,17 +71,21 @@ export const ImageFeedbackWait = styled.img`
 `
 export const SecondColumn = styled.div`
     padding: 70px 0px ;
-    margin-bottom: 15px;
     padding-left:100px;
     padding-right:15px;
-
     max-width: 100%;
+    
+    @media screen and (min-width:4000px){
+        margin-left:auto;
+        margin-right:auto;
+    }
     @media screen and (max-width: 768px) {
         max-width:100%;
         flex-basis:100%;
         padding-left:15px;
         display:flex;
         justify-content:center;
+        
     }
 `
 export const SecondText = styled.div`

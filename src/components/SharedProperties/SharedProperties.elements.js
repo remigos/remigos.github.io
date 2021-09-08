@@ -8,7 +8,7 @@ export const InfoSec = styled.div`
 
 export const InfoRow = styled.div`
     display:flex;
-    margin: 0px -15px -55px -15px;
+    margin: 0px -100px -55px -15px;
     flex-wrap:wrap;
     align-items:center;
     flex-direction: ${({imgStart}) => (imgStart ? 'row-reverse' : 'row')};

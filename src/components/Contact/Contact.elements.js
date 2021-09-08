@@ -49,6 +49,10 @@ export const SkydiverImage = styled.img`
         margin-top:-100%;
 
     }
+    @media screen and (min-width:4000px) {
+        margin-top:-10%;
+        right:300px;
+    }
 `
 
 export const TextContainer = styled.div`
