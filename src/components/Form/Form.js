@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import AgileCRMManager from './agilecrm.js'
 
 const Row = styled.div`
 
@@ -102,9 +102,9 @@ export default class Forms extends React.Component {
         }else{
           console.error('Invalid Form')
         }
+        fetch('')
       }
-
-
+     
     render(){
         const {errors} = this.state;
         return (
