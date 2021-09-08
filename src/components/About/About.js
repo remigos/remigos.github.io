@@ -6,19 +6,6 @@ import gsap from "gsap";
 
 const About = ({lightBg, imgStart, lightTopLine, lightText,lightTextDesc, description,headline, start, img, alt}) => {
     
-    useEffect(() => {      
-        gsap.to(".text", {
-          x: 70,
-          duration: 2,
-          delay: 0,
-          scrollTrigger: {
-            trigger: ".text",
-            markers: false,
-            start: "top center",
-            end: "bottom 80px",
-          }
-        });
-      }, []);
     
     return (
         <>
@@ -26,7 +13,7 @@ const About = ({lightBg, imgStart, lightTopLine, lightText,lightTextDesc, descri
                 <Container>
                     <InfoRow imgStart={imgStart}>
                     <InfoColumn>
-                        <TextWrapper className='text'>
+                        <TextWrapper>
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                         </TextWrapper>

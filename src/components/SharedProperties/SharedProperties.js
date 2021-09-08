@@ -34,20 +34,6 @@ const SharedProperties = ({lightBg, imgStart, lightTopLine, lightText,lightTextD
         }
     }, [])
 
-    useEffect(() => {      
-        gsap.to(".text1", {
-          x: -70,
-          duration: 2,
-          delay: 0,
-          scrollTrigger: {
-            trigger: ".text1",
-            markers: false,
-            start: "top center",
-            end: "bottom 80px",
-          }
-        });
-       
-      }, []);
 
     return (
         <>
@@ -55,7 +41,7 @@ const SharedProperties = ({lightBg, imgStart, lightTopLine, lightText,lightTextD
                 <Container>
                     <InfoRow imgStart={imgStart}>
                     <InfoColumn>
-                        <TextWrapper className='text1'>
+                        <TextWrapper>
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                         </TextWrapper>
