@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+
+    </head>
+    <body>
+        
+        <h1>Create Contact and Track it</h1>
+         <h4>Please run this code at some server : (XAMPP OR WAMP OR TOMCAT OR Google APP engine)</h4>
+         
+        <form name="create_contact_track">
+
+            Email      : <input type='email' name = "first_name" id = "email" ><br/><br/>
+
+            <input type="button" value="Create Contact in Agile CRM" onclick = "createContact()">
+        </form>	
+        <script type="text/javascript" src="https://remigo.agilecrm.com/stats/min/agile-min.js"></script>
+        <script type="text/javascript" > _agile.set_account('8gffp3a7mn5qssga979pshclcs', 'remigo');
+            _agile.track_page_view();
+            _agile_execute_web_rules();
+        </script>
+
+        <script>
+
+            function createContact() {
+                alert('hello');
+
+                var email_received = document.getElementById('email').value;
+
+                var contact = {};
+                contact.email = email_received;
+
+                // Custom fields can be added to contact object as
+                contact.status = "incomplete";
+                contact.custom_id = "EN001C";
+
+                _agile.create_contact(contact, {
+                    success: function (data) {
+
+                        // Set Email at success of contact creation. But you can set it at failure too.
+                        _agile.set_email(email_received);
+                        
+                        console.log("success");
+                        console.log("Response = "+data);
+                    },
+                    error: function (data) {
+                        console.log("error");
+                        console.log("Error Cause = "+data);
+                    }
+                });
+
+
+        // Function end
+            }
+
+        </script>
+    </body>
+</html>

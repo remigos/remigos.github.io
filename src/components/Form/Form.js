@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import AgileCRMManager from './agilecrm.js'
+import AgileCRMManager from 'agile_crm'
 
 const Row = styled.div`
 
 `
 
-const Form = styled.form`
+const Form = styled.form`Z
     display:grid;
     input[type='email']{
         width:535px;
@@ -76,6 +76,7 @@ export default class Forms extends React.Component {
         };
       }
     
+
       handleChange = (event) => {
         event.preventDefault();
         const { name, value } = event.target;
@@ -97,25 +98,51 @@ export default class Forms extends React.Component {
     
       handleSubmit = (event) => {
         event.preventDefault();
+        //const data = new FormData(event.target)
         if(validateForm(this.state.errors)) {
           console.info('Valid Form')
         }else{
           console.error('Invalid Form')
         }
-        fetch('')
+        const obj = new AgileCRMManager("remigo", "8gffp3a7mn5qssga979pshclcs", "tobias@remigo.io");
+        const success = function (data) {
+          console.log(data);
+        };
+        const error = function (data) {
+          console.log(data);
+        };
+        
+        const contact = {
+          "lead_score": "92",
+          "tags": [
+              "Lead",
+              "Likely Buyer"
+          ],
+          "properties": [
+              {
+                  "type": "SYSTEM",
+                  "name": "email",
+                  "subtype": "work",
+                  "value": "sila@tester.com"
+              },
+          ]
+        };
+      
+      console.log(obj.contactAPI.add(contact, success, error));
       }
      
     render(){
         const {errors} = this.state;
         return (
-            <Form onSubmit={this.handleSubmit} noValidate>
+                  <Form onSubmit={this.handleSubmit} noValidate>
+            
                         <Row>
                             <input type="email" name='email' placeholder='Email' id='email' onChange={this.handleChange} noValidate/>
                             <input type="submit" name="send" id="send" value="Go"/>
                          </Row>
                          {errors.email.length > 0 && 
                             <span className='error'>{errors.email}</span>}
-                    </Form>
+                  </Form>
         )
     }
 }

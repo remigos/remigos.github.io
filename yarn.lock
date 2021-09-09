@@ -2319,6 +2319,11 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
+agile_crm@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/agile_crm/-/agile_crm-1.2.5.tgz#823facd7c2d4a737ac276be215cf6deb0c329558"
+  integrity sha1-gj+s18LUpzesJ2viFc9t6wwylVg=
+
 ajv-errors@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.1.tgz#f35986aceb91afadec4102fbd85014950cefa64d"

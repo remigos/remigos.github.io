@@ -5,6 +5,8 @@
     <link rel="icon" href="%PUBLIC_URL%/IconLogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
     <meta
       name="description"
       content="Reimaging the way Agents, Buyers, and Sellers to communicate about and share Real-Estate"
@@ -26,7 +28,52 @@
   </head>
 
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+      <form name="create_contact_track">
+
+              <input type='email' name = "first_name" id = "emails" >
+
+            <input type="button" value='Go' onclick = "createContact()">
+        </form>	
+        <script type="text/javascript" src="https://remigo.agilecrm.com/stats/min/agile-min.js"></script>
+        <script type="text/javascript" > _agile.set_account('8gffp3a7mn5qssga979pshclcs', 'remigo');
+            _agile.track_page_view();
+            _agile_execute_web_rules();
+        </script>
+
+        <script>
+
+            function createContact() {
+                alert('hello');
+
+                var email_received = document.getElementById('emails').value;
+
+                var contact = {};
+                contact.email = email_received;
+
+                // Custom fields can be added to contact object as
+                contact.status = "incomplete";
+                contact.custom_id = "EN001C";
+
+                _agile.create_contact(contact, {
+                    success: function (data) {
+
+                        // Set Email at success of contact creation. But you can set it at failure too.
+                        _agile.set_email(email_received);
+                        
+                        console.log("success");
+                        console.log("Response = "+data);
+                    },
+                    error: function (data) {
+                        console.log("error");
+                        console.log("Error Cause = "+data);
+                    }
+                });
+
+
+        // Function end
+            }
+
+        </script>
   </body>
 </html>
