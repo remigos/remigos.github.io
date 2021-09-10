@@ -9,7 +9,7 @@ const Row = styled.div`
 const Form = styled.form`Z
     display:grid;
     input[type='email']{
-        width:535px;
+        width:450px;
         height:53px;
         margin-bottom:1rem;
         padding:1rem;
@@ -49,9 +49,6 @@ const Form = styled.form`Z
       input[type='email']{
         width:320px;
         height:53px;
-      }
-      input[type='submit'] {
-
       }
     }
 `

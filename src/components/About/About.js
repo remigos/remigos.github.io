@@ -1,7 +1,6 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import {InfoSec, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrapper, Image} from './About.elements'
 import {Container} from '../../globalStyles'
-import gsap from "gsap";
 
 
 const About = ({lightBg, imgStart, lightTopLine, lightText,lightTextDesc, description,headline, start, img, alt}) => {

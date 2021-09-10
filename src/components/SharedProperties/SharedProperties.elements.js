@@ -81,9 +81,9 @@ export const ImgWrapper = styled.div`
 `
 
 export const Image = styled.img`
-    padding-right: 0;
+    padding-right: 40px;
     border:0;
-    bottom:-50px;
+    bottom:-100px;
     max-width:130%;
     vertical-align:middle;
     display:inline-block;
@@ -116,14 +116,19 @@ export const Image1 = styled.img`
     vertical-align:middle;
     display:flex;
     max-height:auto;
-    margin-top: -300px;
+    margin-top: -200px;
     position: absolute;
     @media screen and (min-width:4000px){
-            width:4000px;
-            margin-top:-900px;
+            //width:4000px;
+            //margin-top:-900px;
+            display:none;
+    }
+    @media screen and (max-width:768px) {
+        margin-top: -100px;
+
     }
     @media screen and (max-width:540px){
-        margin-top: -800px;
+        margin-top: -780px;
         margin-bottom:300px;
 
     }

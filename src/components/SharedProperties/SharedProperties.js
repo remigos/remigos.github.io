@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react'
-import {InfoSec, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrapper, Image,Image1, Gradient} from './SharedProperties.elements'
+import {InfoSec, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrapper, Image,Image1} from './SharedProperties.elements'
 import {Container} from '../../globalStyles'
 import RealtorCatalog from '../../assets/Framedevice.png'
 import iphonePng from '../../assets/iphonex-dark.png'
 import RectangleHouse from '../../assets/housePng.png'
 import RectangleHouseMobile from '../../assets/RectangleImageMobile.png'
-import gsap from "gsap";
 
 
 const SharedProperties = ({lightBg, imgStart, lightTopLine, lightText,lightTextDesc, description,headline, start, img, alt}) => {
@@ -19,7 +18,7 @@ const SharedProperties = ({lightBg, imgStart, lightTopLine, lightText,lightTextD
     
     useEffect(() => {
         const handleWidth = () => {
-            const show = window.innerWidth <= 767
+            const show = window.innerWidth <= 760
             if (show) {
                 setImagePng(iphonePng)
                 setRectanglePng(RectangleHouseMobile)
