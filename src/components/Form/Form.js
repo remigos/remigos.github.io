@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import AgileCRMManager from 'agile_crm'
 
 const Row = styled.div`
 
 `
 
-const Form = styled.form`Z
+const Form = styled.form`
     display:grid;
     input[type='email']{
         width:450px;
@@ -52,94 +51,57 @@ const Form = styled.form`Z
       }
     }
 `
-const validEmailRegex = RegExp(
-    // eslint-disable-next-line no-useless-escape
-    /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-  );
-  const validateForm = errors => {
-    let valid = true;
-    Object.values(errors).forEach(val => val.length > 0 && (valid = false));
-    return valid;
-  };
-export default class Forms extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-          email: null,
-          errors: {
-            email: '',
-          }
-        };
-      }
-    
+const Formtest = () => {
+  const [email, setEmail] = useState('')
 
-      handleChange = (event) => {
-        event.preventDefault();
-        const { name, value } = event.target;
-        let errors = this.state.errors;
-    
-        switch (name) {
-          case 'email': 
-            errors.email = 
-              validEmailRegex.test(value)
-                ? ''
-                : 'Email is not valid';
-            break;
-          default:
-            break;
+  function createContact(event) {
+    try {
+      event.preventDefault();
+      const contact = { email };
+
+      window._agile.create_contact(contact, {
+        success: function (data) {
+
+          // Set Email at success of contact creation. But you can set it at failure too.
+          window._agile.set_email(email);
+          console.log(`Successfully created contact: ${data && JSON.stringify(data)}`);
+          alert('your email was submitted: ' + email);
+
+        },
+        error: function (data) {
+          console.error(`Error while creating contact: ${data && JSON.stringify(data)}`);
         }
-    
-        this.setState({errors, [name]: value});
-      }
-    
-      handleSubmit = (event) => {
-        event.preventDefault();
-        //const data = new FormData(event.target)
-        if(validateForm(this.state.errors)) {
-          console.info('Valid Form')
-        }else{
-          console.error('Invalid Form')
-        }
-        const obj = new AgileCRMManager("remigo", "8gffp3a7mn5qssga979pshclcs", "tobias@remigo.io");
-        const success = function (data) {
-          console.log(data);
-        };
-        const error = function (data) {
-          console.log(data);
-        };
-        
-        const contact = {
-          "lead_score": "92",
-          "tags": [
-              "Lead",
-              "Likely Buyer"
-          ],
-          "properties": [
-              {
-                  "type": "SYSTEM",
-                  "name": "email",
-                  "subtype": "work",
-                  "value": "sila@tester.com"
-              },
-          ]
-        };
-      
-      console.log(obj.contactAPI.add(contact, success, error));
-      }
-     
-    render(){
-        const {errors} = this.state;
-        return (
-                  <Form onSubmit={this.handleSubmit} noValidate>
-            
-                        <Row>
-                            <input type="email" name='email' placeholder='Email' id='email' onChange={this.handleChange} noValidate/>
-                            <input type="submit" name="send" id="send" value="Go"/>
-                         </Row>
-                         {errors.email.length > 0 && 
-                            <span className='error'>{errors.email}</span>}
-                  </Form>
-        )
+      });
+    } catch (err) {
+      console.log(`Error while creating contact: ${err.stack}`);
     }
+  }
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://remigo.agilecrm.com/stats/min/agile-min.js';
+    script.async = true;
+    script.onload = () => {
+      window._agile.set_account('8gffp3a7mn5qssga979pshclcs', 'remigo');
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
+
+  return (
+    <Form>
+            <Row>
+                <input type="email" name='email' placeholder='Email' id='email' onChange={event => setEmail(event.target.value)}/>
+                <input type="submit" name="send" id="send" value="Go" onClick={createContact}/>
+            </Row>
+
+    </Form>
+  )
 }
+
+export default Formtest;
