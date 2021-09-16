@@ -102,6 +102,8 @@ export const Image = styled.img`
     @media screen and (max-width:415px){
         max-width:100%;
         margin-top: 10px;
+        left:50px;
+
     }
     @media screen and (max-width:330px){
         max-width:100%;
@@ -128,8 +130,7 @@ export const Image1 = styled.img`
 
     }
     @media screen and (max-width:540px){
-        margin-top: -780px;
-        margin-bottom:300px;
+        margin-top: -480px;
 
     }
     @media screen and (max-width:414px){

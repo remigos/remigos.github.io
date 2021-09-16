@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 const Row = styled.div`
     p {
@@ -64,20 +66,31 @@ const schema = yup.object().shape({
 });
 
 
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Formtest = () => {
+  const [open, setOpen] = React.useState(false);
+  
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
   const { register, formState:{ errors }, handleSubmit, reset } = useForm({
     resolver: yupResolver(schema)
   });
   const onSubmit = data => {
-    console.log(data) 
     const Email = data;
     window._agile.create_contact(Email, {
       success: function (data) {
 
         window._agile.set_email(data);
         console.log(`Successfully created contact: ${data && JSON.stringify(data)}`);
-        alert('Submitted succesfully!')
+        setOpen(true);
       },
       error: function (data) {
         console.error(`Error while creating contact: ${data && JSON.stringify(data)}`);
@@ -100,8 +113,16 @@ const Formtest = () => {
       document.body.removeChild(script);
     }
   }, []);
+
+  const vertical = 'top';
+  const horizontal = 'center' 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}> 
+    <Form onSubmit={handleSubmit(onSubmit)}>
+          <Snackbar open={open} autoHideDuration={4000} onClose={handleClose} anchorOrigin={{vertical, horizontal}} sx={{ width: '70%' }}>
+              <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                Thanks for subscribing!
+              </Alert>
+          </Snackbar> 
             <Row>
                 <input {...register("email")} type="email" placeholder='Email' />
                 <input type="submit" name="send" id="send" value="Go"/>

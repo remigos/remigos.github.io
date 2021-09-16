@@ -11,7 +11,9 @@ export const Nav = styled.nav`
     align-items: center;
     top:0;
     z-index:999;
+    @media screen and (max-width:768px){
 
+    }
     
 `
 export const NavbarContainer = styled(Container)`
@@ -40,6 +42,7 @@ export const NavLogo = styled(Link)`
         margin-left:auto;
         img {
         width:130px;
+        margin-top:-30px;
     }
     }
 
