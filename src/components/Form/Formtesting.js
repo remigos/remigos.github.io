@@ -78,7 +78,7 @@ const Formtest = () => {
 
         window._agile.set_email(data);
         console.log(`Successfully created contact: ${data && JSON.stringify(data)}`);
-        BasicAlerts()
+        alert('Submitted succesfully!')
       },
       error: function (data) {
         console.error(`Error while creating contact: ${data && JSON.stringify(data)}`);
@@ -105,7 +105,7 @@ const Formtest = () => {
     <Form onSubmit={handleSubmit(onSubmit)}> 
             <Row>
                 <input {...register("email")} type="email" placeholder='Email' />
-                <input type="submit" name="send" id="send" value="Go" onClick={BasicAlerts()}/>
+                <input type="submit" name="send" id="send" value="Go"/>
                 <p>{errors.email?.message}</p>
             </Row>
     </Form>
