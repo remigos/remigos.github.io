@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import BasicAlerts from '../SnackBar/SnackBar'
 
 const Row = styled.div`
     p {
