@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+import BasicAlerts from '../SnackBar/SnackBar'
 
 const Row = styled.div`
-
+    p {
+      color:#c90000; 
+    }
 `
 
 const Form = styled.form`
@@ -52,32 +58,58 @@ const Form = styled.form`
     }
 `
 
-export default class Formtest extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.input = React.createRef();
-    this.state = { email: '' };
+
+const schema = yup.object().shape({
+  email: yup.string().email().required(),
+});
+
+
+
+const Formtest = () => {
+  const { register, formState:{ errors }, handleSubmit, reset } = useForm({
+    resolver: yupResolver(schema)
+  });
+  const onSubmit = data => {
+    console.log(data) 
+    const Email = data;
+    window._agile.create_contact(Email, {
+      success: function (data) {
+
+        window._agile.set_email(data);
+        console.log(`Successfully created contact: ${data && JSON.stringify(data)}`);
+        BasicAlerts()
+      },
+      error: function (data) {
+        console.error(`Error while creating contact: ${data && JSON.stringify(data)}`);
+      }
+    });
+    reset()
+    
   }
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://remigo.agilecrm.com/stats/min/agile-min.js';
+    script.async = true;
+    script.onload = () => {
+      window._agile.set_account('8gffp3a7mn5qssga979pshclcs', 'remigo');
+    };
 
-  handleSubmit(event) {
+    document.body.appendChild(script);
 
-    alert('A name was submitted: ' + this.input.current.value);
-    event.preventDefault();
-
-  }
-     
-    render(){
-      
-        return (
-                  <Form onSubmit={this.handleSubmit} >
-                        <Row>
-                            <input type="email" name='email' placeholder='Email' id='email' ref={this.state.email}/>
-                            <input type="submit" name="send" id="send" value="Go"/>
-                         </Row>
-                         
-                  </Form>
-        )
+    return () => {
+      document.body.removeChild(script);
     }
+  }, []);
+  return (
+    <Form onSubmit={handleSubmit(onSubmit)}> 
+            <Row>
+                <input {...register("email")} type="email" placeholder='Email' />
+                <input type="submit" name="send" id="send" value="Go" onClick={BasicAlerts()}/>
+                <p>{errors.email?.message}</p>
+            </Row>
+    </Form>
+  )
 }
+
+export default Formtest;

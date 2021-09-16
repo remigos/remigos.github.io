@@ -43,9 +43,7 @@ export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top: 0;
     padding-bottom:60px;
-    span {
-          color:#C90000;
-        }
+
     @media screen and (max-width:768px){
         padding-bottom:65px;
     }
@@ -108,3 +106,5 @@ export const Image = styled.img`
         display:none;
     }
 `
+
+

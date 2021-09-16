@@ -59,15 +59,13 @@ const Formtest = () => {
     try {
       event.preventDefault();
       const contact = { email };
-
+      console.log(contact)
       window._agile.create_contact(contact, {
         success: function (data) {
 
           // Set Email at success of contact creation. But you can set it at failure too.
           window._agile.set_email(email);
           console.log(`Successfully created contact: ${data && JSON.stringify(data)}`);
-          alert('your email was submitted: ' + email);
-
         },
         error: function (data) {
           console.error(`Error while creating contact: ${data && JSON.stringify(data)}`);
@@ -96,7 +94,7 @@ const Formtest = () => {
   return (
     <Form>
             <Row>
-                <input type="email" name='email' placeholder='Email' id='email' onChange={event => setEmail(event.target.value)}/>
+                <input type="email" name='email' placeholder='Email' id='email'  noValidate onChange={event => setEmail(event.target.value)}/>
                 <input type="submit" name="send" id="send" value="Go" onClick={createContact}/>
             </Row>
 

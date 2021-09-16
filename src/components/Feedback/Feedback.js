@@ -27,8 +27,8 @@ const Feedback = () => {
             <SecondColumn>
                 <SecondText>
                     <Subtitle>Coming Late 2021</Subtitle>
-                    <Text>Remigo is a real estate focused communication tool designed to help home buyers, sellers and realtors exchange information, properties and feedback in a concise and convenient method. Make faster decisions with more confidence by having a single conversation on a single platform rather than hunting through texts and emails. </Text>
-                    <Text>Improving communication makes the home shopping experience better, faster and more enjoyable for all parties. Real time notifications, time stamped conversations and feedback with context makes real estate communication smoother by avoiding misunderstandings, missed notes, and confusing language. Communicate with confidence centralized around specific houses.</Text>    
+                    <Text>Remigo is a real estate focused communication tool designed to help home buyers, sellers and realtors exchange information, properties and feedback in a concise and convenient method. Make faster decisions with more confidence by having a single conversation on a single platform rather than hunting through texts and emails.</Text>
+                    <Text>Improving communication makes the home shopping experience better, faster and more enjoyable for all parties. Real time notifications, time stamped conversations and feedback with context makes real estate communication smoother by avoiding misunderstandings, missed notes, and confusing language. Communicate with confidence centralized around the few dream houses instead of the many wrong ones.</Text>    
                 </SecondText>
             </SecondColumn>
         </FeedbackSection>

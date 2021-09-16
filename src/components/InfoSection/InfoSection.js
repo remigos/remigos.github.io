@@ -5,7 +5,8 @@ import Forms from '../Form/Form'
 import gsap from "gsap";
 
 
-const InfoSection = ({lightBg, imgStart, lightTopLine, lightText,lightTextDesc, description,headline, start, img, alt,signUpText,signUpText1}) => {
+
+const InfoSection = ({lightBg, imgStart, lightText,lightTextDesc, description,headline, start, img, alt,signUpText}) => {
     useEffect(() => {      
 
         gsap.fromTo('.hero',{opacity:0, y:300 }, {opacity: 1 , y: -50 , duration: 1.5 });
@@ -20,7 +21,7 @@ const InfoSection = ({lightBg, imgStart, lightTopLine, lightText,lightTextDesc, 
                         <TextWrapper>
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                            <SignUpText lightTextDesc={lightTextDesc}><span>{signUpText1}</span>{signUpText}</SignUpText>
+                            <SignUpText lightTextDesc={lightTextDesc}>{signUpText}</SignUpText>
                             <Forms/>
                         </TextWrapper>
                     </InfoColumn>
