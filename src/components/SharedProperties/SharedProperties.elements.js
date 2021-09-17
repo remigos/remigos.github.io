@@ -35,7 +35,7 @@ export const InfoColumn = styled.div`
 export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top: 0;
-    padding-bottom:200px;
+    padding-bottom:30px;
 
     @media screen and (max-width:768px){
         padding-bottom:65px;
@@ -86,7 +86,7 @@ export const ImgWrapper = styled.div`
 export const Image = styled.img`
     padding-right: 40px;
     border:0;
-    bottom:-100px;
+    bottom:-150px;
     max-width:130%;
     vertical-align:middle;
     display:inline-block;

@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react'
-import {InfoSec, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrapper, Image,SignUpText} from './InfoSection.elements'
+import {InfoSec, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrapper, Image,SignUpText, ObjectMain } from './InfoSection.elements'
 import {Container} from '../../globalStyles'
 import Forms from '../Form/Form'
 import gsap from "gsap";
-
+import Objects from '../../assets/Object.png'
 
 
 const InfoSection = ({lightBg, imgStart, lightText,lightTextDesc, description,headline, start, img, alt,signUpText}) => {
@@ -16,6 +16,8 @@ const InfoSection = ({lightBg, imgStart, lightText,lightTextDesc, description,he
         <>
             <InfoSec lightBg={lightBg}>
                 <Container>
+                <ObjectMain src={Objects} alt="object png"/>
+
                     <InfoRow imgStart={imgStart} className='hero'>
                     <InfoColumn>
                         <TextWrapper>

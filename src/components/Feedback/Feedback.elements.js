@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 export const FeedbackSection = styled.div`
-    padding: 300px 0px 50px;
+    padding: 200px 0px 50px;
     display:flex;
     flex-direction:column;
     justify-content: center;
     background: #00AEEF;
     @media screen and (max-width:768px){
-        padding: 100px 0 50px;
+        padding: 150px 0 50px;
 
     }
 `
@@ -122,5 +122,17 @@ export const Text = styled.p`
         font-family:'Roboto', sans-serif;
         text-align:center;
 
+    }
+`
+export const ObjectMain = styled.img`
+    max-width: 100%;
+    width:135px;
+    z-index: 1000;
+    height:auto;
+    position:relative;
+    left:1150px;
+    top:150px;
+    @media screen and (max-width: 768px) {
+        display:none;
     }
 `

@@ -29,7 +29,7 @@ export const InfoRow = styled.div`
 
 export const InfoColumn = styled.div`
     margin-bottom: 15px;
-    padding-right:15px;
+    padding-right:100px;
     padding-left:15px;
     flex:1;
     max-width: 50%;
@@ -111,3 +111,15 @@ export const Image = styled.img`
 `
 
 
+export const ObjectMain = styled.img`
+    max-width: 100%;
+    width:135px;
+    z-index: 2;
+    height:auto;
+    position:absolute;
+    right:80px;
+    top:30px;
+    @media screen and (max-width: 768px) {
+        display:none;
+    }
+`
