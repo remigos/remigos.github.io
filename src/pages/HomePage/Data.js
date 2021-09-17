@@ -7,7 +7,7 @@ export const homeObjOne = {
     description:'Reimaging the way Agents,Buyers, and Sellers to communicate about and share Real-Estate',
     headline: 'Coming soon!',
     signUpText: 'SIGN UP FOR RELEASE DATES AND UPDATES.',
-    img:require('../../assets/iphone-login.png').default,
+    img:require('../../assets/iphone_info_section.png').default,
     start:'',
     alt:'Image'
 

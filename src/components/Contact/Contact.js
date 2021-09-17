@@ -1,6 +1,6 @@
 import React from 'react';
 import {Contactsection, MainContent, ImageContainer, SkydiverImage, TextContainer, Title,Text, SubText} from './Contact.elements';
-import Formtesting from '../Form/Formtesting'
+import Forms from '../Form/Form'
 import skydiver from '../../assets/skydiver.png'
 
 const Contact = () => {
@@ -15,7 +15,7 @@ const Contact = () => {
                   <Title>Coming soon!</Title>
                   <Text>Reimaging the way Agents, Buyers, and Sellers to communicate about and share Real-Estate</Text>
                   <SubText>SIGN UP FOR RELEASE DATES AND UPDATES.</SubText>
-                  <Formtesting/>
+                  <Forms/>
             </TextContainer>
       </MainContent>
   </Contactsection>

@@ -1,31 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
 
 const Row = styled.div`
-
+    p {
+      color:#c90000; 
+    }
 `
 
 const Form = styled.form`
     display:grid;
-    input[type='email']{
-        width:450px;
-        height:53px;
-        margin-bottom:1rem;
-        padding:1rem;
-        border-radius: 8px;
-        border:1px solid #1F2936;
-        font-family: 'Inter', sans-serif;
-        &:active,
-        &:focus {
-           outline: none;
-        }
-        &::placeholder{
-           color: #444444;
-           opacity: 0.8;
-        }
-
-    }         
-    input[type='submit'] {
+    button {
         background: linear-gradient(#444444, #222222);
         color:var(--white);
         border-bottom-right-radius: 8px;
@@ -44,38 +32,71 @@ const Form = styled.form`
             background:#28B8A7;
         }
     }
-    @media screen and (max-width:768px){
-      input[type='email']{
-        width:320px;
-        height:53px;
-      }
-    }
+   
 `
 
-const Formtest = () => {
-  const [email, setEmail] = useState('')
-
-  function createContact(event) {
-    try {
-      event.preventDefault();
-      const contact = { email };
-      console.log(contact)
-      window._agile.create_contact(contact, {
-        success: function (data) {
-
-          // Set Email at success of contact creation. But you can set it at failure too.
-          window._agile.set_email(email);
-          console.log(`Successfully created contact: ${data && JSON.stringify(data)}`);
-        },
-        error: function (data) {
-          console.error(`Error while creating contact: ${data && JSON.stringify(data)}`);
+const EmailInput = styled.input`
+        width:450px;
+        height:53px;
+        margin-bottom:1rem;
+        padding:1rem;
+        border-radius: 8px;
+        border:1px solid #1F2936;
+        font-family: 'Inter', sans-serif;
+        &:active,
+        &:focus {
+           outline: none;
         }
-      });
-    } catch (err) {
-      console.log(`Error while creating contact: ${err.stack}`);
-    }
-  }
+        &::placeholder{
+           color: #444444;
+           opacity: 0.8;
+        }
+   @media screen and (max-width:768px){
+        width:320px;
+        height:53px;    
+    }      
+`
 
+const TextConfirmation = styled.div`
+  color: #28B8A7;
+  font-weight: 700;
+  font-size: 18px;
+  
+`
+
+
+const schema = yup.object().shape({
+  email: yup.string().email().required(),
+});
+
+
+
+const Forms = () => {
+  const [open, setOpen] = React.useState(false);
+  
+
+  const { register, formState:{ errors }, handleSubmit, reset } = useForm({
+    resolver: yupResolver(schema)
+  });
+  const onSubmit = data => {
+    const Email = data;
+    window._agile.create_contact(Email, {
+      success: function (data) {
+
+        window._agile.set_email(data);
+        console.log(`Successfully created contact: ${data && JSON.stringify(data)}`);
+        setOpen(true);
+        setTimeout(() => {
+          setOpen(false)
+        }, 3000)
+      },
+      error: function (data) {
+        console.error(`Error while creating contact: ${data && JSON.stringify(data)}`);
+      }
+    });
+    reset()
+    
+  }
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://remigo.agilecrm.com/stats/min/agile-min.js';
@@ -85,21 +106,25 @@ const Formtest = () => {
     };
 
     document.body.appendChild(script);
-
+   
     return () => {
       document.body.removeChild(script);
     }
   }, []);
 
   return (
-    <Form>
-            <Row>
-                <input type="email" name='email' placeholder='Email' id='email'  noValidate onChange={event => setEmail(event.target.value)}/>
-                <input type="submit" name="send" id="send" value="Go" onClick={createContact}/>
-            </Row>
+    <Form onSubmit={handleSubmit(onSubmit)}>
 
+            <Row>
+                <EmailInput {...register("email")} placeholder='Email' />
+                <button type="submit">Go</button>
+                <p>{errors.email?.message}</p>
+               { open && (
+                 <TextConfirmation>Thanks for subscribing!</TextConfirmation>
+               )}{ !open && (<p></p>)}
+            </Row>
     </Form>
   )
 }
 
-export default Formtest;
+export default Forms;

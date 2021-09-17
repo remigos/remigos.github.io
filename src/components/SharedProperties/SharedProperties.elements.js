@@ -77,7 +77,10 @@ export const ImgWrapper = styled.div`
     max-width:750px;
     display:flex;
     justify-content:${({start}) => (start ? 'flex-start' : 'flex-end')};
-    
+    @media screen and (max-width:415px){
+        display:block;
+        margin-left:auto;
+    }
 `
 
 export const Image = styled.img`
@@ -102,7 +105,6 @@ export const Image = styled.img`
     @media screen and (max-width:415px){
         max-width:100%;
         margin-top: 10px;
-        left:50px;
 
     }
     @media screen and (max-width:330px){
