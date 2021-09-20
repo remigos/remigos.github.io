@@ -4,7 +4,7 @@ import {Container} from '../../globalStyles'
 import RealtorCatalog from '../../assets/Framedevice.png'
 import iphonePng from '../../assets/iphone_shared_properties.png'
 import RectangleHouse from '../../assets/housePng.png'
-import RectangleHouseMobile from '../../assets/RectangleImageMobile.png'
+import RectangleMobile from '../../assets/RectangleMobile.png'
 
 
 const SharedProperties = ({lightBg, imgStart, lightText,lightTextDesc, description,headline, start, alt}) => {
@@ -21,7 +21,7 @@ const SharedProperties = ({lightBg, imgStart, lightText,lightTextDesc, descripti
             const show = window.innerWidth <= 760
             if (show) {
                 setImagePng(iphonePng)
-                setRectanglePng(RectangleHouseMobile)
+                setRectanglePng(RectangleMobile)
             } else {
                 setImagePng(RealtorCatalog)
                 setRectanglePng(RectangleHouse)

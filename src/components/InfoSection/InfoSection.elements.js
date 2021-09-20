@@ -14,8 +14,7 @@ export const InfoSec = styled.div`
     border-radius: 100%/0 0 30px 30px;
     box-shadow: 0px 150px 0px white;
     @media screen and (max-width: 768px) {
-        padding: 50px 0px 20px ;
-
+        padding: 50px 0px 20px 40px;
     }
 `
 

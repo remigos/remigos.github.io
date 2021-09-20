@@ -128,19 +128,19 @@ export const Image1 = styled.img`
             display:none;
     }
     @media screen and (max-width:768px) {
-        margin-top: -100px;
+        margin-top: -50px;
 
     }
     @media screen and (max-width:540px){
-        margin-top: -480px;
+        margin-top: -400px;
 
     }
     @media screen and (max-width:414px){
-        margin-top: -500px;
+        margin-top: -400px;
 
     }
     @media screen and (max-width:340px){
-        margin-top: -400px;
+        margin-top: -280px;
 
     }
 `

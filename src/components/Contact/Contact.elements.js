@@ -60,6 +60,7 @@ export const TextContainer = styled.div`
     flex-direction:column;
     align-items:center;
     margin: 0 auto;
+
     span {
           color:#C90000;
         }
@@ -117,4 +118,11 @@ export const SubText = styled.p`
         font-family:'Roboto', sans-serif;
         color:#1f2936;
     }
+`
+
+export const FormSection = styled.div`
+    p {
+        color:#C90000;
+    }
+
 `

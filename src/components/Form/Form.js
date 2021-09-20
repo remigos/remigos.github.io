@@ -7,7 +7,7 @@ import * as yup from "yup";
 
 const Row = styled.div`
     p {
-      color:#c90000; 
+      color:#fff; 
     }
 `
 
@@ -66,7 +66,7 @@ const TextConfirmation = styled.div`
 
 
 const schema = yup.object().shape({
-  email: yup.string().email().required(),
+  email: yup.string().email('Must be a valid email.').required('Email is a required field.'),
 });
 
 
@@ -88,7 +88,7 @@ const Forms = () => {
         setOpen(true);
         setTimeout(() => {
           setOpen(false)
-        }, 3000)
+        }, 2000)
       },
       error: function (data) {
         console.error(`Error while creating contact: ${data && JSON.stringify(data)}`);
@@ -120,7 +120,7 @@ const Forms = () => {
                 <button type="submit">Go</button>
                 <p>{errors.email?.message}</p>
                { open && (
-                 <TextConfirmation>Thanks for subscribing!</TextConfirmation>
+                 <TextConfirmation>Success! Thanks for subscribing</TextConfirmation>
                )}{ !open && (<p></p>)}
             </Row>
     </Form>

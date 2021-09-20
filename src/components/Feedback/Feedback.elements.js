@@ -19,7 +19,7 @@ export const FeedbackWrapper = styled.div`
     margin: 0 auto;
 
     @media screen and (max-width: 768px) {
-        margin: 0 30px;
+        margin: 0 10px;
         display:flex;
         flex-direction: column;
         align-items: center;
