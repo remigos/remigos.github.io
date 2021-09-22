@@ -13,9 +13,7 @@ export const InfoSec = styled.div`
     background: ${({lightBg}) => (lightBg ? '#fff' : '#1F2936')};
     border-radius: 100%/0 0 30px 30px;
     box-shadow: 0px 150px 0px white;
-    @media screen and (max-width: 768px) {
-        padding: 50px 0px 20px 40px;
-    }
+   
 `
 
 export const InfoRow = styled.div`
@@ -38,6 +36,8 @@ export const InfoColumn = styled.div`
         flex-basis:100%;
         display:flex;
         justify-content:center;
+        padding-right:20px;
+
     }
 `
 

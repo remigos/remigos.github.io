@@ -4,7 +4,7 @@ import {Container} from '../../globalStyles'
 import Forms from '../Form/Form'
 import gsap from "gsap";
 import Objects from '../../assets/Object.png'
-
+//import {FormEmail} from '../Form/FormEmailJS'
 
 const InfoSection = ({lightBg, imgStart, lightText,lightTextDesc, description,headline, start, img, alt,signUpText}) => {
     useEffect(() => {      
