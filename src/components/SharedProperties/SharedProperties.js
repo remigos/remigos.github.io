@@ -3,7 +3,7 @@ import {InfoSec, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrapper
 import {Container} from '../../globalStyles'
 import RealtorCatalog from '../../assets/Framedevice.png'
 import iphonePng from '../../assets/iphone_shared_properties.png'
-import RectangleHouse from '../../assets/housePng.png'
+import RectangleHouse from '../../assets/RectangleDesktop.png'
 import RectangleMobile from '../../assets/RectangleMobile.png'
 
 

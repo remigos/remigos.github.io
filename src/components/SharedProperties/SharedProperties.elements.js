@@ -120,7 +120,7 @@ export const Image1 = styled.img`
     vertical-align:middle;
     display:flex;
     max-height:auto;
-    margin-top: -200px;
+    margin-top: -50px;
     position: absolute;
     @media screen and (min-width:4000px){
             //width:4000px;

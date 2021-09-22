@@ -36,7 +36,7 @@ export const InfoColumn = styled.div`
         flex-basis:100%;
         display:flex;
         justify-content:center;
-        padding-right:20px;
+        padding-right:0px;
 
     }
 `

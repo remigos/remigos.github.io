@@ -52,7 +52,7 @@ const EmailInput = styled.input`
            opacity: 0.8;
         }
    @media screen and (max-width:768px){
-        width:320px;
+        width:300px;
         height:53px;    
     }      
 `
