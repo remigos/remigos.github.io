@@ -38,7 +38,8 @@ export const TextWrapper = styled.div`
     padding-bottom:30px;
 
     @media screen and (max-width:768px){
-        padding-bottom:65px;
+        padding-bottom:30px;
+       
     }
 `
 
@@ -47,7 +48,7 @@ export const Heading = styled.h1`
     color: ${({lightText}) => (lightText ? '#fff' : '#000')};
     font-size:28px;
     line-height:1.1;
-    margin-bottom:24px;
+    margin-bottom:30px;
     max-width:400px;
     font-family:'Roboto', sans-serif;
     @media screen and (max-width:768px){
@@ -63,7 +64,7 @@ export const Subtitle = styled.p`
     color: ${({lightTextDesc}) => (lightTextDesc ? '#fff' : '#000')};
     font-size:18px;
     line-height:24px;
-    margin-bottom:35px;
+    margin-bottom:5px;
     max-width:400px;
     font-family:'Roboto', sans-serif;
     @media screen and (max-width:768px){
@@ -83,10 +84,10 @@ export const ImgWrapper = styled.div`
     }
 `
 
-export const Image = styled.img`
+export const Devices = styled.img`
     padding-right: 40px;
     border:0;
-    bottom:-150px;
+    bottom:-100px;
     max-width:130%;
     vertical-align:middle;
     display:inline-block;
@@ -105,6 +106,7 @@ export const Image = styled.img`
     @media screen and (max-width:415px){
         max-width:100%;
         margin-top: 10px;
+        padding-right: 0px;
 
     }
     @media screen and (max-width:330px){
@@ -113,7 +115,7 @@ export const Image = styled.img`
     }
 
 `
-export const Image1 = styled.img`
+export const Background = styled.img`
     padding-right: 0;
     border:0;
     max-width:100%;
