@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.remigo.com/",
     title: "Remigo-website",
   },
   plugins: [
@@ -18,6 +18,14 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        start_url:'/',
+        display:'minimal-ui',
+        icon:`src/images/iconLogo.png`
+      }
     },
   ],
 };

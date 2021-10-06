@@ -9,7 +9,7 @@ const Seo = () => {
 
   const title = 'Remigo'
   const description = 'Reimaging the way Agents, Buyers, and Sellers to communicate about and share Real-Estate'
-  const url = 'https://remigo-landing-page.herokuapp.com/';
+  const url = 'https://www.remigo.com/';
 
   return (
     <Helmet>
