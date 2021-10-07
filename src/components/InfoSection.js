@@ -165,7 +165,7 @@ const InfoSection = () => {
                     <InfoColumn>
                         <TextWrapper>
                             <Heading lightText={lightText}>Coming soon!</Heading>
-                            <Subtitle lightTextDesc={lightText}>Reimaging the way Agents, Buyers and Sellers to communicate about and share Real-Estate</Subtitle>
+                            <Subtitle lightTextDesc={lightText}>Reimaging the way Agents, Buyers and Sellers communicate about and share Real Estate</Subtitle>
                             <SignUpText lightTextDesc={lightText}>SIGN UP FOR RELEASE DATES AND UPDATES.</SignUpText>
                             <Forms/>
                         </TextWrapper>
