@@ -19,5 +19,13 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        start_url:`/`,
+        display:`minimal-ui`,
+        icon:`src/images/IconLogo.png`
+      }
+    },
   ],
 };
