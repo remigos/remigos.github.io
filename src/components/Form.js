@@ -73,7 +73,8 @@ const schema = yup.object().shape({
 
 const Forms = () => {
   const [open, setOpen] = React.useState(false);
-  
+  const [errorOpen, setErrorOpen] = React.useState(false);
+
 
   const { register, formState:{ errors }, handleSubmit, reset } = useForm({
     resolver: yupResolver(schema)
@@ -90,8 +91,11 @@ const Forms = () => {
           setOpen(false)
         }, 2000)
       },
-      error: function (data) {
-        console.error(`Error while creating contact: ${data && JSON.stringify(data)}`);
+      error: function () {
+        setErrorOpen(true);
+        setTimeout(() => {
+          setErrorOpen(false)
+        }, 2000)
       }
     });
     reset()
@@ -119,6 +123,9 @@ const Forms = () => {
                 <EmailInput {...register("email")} placeholder='Email' />
                 <button type="submit">Go</button>
                 <p>{errors.email?.message}</p>
+                { errorOpen && (
+                  <p>This email address is already registered</p>
+                )}{ !errorOpen && (<p></p>)}
                { open && (
                  <TextConfirmation>Success! Thanks for subscribing</TextConfirmation>
                )}{ !open && (<p></p>)}
