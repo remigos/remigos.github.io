@@ -1,10 +1,7 @@
 import React from 'react'
-import feedback from '../images/Feedback.png'
-import feedbackWaiting1 from '../images/feedbackWait1.png'
-import feedbackWaiting2 from '../images/feedbackWait2.png'
-import feedbackWaiting3 from '../images/feedbackWait3.png'
 import Objects from '../images/Object.png'
 import styled from 'styled-components'
+import FeedbackDesign from './FeedbackDesign'
 
 
 const Container = styled.div`
@@ -73,25 +70,6 @@ const FeedbackText = styled.p`
     }
 `
 
-const ImageContainer = styled.div`
-    justify-content:center;
-    align-items:center;
-    margin-bottom:-10px;
-    
-`
-
-const Image = styled.img`
-    max-width:100%;
-    vertical-align:middle;
-    display:inline-block;
-    max-height:700px;
-`
-const ImageFeedbackWait = styled.img`
-    max-width:100%;
-    vertical-align:middle;
-    display:inline-block;
-    max-height:167px;
-`
 const SecondColumn = styled.div`
     padding: 70px 0px ;
     padding-left:100px;
@@ -167,18 +145,7 @@ const Feedback = () => {
                 <FeedbackWrapper>
                     <FeedbackHeading>Consolidate Feedback</FeedbackHeading>
                     <FeedbackText>Consolidate client feedback and property notes in one easy to use platform. Stop wasting time digging through emails for conversations that happened weeks ago.</FeedbackText>
-                    <ImageContainer>
-                        <Image src={feedback} alt='feedback'/>
-                    </ImageContainer>
-                    <ImageContainer>
-                        <ImageFeedbackWait src={feedbackWaiting1} alt='feedback-wait'/>
-                    </ImageContainer>
-                    <ImageContainer>
-                        <ImageFeedbackWait src={feedbackWaiting2} alt='feedback-wait'/>
-                    </ImageContainer>
-                    <ImageContainer>
-                        <ImageFeedbackWait src={feedbackWaiting3} alt='feedback-wait'/>
-                    </ImageContainer>
+                    <FeedbackDesign/>
                 </FeedbackWrapper>
                 <SecondColumn>
                     <SecondText>

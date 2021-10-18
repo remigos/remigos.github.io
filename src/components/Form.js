@@ -81,6 +81,12 @@ const Forms = () => {
   });
   const onSubmit = data => {
     const Email = data;
+    console.log(window._agile)
+    if (window._agile === ' ') {
+      console.log('Error')
+    } else {
+      console.log('working!')
+    }
     window._agile.create_contact(Email, {
       success: function (data) {
 
@@ -89,7 +95,7 @@ const Forms = () => {
         setOpen(true);
         setTimeout(() => {
           setOpen(false)
-        }, 2000)
+        }, 12000)
       },
       error: function () {
         setErrorOpen(true);
@@ -98,6 +104,7 @@ const Forms = () => {
         }, 2000)
       }
     });
+   
     reset()
     
   }
@@ -105,15 +112,17 @@ const Forms = () => {
     const script = document.createElement('script');
     script.src = 'https://remigo.agilecrm.com/stats/min/agile-min.js';
     script.async = true;
-    script.onload = () => {
-      window._agile.set_account('8gffp3a7mn5qssga979pshclcs', 'remigo');
-    };
 
-    document.body.appendChild(script);
+      script.onload = () => {
+        window._agile.set_account('8gffp3a7mn5qssga979pshclcs', 'remigo');
+        console.log(window._agile)
+      };
+  
+      document.body.appendChild(script);
+      return () => {
+        document.body.removeChild(script);
+      }
    
-    return () => {
-      document.body.removeChild(script);
-    }
   }, []);
 
   return (
@@ -127,7 +136,7 @@ const Forms = () => {
                   <p>This email address is already registered</p>
                 )}{ !errorOpen && (<p></p>)}
                { open && (
-                 <TextConfirmation>Success! Thanks for subscribing</TextConfirmation>
+                 <TextConfirmation id='success-form'>Success! Thanks for subscribing</TextConfirmation>
                )}{ !open && (<p></p>)}
             </Row>
     </Form>
@@ -135,3 +144,4 @@ const Forms = () => {
 }
 
 export default Forms;
+

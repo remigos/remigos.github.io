@@ -34,7 +34,7 @@ const InfoSec = styled.div`
     background: ${({lightBg}) => (lightBg ? '#fff' : '#1F2936')};
     border-radius: 100%/0 0 30px 30px;
     box-shadow: 0px 150px 0px white;
-   
+    height: 100vh;
 `
 
 const InfoRow = styled.div`
@@ -152,7 +152,8 @@ const lightText = true;
 const InfoSection = () => {
     useEffect(() => {      
 
-        gsap.fromTo('.hero',{opacity:0, y:300 }, {opacity: 1 , y: -50 , duration: 1.5 });
+        gsap.fromTo('.hero',{opacity:0, y:200 }, {opacity: 1 , y: -50 , duration: 0.8, delay: 0.7});
+        gsap.fromTo('.hero1',{opacity:0, y:200 }, {opacity: 1 , y: -50 , duration: 0.8 });
 
     }, []);
     return (
@@ -161,8 +162,8 @@ const InfoSection = () => {
                 <Container>
                 <ObjectMain src={Objects} alt="object png"/>
 
-                    <InfoRow imgStart='' className='hero'>
-                    <InfoColumn>
+                    <InfoRow imgStart=''>
+                    <InfoColumn className='hero'>
                         <TextWrapper>
                             <Heading lightText={lightText}>Coming soon!</Heading>
                             <Subtitle lightTextDesc={lightText}>Reimaging the way Agents, Buyers and Sellers communicate about and share Real Estate</Subtitle>
@@ -170,7 +171,7 @@ const InfoSection = () => {
                             <Forms/>
                         </TextWrapper>
                     </InfoColumn>
-                    <InfoColumn>
+                    <InfoColumn className='hero1'>
                         <ImgWrapper start=''>
                             <Image src={Iphone} alt='iphone-img'/>
                         </ImgWrapper>

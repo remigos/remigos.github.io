@@ -1,6 +1,7 @@
 import React from 'react'
 import People from '../images/AdobeStock1.png'
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const Container = styled.div`
     z-index: 1;
@@ -111,16 +112,19 @@ const lightBg = true;
 const lightText = false;
 const Introduction = () => {
 
+
     return (
         <>
             <InfoSec lightBg={lightBg}>
                 <Container>
                     <InfoRow imgStart='start'>
                     <InfoColumn>
+                    <Fade right cascade>
                         <TextWrapper>
                             <Heading lightText={lightText}>Remigo, connects all of your real-estate amigos</Heading>
                             <Subtitle lightTextDesc={lightText}>Enjoy home shopping the way you should with effortless communication that is both faster and more informative than the traditional methods.</Subtitle>
                         </TextWrapper>
+                    </Fade>
                     </InfoColumn>
                     <InfoColumn>
                         <ImgWrapper start='true'>

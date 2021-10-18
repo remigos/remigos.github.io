@@ -4,6 +4,7 @@ import iphonePng from '../images/iphone_shared_properties.png'
 import RectangleHouse from '../images/RectangleDesktop.png'
 import RectangleMobile from '../images/RectangleMobile.png'
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 
 const Container = styled.div`
@@ -204,8 +205,10 @@ const SharedProperties = () => {
                     <InfoRow imgStart=''>
                     <InfoColumn>
                         <TextWrapper>
+                        <Fade left cascade>
                             <Heading lightText={lightText}>Catalog Shared Properties</Heading>
                             <Subtitle lightTextDesc={lightText}>Elevate the home shopping experience with convenient and detailed feedback on each shared property through a communication platform specifically designed for real estate.</Subtitle>
+                        </Fade>
                         </TextWrapper>
                     </InfoColumn>
                     <InfoColumn>

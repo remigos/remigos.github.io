@@ -36,9 +36,7 @@ const SocialIcons = styled.div`
         font-size: 16px;
         cursor:pointer;
         transition-duration: 0.3s;
-        &:hover {
-            color: #00AEFF;
-        }
+
     }
 `
 const Button = styled.button`
@@ -47,14 +45,7 @@ const Button = styled.button`
     width: 55px;
     height: auto;
     cursor:pointer;
-    transition-duration: 0.3s;
-    &:hover {
-        img {
-            width: 40px;
-            height:auto;
-            transition-duration: 0.3s;
-        }
-    }
+    position:relative;
      img {
          width:38px;
          height:auto;

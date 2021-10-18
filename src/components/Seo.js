@@ -9,7 +9,7 @@ const Seo = () => {
 
   const title = 'Remigo'
   const description = 'Reimaging the way Agents, Buyers, and Sellers to communicate about and share Real Estate'
-  const url = 'https://remigo-landing-page.herokuapp.com/';
+  const url = 'https://www.remigo.com/';
 
   return (
     <Helmet>
@@ -18,6 +18,8 @@ const Seo = () => {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <title>{title}</title>
       <link rel="canonical" href={url} />
       <meta name="description" content={description} />
@@ -39,3 +41,5 @@ const Seo = () => {
 };
 
 export default Seo;
+
+
