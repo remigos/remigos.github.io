@@ -29,7 +29,6 @@ const DivContainerData = styled.div`
     display:grid;
     background-color: #fff;
     padding:20px;
-    width:850px;
     max-width: 850px;
     width: 100%;
     height:auto;
@@ -39,6 +38,10 @@ const DivContainerData = styled.div`
     box-shadow: 0px 0px 24px rgba(0, 100, 137, 0.33);    
     margin-top:15px;
     margin-bottom:15px;
+
+    @media screen and (max-width: 408px) {
+        padding:10px;
+    }
 
 `
 const ImgContainer = styled.div`

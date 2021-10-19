@@ -33,8 +33,12 @@ const InfoSec = styled.div`
     padding: 10px 0px;
     background: ${({lightBg}) => (lightBg ? '#fff' : '#1F2936')};
     border-radius: 100%/0 0 30px 30px;
-    box-shadow: 0px 150px 0px white;
+    box-shadow: 0px 150px 0px white;    
     height: 100vh;
+
+    @media screen and (max-width:768px) {
+        height: auto;
+    }
 `
 
 const InfoRow = styled.div`

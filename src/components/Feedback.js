@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Objects from '../images/Object.png'
 import styled from 'styled-components'
 import FeedbackDesign from './FeedbackDesign'
-
+import gsap from 'gsap'
 
 const Container = styled.div`
     z-index: 1;
@@ -138,13 +138,14 @@ const ObjectMain = styled.img`
 `
 
 const Feedback = () => {
+
     return (
         <FeedbackSection>
             <Container>
                 <ObjectMain src={Objects} alt="object png"/>
                 <FeedbackWrapper>
-                    <FeedbackHeading>Consolidate Feedback</FeedbackHeading>
-                    <FeedbackText>Consolidate client feedback and property notes in one easy to use platform. Stop wasting time digging through emails for conversations that happened weeks ago.</FeedbackText>
+                    <FeedbackHeading className='title'>Consolidate Feedback</FeedbackHeading>
+                    <FeedbackText className='subtitle'>Consolidate client feedback and property notes in one easy to use platform. Stop wasting time digging through emails for conversations that happened weeks ago.</FeedbackText>
                     <FeedbackDesign/>
                 </FeedbackWrapper>
                 <SecondColumn>

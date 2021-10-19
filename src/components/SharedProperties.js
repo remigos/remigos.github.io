@@ -108,6 +108,7 @@ const ImgWrapper = styled.div`
 `
 
 const Devices = styled.img`
+
     padding-right: 40px;
     border:0;
     bottom:-100px;
@@ -169,6 +170,7 @@ const Background = styled.img`
 
     }
 `
+
 const lightBg = true;
 const lightText = false;
 const SharedProperties = () => {

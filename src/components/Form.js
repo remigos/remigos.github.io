@@ -80,13 +80,8 @@ const Forms = () => {
     resolver: yupResolver(schema)
   });
   const onSubmit = data => {
+
     const Email = data;
-    console.log(window._agile)
-    if (window._agile === ' ') {
-      console.log('Error')
-    } else {
-      console.log('working!')
-    }
     window._agile.create_contact(Email, {
       success: function (data) {
 
@@ -117,7 +112,7 @@ const Forms = () => {
         window._agile.set_account('8gffp3a7mn5qssga979pshclcs', 'remigo');
         console.log(window._agile)
       };
-  
+
       document.body.appendChild(script);
       return () => {
         document.body.removeChild(script);
