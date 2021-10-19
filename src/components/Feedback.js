@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Objects from '../images/Object.png'
 import styled from 'styled-components'
 import FeedbackDesign from './FeedbackDesign'
-import gsap from 'gsap'
 
 const Container = styled.div`
     z-index: 1;
