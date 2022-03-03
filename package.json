@@ -7,9 +7,12 @@
     "@emotion/styled": "^11.3.0",
     "@hookform/resolvers": "^2.8.0",
     "@material-ui/core": "^5.0.0-beta.5",
+    "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.60",
     "@material-ui/styled-engine-sc": "^5.0.0-beta.5",
-    "@mui/material": "^5.0.0",
+    "@mui/icons-material": "^5.4.2",
+    "@mui/material": "^5.4.3",
+    "@mui/styled-engine-sc": "^5.4.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -19,9 +22,13 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.15.3",
+    "react-icons": "^4.3.1",
     "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
-    "styled-components": "^5.3.1",
+    "react-slick": "^0.28.1",
+    "react-swipeable": "^6.2.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1",
     "yup": "^0.32.9"
   },
@@ -32,7 +39,7 @@
     "eject": "react-scripts eject"
   },
   "engines": {
-    "node": "14.15.4"
+    "node": "^14.15.4"
   },
   "eslintConfig": {
     "extends": [

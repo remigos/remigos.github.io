@@ -1,15 +1,18 @@
 import React from 'react'
-import {homeObjOne,homeObjTwo,homeObjThree} from './Data'
-import {InfoSection, About, SharedProperties, Feedback, Contact} from '../../components';
+import {homeObjOne} from './Data'
+import {InfoSection, InfoOne, InfoTwo, InfoThree, Reviews, Chat, Market } from '../../components';
+
 const Home = () => {
     return (
         <>
             <InfoSection {...homeObjOne}/>
-            <About {...homeObjTwo}/>
-            <SharedProperties {...homeObjThree}/>
-            <Feedback/>
-            <Contact/>
-        </>
+            <InfoOne />
+            <InfoTwo />
+            <InfoThree />
+            <Reviews/>
+            <Chat/>
+            <Market/>
+        </> 
     )
 }
 
