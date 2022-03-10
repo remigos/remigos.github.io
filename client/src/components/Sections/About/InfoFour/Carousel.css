@@ -1,0 +1,47 @@
+.carousel_container {
+    display:none;
+  }
+  
+  .button_bar1 {
+    display: flex;
+    margin: 0px 120px 20px;
+    padding: 0;
+    border-radius: 40px;
+    text-align: left;
+    background-color: transparent;
+  }
+  .button_bar1 li button {
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 7.5px;
+    background-color:#6B727F;
+  
+  }
+  .button_bar1 li {
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 0;
+  }
+  .button_bar1 li.slick-active button {
+    background-color: #00AEFF;
+  }
+  
+  @media screen and (max-width: 600px) {
+      .carousel_container {
+        display:block;
+        justify-content:'center';
+        align-items:center;
+      }
+      .button_bar1 {
+        display: inline-block;
+        text-align: center;
+        margin: 0px;
+        background-color:#fff;
+      }
+  }

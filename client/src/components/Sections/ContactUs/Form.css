@@ -1,0 +1,28 @@
+.input-group {
+    width:100%;
+    max-width:222px;
+    height:60px;
+    border:1px solid #E5E7EB;
+    border-radius: 6px;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+.input-column {
+    width:95%;
+    height:60px;
+    border:1px solid #E5E7EB;
+    border-radius: 6px;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+.input-comment {
+    width:95%;
+    height:100px;
+    border:1px solid #E5E7EB;
+    border-radius: 6px;
+    padding:10px;
+    margin-bottom:10px; 
+    padding: 0px 10px;
+}
