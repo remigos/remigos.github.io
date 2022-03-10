@@ -90,10 +90,10 @@ export default function UnstyledTabsCustomized() {
       <TabPanel value={0}>
             <LeftPanel>
                 <Title>
-                    Chat between realtor and client
+                One Platform One Conversation
                 </Title>
                 <Text>
-                This video will show the platform being used to chat back and forth between realtor and client
+                Remigo chat is specifically designed for sharing and discussing properties
                 </Text>
                 <Button>
                     Get Started
@@ -103,8 +103,38 @@ export default function UnstyledTabsCustomized() {
                 <Image src={ChatView} alt="chat-view"/>
             </RightPanel>
       </TabPanel>
-      <TabPanel value={1}>Second content</TabPanel>
-      <TabPanel value={2}>Third content</TabPanel>
+      <TabPanel value={1}>
+            <LeftPanel>
+                <Title>
+                Share Properties & Stay Organized
+                </Title>
+                <Text>
+                Share properties quickly and easily see which clients are saving the listing.
+                </Text>
+                <Button>
+                    Get Started
+                </Button>
+            </LeftPanel>
+            <RightPanel>
+                <Image src={ChatView} alt="chat-view"/>
+            </RightPanel>      
+      </TabPanel>
+      <TabPanel value={2}>
+            <LeftPanel>
+                <Title>
+                Making Feedback Convenient
+                </Title>
+                <Text>
+                Engaging clients and receiving feedback on shared properties makes for a better shopping experience for all parties
+                </Text>
+                <Button>
+                    Get Started
+                </Button>
+            </LeftPanel>
+            <RightPanel>
+                <Image src={ChatView} alt="chat-view"/>
+            </RightPanel>      
+      </TabPanel>
     </TabsUnstyled>
   );
 }
