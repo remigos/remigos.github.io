@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const nodemailer = require('nodemailer')
 const sendGridTransport = require('nodemailer-sendgrid-transport');
-//const {SENDGRID_API} = require('./config/keys')
+const {SENDGRID_API} = require('./config/keys')
 
 const PORT = process.env.PORT || 3000
 
@@ -10,7 +10,7 @@ app.use(express.json())
 
 const transporter = nodemailer.createTransport(sendGridTransport({
     auth:{
-        api_key:'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'
+        api_key:SENDGRID_API
     }
 }))
 
