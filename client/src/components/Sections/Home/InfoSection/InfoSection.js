@@ -2,7 +2,6 @@ import React from 'react'
 import {InfoSec, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrapper, Image, Button } from './InfoSection.elements'
 import {Container} from '../../../../globalStyles'
 
-
 const InfoSection = ({lightBg, imgStart, lightText,lightTextDesc, description,headline, start, img, alt}) => {
 
     return (

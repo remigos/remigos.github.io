@@ -74,8 +74,8 @@ const Navbar = () => {
             </LeftContainer>
             <RightContainer>
                 <Stack spacing={2} direction="row">
-                    <ButtonSignIn href="https://app.remigo.com/login">Sign In</ButtonSignIn>
-                    <ButtonRegister href="https://app.remigo.com/onboarding">Register Now</ButtonRegister>
+                    <ButtonSignIn onClick={()=> window.open("https://app.remigo.com/login", "_blank")}>Sign In</ButtonSignIn>
+                    <ButtonRegister onClick={()=> window.open("https://app.remigo.com/onboarding", "_blank")}>Register Now</ButtonRegister>
                 </Stack>
             </RightContainer>
             </ul>

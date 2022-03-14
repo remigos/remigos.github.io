@@ -4,7 +4,6 @@ import { Title } from '../../../globalStyles'
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-
 const Message  = () => { 
     const [firstname,setFirstName] = useState("")
     const [lastname,setLastName] = useState("")
@@ -13,7 +12,7 @@ const Message  = () => {
     const [brokerage,setBrokerage] = useState("")
     const [message,setMessage] = useState("")
     const [subject,setSubject] = useState("general")
-
+   
     const PostData = ()=>{
         fetch("/send",{
             method:"post",
@@ -43,6 +42,7 @@ const Message  = () => {
         })
     }
    return (
+     <>
      <Container>
         <Title>Contact Us</Title>
         <Text>Have an inquiry or some feedback for us? Fill out the from below to contact out team.</Text>
@@ -92,6 +92,7 @@ const Message  = () => {
         </ColumnContainer>
         <Button onClick={() => PostData()}>Send</Button>
      </Container>
+     </>
    )
 }
 
