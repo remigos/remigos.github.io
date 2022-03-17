@@ -13,15 +13,15 @@ const Footer = () => {
                 <LinkContainer>
                     <LinkContent>
                         <Title>Company</Title>
-                        <Links href='/'>About</Links>
-                        <Links href='/'>Support</Links>
-                        <Links href='/'>FAQ</Links>
-                        <Links href='/contact-us'>Contact Us</Links>
+                        <Links href='/dev-website'>About</Links>
+                        <Links href='/dev-website'>Support</Links>
+                        <Links href='/dev-website'>FAQ</Links>
+                        <Links href='/dev-website/contact-us'>Contact Us</Links>
                     </LinkContent>
                     <LinkContent>
                         <Title>Legal</Title>
-                        <Links href='/'>Privacy policy</Links>
-                        <Links href='/'>Terms and conditions</Links>
+                        <Links href='/dev-website/'>Privacy policy</Links>
+                        <Links href='/dev-website/'>Terms and conditions</Links>
                     </LinkContent>
                     <LinkContent>
                         <Title>Social</Title>

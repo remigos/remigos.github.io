@@ -5,7 +5,7 @@ export const Container = styled.div`
     justify-content: space-around;
     width:100%;
     flex-direction: row;
-    padding: 100px 70px;
+    padding: 70px;
     background-color: #fff;
     align-items: center;
 

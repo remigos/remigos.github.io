@@ -2,7 +2,7 @@ import React from 'react'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import GlobalStyle from './globalStyles'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import Home from './pages/HomePage/Home'
 import {Footer} from './components'
 import Navbar from './components/Layout/Navbar/Navbar'
@@ -20,11 +20,14 @@ function App() {
         <Navbar />
         <ScrollToTop/>
         <Switch>
-          <Route path='/' exact component={Home}/>
-          <Route path='/realtors' exact component={Realtors}/>
-          <Route path='/buyers' exact component={Buyers}/>
-          <Route path='/about-us' exact component={About}/>
-          <Route path='/contact-us' exact component={ContactUs}/>
+          <Route exact path="/">
+            <Redirect to="/dev-website" />
+          </Route>
+          <Route path='/dev-website' exact component={Home}/>
+          <Route path='/dev-website/realtors' exact component={Realtors}/>
+          <Route path='/dev-website/buyers' exact component={Buyers}/>
+          <Route path='/dev-website/about-us' exact component={About}/>
+          <Route path='/dev-website/contact-us' exact component={ContactUs}/>
         </Switch>
         <Footer/>
     </Router>

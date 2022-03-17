@@ -30,7 +30,7 @@ const Navbar = () => {
                   exact
                   activeClassName="navbar__link--active"
                   className="navbar__link"
-                  to="/"
+                  to="/dev-website"
                   onClick={closeMenu}
                 >
                 <p>Home</p>
@@ -41,7 +41,7 @@ const Navbar = () => {
                 <NavLink
                   className="navbar__link"
                   activeClassName="navbar__link--active"
-                  to="/realtors"
+                  to="/dev-website/realtors"
                   onClick={closeMenu}
                 >
                     <p>
@@ -53,7 +53,7 @@ const Navbar = () => {
                 <NavLink
                   activeClassName="navbar__link--active"
                   className="navbar__link"
-                  to="/buyers"
+                  to="/dev-website/buyers"
                 >
                     <p>
                         Buyers
@@ -64,7 +64,7 @@ const Navbar = () => {
                 <NavLink
                 activeClassName="navbar__link--active"
                 className="navbar__link"
-                to="/about-us"
+                to="/dev-website/about-us"
               >
               <p>
               About
