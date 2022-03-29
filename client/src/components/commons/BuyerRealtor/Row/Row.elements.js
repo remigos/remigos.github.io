@@ -4,6 +4,7 @@ import styled from 'styled-components'
 export const LeftContent = styled.div`
     width: 30%;
     max-width:700px;
+    margin: 0px 20px;
 
     @media screen and (max-width:960px){
         width: 100%;
@@ -20,15 +21,26 @@ export const BottomContent = styled.div`
         padding: 0;
     }
 `
+export const Image = styled.img`
+      position:absolute;
+      z-index: 2;
+      width:100%;
+      max-width:450px;
+      margin: auto;
+      @media screen and (max-width:960px) {
+        width: 100%;
+        max-width: 280px;
+      }
+`
 
 export const RightContent = styled.div`
     display: flex;
-    width: 70%;
-    max-width:700px;
+    width: 30%;
+    max-width:500px;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 20px 0px;
-
+    padding: 20px 10px;
+    margin: 0px 150px;
     @media screen and (max-width:960px) {
         justify-content:flex-start;
         width: 100%;
@@ -44,11 +56,6 @@ export const ImageContainer = styled.div`
     align-items: center;
     justify-content: center;
     width:100%;
-`
-export const Image = styled.img`
-      position:relative;
-      width:100%;
-      max-width: 650px;
 `
 
 export const Button = styled.button`

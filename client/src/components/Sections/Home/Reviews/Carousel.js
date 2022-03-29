@@ -67,7 +67,7 @@ export default class PreviousNextMethods extends Component {
       prevArrow: <SamplePrevArrow />
     };
     return (
-      <div>
+      <div style={{justifyContent: 'center', alignItems: 'center', paddingTop:'4%'}}>
       <div className='top_content'> 
           <h2 className="title">What our customer say</h2>
           <div style={{ textAlign: "center" }}>

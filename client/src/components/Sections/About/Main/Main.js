@@ -1,13 +1,11 @@
 import React from 'react'
-import { Container, Background, Image } from './Main.elements'
-import Bg from '../../../../assets/Realtors/bgRealtor.png'
-import MsgRealtor from '../../../../assets/Realtors/MessageRealtor.png'
+import { Container, Image } from './Main.elements'
+import people from '../../../../assets/About/main.png'
 
 const Main = () => {
     return (
-        <Container>
-            <Background src={Bg} alt="bg"/>
-            <Image src={MsgRealtor} alt="image"/>
+        <Container style={{padding:"70px"}}>
+            <Image src={people} alt="image"/>
         </Container>
     )
 }

@@ -43,6 +43,8 @@ export const BottomContainer = styled.div`
     flex-direction: row;
     padding: 20px 20px;
     width:100%;
+    min-height: 300px;
+
     @media screen and (max-width:960px) {
         padding:100px 0px;
     }
@@ -55,7 +57,7 @@ export const BottomContainer = styled.div`
 export const Card = styled.div`
     width: 100%;
     max-width:400px;
-    max-height: 352px;
+    min-height: 352px;
     flex-direction: column;
     margin: 0px 40px;
     display: block;

@@ -13,7 +13,7 @@ export const headerAnimation = {
     show: { x: 0 },
   };
   export const revealReverse = {
-    hidden: { x: 700 },
+    hidden: { x: 100 },
     show: { x: 0 },
   };
   

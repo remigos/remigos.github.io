@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, TopContainer, BottomContainer, Title, Subtitle, Card, Icon, Text, CardsContainer} from './InfoThree.elements'
+import { Container, TopContainer, BottomContainer, Title, Subtitle, Card, Icon, Icon1, Text, CardsContainer} from './InfoThree.elements'
 import Focus from '../../../../assets/Icon/Focus.png'
 import Light from '../../../../assets/Icon/Light.png'
 import LightHome from '../../../../assets/Icon/LightHome.png'
@@ -14,7 +14,7 @@ const InfoThree = () => {
             <BottomContainer>
                 <CardsContainer>       
                 <Card>
-                    <Icon src={Focus} alt="home"/>
+                    <Icon1 src={Focus} alt="home"/>
                     <Subtitle>Service focused</Subtitle>
                     <Text>Remigo is all about bringing parties together into a more organized and effective way. We strive to provide the best service to our clients so that in turn, they can provide the best service to theirs. Good service builds a bond.</Text>
                 </Card>

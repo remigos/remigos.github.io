@@ -45,6 +45,7 @@ const Benefits = () => {
                     <Subtitle>Enjoy real estate shopping </Subtitle>
                     <Text>It’s the biggest purchase of your life and you should enjoy the whole process. Remigo offers better organization, easier feedback and a single platform for all of the communication.</Text>
                 </Card>
+                <Card></Card>
                 </CardsContainer> 
                <SimpleSlider />
                </BottomContainer> 

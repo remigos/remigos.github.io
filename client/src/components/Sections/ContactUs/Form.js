@@ -12,6 +12,7 @@ const Message  = () => {
     const [brokerage,setBrokerage] = useState("")
     const [message,setMessage] = useState("")
     const [subject,setSubject] = useState("general")
+    const [userType, setUserType] = useState("")
    
     const PostData = ()=>{
         fetch("/send",{
@@ -26,7 +27,8 @@ const Message  = () => {
                 brokerage,
                 email,
                 subject,
-                message
+                message,
+                userType
             })
         }).then(res=>res.json())
         .then(data=>{
@@ -37,6 +39,7 @@ const Message  = () => {
             setEmail('')
             setPhonenumber('')
             setBrokerage('')
+            setUserType('')
         }).catch(err=>{
 
         })
@@ -89,6 +92,10 @@ const Message  = () => {
         placeholder="Comment"
         value={message}
         onChange={(e)=>setMessage(e.target.value)}/>
+        <div style={{display: subject === 'request MLS' ? 'flex' : 'none', flexDirection: 'column'}}>
+          <FormControlLabel value='REALTOR' onChange={(e)=> setUserType(e.target.value)} control={<Radio />} label="I am a REALTOR" />
+          <FormControlLabel value="Buyer" onChange={(e)=> setUserType(e.target.value)} control={<Radio />} label="I am a home buyer" />
+        </div>
         </ColumnContainer>
         <Button onClick={() => PostData()}>Send</Button>
      </Container>

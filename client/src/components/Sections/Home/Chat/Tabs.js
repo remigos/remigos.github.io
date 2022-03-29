@@ -9,7 +9,9 @@ import chatIcon from '../../../../assets/Icon/Chat.png'
 import shareIcon from '../../../../assets/Icon/Vector.png'
 import shapeIcon from '../../../../assets/Icon/Shape.png'
 import { Icon, LeftPanel, RightPanel, Title, Text, Button, Image } from './Chat.elements'
+import ShareView from '../../../../assets/Home/ShareView.png'
 import ChatView from '../../../../assets/Home/ChatView.png'
+import FeedbackView from '../../../../assets/Home/FeedbackView.png'
 
 const Tab = styled(TabUnstyled)`
   font-family: 'Poppins', sans-serif;
@@ -116,7 +118,7 @@ export default function UnstyledTabsCustomized() {
                 </Button>
             </LeftPanel>
             <RightPanel>
-                <Image src={ChatView} alt="chat-view"/>
+                <Image src={ShareView} alt="chat-view"/>
             </RightPanel>      
       </TabPanel>
       <TabPanel value={2}>
@@ -132,7 +134,7 @@ export default function UnstyledTabsCustomized() {
                 </Button>
             </LeftPanel>
             <RightPanel>
-                <Image src={ChatView} alt="chat-view"/>
+                <Image src={FeedbackView} alt="chat-view"/>
             </RightPanel>      
       </TabPanel>
     </TabsUnstyled>

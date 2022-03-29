@@ -30,6 +30,7 @@
     border-radius: 50px;
     border: 1px solid #111826;
     margin-right: 8px;
+    cursor: pointer;
 }
 .arrow-btn {
   top: 45%;
@@ -41,8 +42,8 @@
 .carousel {
   width: 100%;
   justify-content: space-between;
-  padding: 10px 70px;
   align-items: center;
+  padding: 70px;
 }
 
 .dots {
@@ -62,6 +63,7 @@
   height: 4px;
   width: 48px;
   border-radius: 32px;
+  margin-top: 40px;
 }
 .dots li {
   list-style: none;
@@ -150,7 +152,7 @@
   }
   .carousel {
     justify-content: center;
-    padding: 10px 10%;
+    padding: 10px 20px;
     width:100%;
   }
 }

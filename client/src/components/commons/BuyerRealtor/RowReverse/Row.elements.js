@@ -19,7 +19,7 @@ export const BottomContent = styled.div`
 `
 export const LeftContent = styled.div`
     width: 100%;
-    max-width:700px;
+    max-width:500px;
     padding: 20px 0px;
     justify-content:flex-start;
     align-items: center;

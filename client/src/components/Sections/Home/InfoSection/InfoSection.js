@@ -1,31 +1,45 @@
 import React from 'react'
 import { Container } from '../../../../globalStyles'
-import { RightContent, Image, ImageContainer, BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
-import {motion} from 'framer-motion'
-import {headerAnimation, imageAnimation} from '../../../../utils/Animation'
-import {useScroll} from '../../../useScroll.jsx'
-import { Button, Title, Text, LeftContent } from './InfoSection.elements'
+import { RightContent, BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
+import { Button, Title, Text, LeftContent,BackgroundImage,Image2,Image1,Image3,Content,ImageContainer } from './InfoSection.elements'
+import msg from '../../../../assets/Home/ChatBox.png'
+import cards from '../../../../assets/Home/Card.png'
+import msgBuyer from '../../../../assets/Home/ChatBoxBuyer.png'
+import Fade from 'react-reveal/Fade';
+
 const InfoSection = ({lightBg, imgStart, lightText,lightTextDesc, description,headline, start, img, alt}) => {
 
-    const [element, controls] = useScroll();
     return (
-        <Container ref={element} style={{paddingTop:'50px'}}>
+        <Container>
+            <Content>
             <BottomContent>
                 <LeftContent>
-                <motion.div animate={controls} variants={headerAnimation} transition={{ease: "easeOut", delay:0.2, stiffness:300}}> 
+                    <Fade left delay={300}>
                     <Title>Elevate Home Shopping Through A Single Platform</Title>
+                    </Fade>
+                    <Fade left delay={600}>
                     <Text>Share properties and feedback both ways in a purpose built real estate solution.</Text>
-                    <Button onClick={()=> window.open("https://app.remigo.com/", "_blank")}>Start your trial</Button>
-                    </motion.div>
+                    </Fade>
+                    <Fade left delay={900}>
+                    <Button onClick={()=> window.open("https://app.remigo.com/onboarding", "_blank")}>Start your trial</Button>
+                    </Fade>
                 </LeftContent>
-            <motion.div animate={controls} variants={imageAnimation} transition={{ease: "easeOut", delay:0.4, stiffness:300}}> 
                 <RightContent>
-                <ImageContainer>
-                    <Image src={img} alt="img"/>
-                </ImageContainer>   
+                    <ImageContainer>
+                    <BackgroundImage src={img} alt="Bg"/>
+                    <Fade left delay={300}>
+                    <Image1 src={msg} alt="Img"/>
+                    </Fade>
+                    <Fade right delay={700}>
+                    <Image2 src={cards} alt="Img"/>
+                    </Fade>
+                    <Fade top delay={1200}>
+                    <Image3 src={msgBuyer} alt="Img"/>
+                    </Fade>
+                    </ImageContainer>
                  </RightContent>
-            </motion.div>
             </BottomContent>
+            </Content>
         </Container>
     )
 }

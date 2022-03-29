@@ -6,7 +6,7 @@ export const Container = styled.div`
     justify-content: center;
     flex-direction: row;
     align-items: space-between;
-    padding: 70px 40px;
+    padding: 20px 40px;
     @media screen and (max-width:960px) {
         padding: 0;
         background-color: #FFF1F7;
@@ -16,14 +16,14 @@ export const Container = styled.div`
 export const Box = styled.div`
     background-color: #FFF1F7;
     width:100%;
-    padding: 100px 30px;
+    padding: 10px 30px;
     justify-content: space-between;
     align-items: center;
     border-radius: 30px;
     flex-direction: row;
     display:flex;
     max-width:2000px;
-
+    min-height:650px;
     @media screen and (max-width:960px) {
         border-radius: 0;
     }
@@ -71,6 +71,7 @@ export const Button = styled.button`
     font-weight:600;
     border:none;
     font-size:16px;
+    cursor: pointer;
     :hover {
         background-color:transparent;
         color:#FF0A74;

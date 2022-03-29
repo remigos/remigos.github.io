@@ -1,5 +1,5 @@
 import React from 'react'
-import InfoOne from '../../../../assets/Realtors/InfoOne.png'
+import yellow from '../../../../assets/About/yellow.png'
 import { Container, Subtitle, Text } from '../../../../globalStyles'
 import {LeftContent, RightContent, Image, ImageContainer, BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
 const InfoTwo = () => {
@@ -13,7 +13,7 @@ const InfoTwo = () => {
                 </LeftContent>
                 <RightContent>
                 <ImageContainer>
-                    <Image src={InfoOne} alt="img"/>
+                    <Image src={yellow} alt="img" style={{maxWidth: "450px", marginLeft: "100px",}}/>
                 </ImageContainer>   
                  </RightContent>
             </BottomContent>

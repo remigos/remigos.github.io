@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     width:100%;
-    padding: 70px 40px;
+    padding: 30px 40px;
     justify-content: center;
 
     @media screen and (max-width:960px) {
@@ -20,7 +20,7 @@ export const Box = styled.div`
     border-radius:30px;
     justify-content: center;
     max-width:2000px;
-
+    min-height:670px;
     @media screen and (max-width:960px) {
         border-radius:0;
         padding: 30px 30px;
@@ -52,7 +52,8 @@ export const LeftPanel = styled.div`
     justify-content: flex-start;
     flex-direction:column;
     padding:30px 0px;
-
+    display: flex;
+    height:auto;
     @media screen and (max-width:960px) {
         width:40%;
     }
@@ -111,6 +112,8 @@ export const RightPanel = styled.div`
     width:60%;
     justify-content:center;
     align-items:center;
+    display: flex;
+    margin-top:-70px;
     @media screen and (max-width:960px) {
         width: 100%;
         margin-top: 0;
@@ -121,7 +124,8 @@ export const RightPanel = styled.div`
 
 export const Image = styled.img`
     width:100%;
-    max-width:700px;
+    min-width:700px;
     @media screen and (max-width:960px) {
+        min-width:200px;
     }
 `

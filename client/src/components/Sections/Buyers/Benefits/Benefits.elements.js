@@ -55,7 +55,7 @@ export const BottomContainer = styled.div`
 export const Card = styled.div`
     width: 100%;
     max-width:400px;
-    max-height: 352px;
+    min-height: 352px;
     flex-direction: column;
     margin: 0px 40px;
     display: block;

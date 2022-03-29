@@ -1,9 +1,9 @@
 import React from 'react'
 import logo from '../../../assets/FooterLogo.png'
 import {Container,FooterTop,Image, LinkContent, Title, Links, FooterBottom,LinkContainer, Text, IconContent, IconImg, Icon} from './Footer.elements'
-import Twitter from '../../../assets/Icon/Twitter.png';
 import Youtube from '../../../assets/Icon/Youtube.png';
-import Instagram from '../../../assets/Icon/Instagram.png';
+import Fb from '../../../assets/Icon/Facebook.png';
+import In from '../../../assets/Icon/Linkedin.png';
 
 const Footer = () => {
     return (
@@ -13,7 +13,7 @@ const Footer = () => {
                 <LinkContainer>
                     <LinkContent>
                         <Title>Company</Title>
-                        <Links href='/dev-website'>About</Links>
+                        {/*<Links href='/dev-website'>About</Links>*/}
                         <Links href='/dev-website'>Support</Links>
                         <Links href='/dev-website'>FAQ</Links>
                         <Links href='/dev-website/contact-us'>Contact Us</Links>
@@ -26,11 +26,11 @@ const Footer = () => {
                     <LinkContent>
                         <Title>Social</Title>
                         <IconContent>
-                            <IconImg>
-                                <Icon src={Instagram} alt="Instagram"/>
+                            <IconImg onClick={()=> window.open('https://www.facebook.com/Remigo-105827138405830', '_blank')}>
+                                <Icon src={Fb} alt="Facebook"/>
                             </IconImg>
-                            <IconImg>
-                                <Icon src={Twitter} alt="Twitter"/>
+                            <IconImg onClick={()=> window.open('https://www.linkedin.com/company/remigo/', '_blank')}>
+                                <Icon src={In} alt="Linkedin"/>
                             </IconImg>
                             <IconImg>
                                 <Icon src={Youtube} alt="Youtube"/>

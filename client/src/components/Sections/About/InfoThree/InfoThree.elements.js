@@ -41,7 +41,6 @@ export const Title = styled.p`
 export const BottomContainer = styled.div`
     display: flex;
     flex-direction: row;
-    padding: 20px 20px;
     width:100%;
     @media screen and (max-width:960px) {
         padding:100px 0px;
@@ -55,7 +54,7 @@ export const BottomContainer = styled.div`
 export const Card = styled.div`
     width: 100%;
     max-width:400px;
-    max-height: 352px;
+    min-height: 360px;
     flex-direction: column;
     margin: 0px 40px;
     display: block;
@@ -72,12 +71,15 @@ export const Icon = styled.img`
     width: 70px;
     height:auto;
 `
-
+export const Icon1 = styled.img`
+    width: 80px;
+    height:auto;
+`
 export const Subtitle = styled.p`
     color:#111826;
     font-size: 20px;
     text-align: left;
-    padding: 25px 0px;
+    padding: 30px 0px;
     @media screen and (max-width:768px){
         padding: 10px 0px;
     }
@@ -100,6 +102,7 @@ export const CardsContainer = styled.div`
     width:100%;
     align-items:center;
     justify-content:center;
+    margin: 20px 0;
     @media screen and (max-width:600px){
         display:none;
     }

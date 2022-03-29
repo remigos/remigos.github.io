@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Subtitle, Text, TopContent, Title } from '../../../../globalStyles.js'
-import InfoOne from '../../../../assets/Realtors/InfoTwo.png'
+import InfoOne from '../../../../assets/About/Home.png'
 import {LeftContent, RightContent, Image, ImageContainer, BottomContent} from '../../../commons/BuyerRealtor/RowReverse/Row.elements'
 
 const InfoTwoRealtors = () => {
@@ -12,7 +12,7 @@ const InfoTwoRealtors = () => {
             <BottomContent>
                 <LeftContent>
                     <ImageContainer>   
-                        <Image src={InfoOne} alt="img"/>
+                        <Image src={InfoOne} alt="img" style={{maxWidth: "400px"}}/>
                     </ImageContainer>
                 </LeftContent>
                 <RightContent>
