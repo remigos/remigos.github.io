@@ -3,25 +3,45 @@ import styled from 'styled-components'
 export const Container = styled.div`
     width: 100%;
     display: flex;
-    padding: 0 0;
+    padding: 100px 0;
     justify-content: center;
     align-items:center;
+    min-height:100vh;
+    @media screen and (max-width:960px) {
+        min-height:30vh;
+        padding: 100px 20px;
+
+      }
+`
+export const ImageContainer = styled.div`
+    width:100%;
+    max-width:1100px;
+    justify-content: center;
+    align-items: center;
+    margin-left:80px;
+    @media screen and (max-width:960px) {
+        margin-left:0px;
+
+      }
 `
 
 export const Background = styled.img`
-    object-fit: cover;
     width: 100%;
     position: absolute;
     z-index: -1;
-    margin-bottom: 70px;
-
+    width:150px;
+    top:170px;
+    right:200px;
 `
 
 export const Image = styled.img`
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     height: auto;
     position: relative;
     z-index: 1;
     margin-bottom: 70px;
+    @media screen and (max-width:960px) {
+        width: 100%;
+      }
 `

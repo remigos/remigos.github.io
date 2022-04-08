@@ -16,7 +16,7 @@ export const Container = styled.div`
 export const Box = styled.div`
     background-color: #E5F7FD;
     width:100%;
-    margin: 20px 10px;
+    margin: 10px 20px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -31,7 +31,7 @@ export const Card = styled.div`
     background-color: transparent;
     display:flex;
     justify-content: space-between;
-    padding: 70px 50px;
+    padding: 40px 50px;
     flex-direction: row;
     width:90%;
     @media screen and (max-width:960px) {
@@ -53,6 +53,8 @@ export const LeftContainer = styled.div`
 
     @media screen and (max-width:960px) {
         width:100%;
+        margin: 0px 30px;
+
     }
 `
 
@@ -66,6 +68,10 @@ export const RightContainer = styled.div`
     @media screen and (max-width:960px) {
         width:100%;
         margin-bottom: 70px;
+    }
+    @media screen and (max-width:600px) {
+        margin-bottom: 70px;
+        margin-left: 30px;
     }
 `
 

@@ -9,12 +9,13 @@ export const Container = styled.div`
     flex-direction: column;
     border-radius: 6px;
     box-shadow: 0px 0px 20px 0px #dedede;
-    height: 750px;
-
+    height: auto;
+    margin-left: -40px;
     @media screen and (max-width:950px) {
         border-radius: none;
         box-shadow: none;
         max-width: 600px;
+        margin-left: 0px;
     }
 `
 export const ColumnContainer = styled.div`
@@ -45,6 +46,7 @@ export const Text = styled.p`
     font-weight: 300;
     line-height: 28px;
     color:#374150;
+    margin:20px 0px;
 `
 export const Button = styled.button`
     width: 100%;
@@ -78,15 +80,17 @@ export const TextField = styled.input`
     padding:10px;
     margin-bottom:10px;
     padding:0px 10px;
+    margin-top:10px;
 `
 export const TextFieldName = styled.input`
-    width:49%;
+    width:47%;
     height:60px;
     border:1px solid #E5E7EB;
     border-radius: 6px;
     padding:10px;
     margin-bottom:10px;
     padding:0px 10px;
+    margin-top:30px;
 `
 export const TextArea = styled.textarea`
     width:100%;

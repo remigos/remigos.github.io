@@ -1,21 +1,28 @@
 import React from 'react'
-import { Container, Subtitle, Text } from '../../../../globalStyles.js'
+import { Subtitle, Text } from '../../../../globalStyles.js'
 import InfoOne from '../../../../assets/Buyer/InfoFour.png'
-import {LeftContent, RightContent, Image, ImageContainer, BottomContent } from '../../../commons/BuyerRealtor/RowReverse/Row.elements'
-
+import { BottomContent } from '../../../commons/BuyerRealtor/RowReverse/Row.elements'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage } from './InfoFour.elements'
+import Fade from 'react-reveal'
 const InfoFourRealtors = () => {
     return (
         <Container>
             <BottomContent>
-                <LeftContent>
-                    <ImageContainer>   
-                        <Image src={InfoOne} alt="img"/>
+                <LeftContainer>
+                    <ImageContainer>
+                        <Fade left>   
+                            <BackgroundImage src={InfoOne} alt="img"/>
+                        </Fade>
                     </ImageContainer>
-                </LeftContent>
-                <RightContent>
-                    <Subtitle>Home Feedback Made Easy</Subtitle>
-                    <Text>The more you engage and provide feedback, the faster the home shopping journey goes. Consistent insights into needs and wants in a new home can make all the difference and with the power of Remigo it’s quick and easy.</Text>
-              </RightContent>
+                </LeftContainer>
+                <RightContainer>
+                    <Fade right>
+                        <Subtitle>Home Feedback Made Easy</Subtitle>
+                    </Fade>
+                    <Fade right delay={300}>
+                        <Text>The more you engage and provide feedback, the faster the home shopping journey goes. Consistent insights into needs and wants in a new home can make all the difference and with the power of Remigo it’s quick and easy.</Text>
+                    </Fade>
+              </RightContainer>
             </BottomContent>
         </Container>
     )

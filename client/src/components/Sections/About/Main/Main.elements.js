@@ -6,6 +6,7 @@ export const Container = styled.div`
     padding: 0 0;
     justify-content: center;
     align-items:center;
+    
 `
 
 export const Background = styled.img`

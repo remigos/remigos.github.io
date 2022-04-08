@@ -19,9 +19,7 @@ export const Container = styled.div`
 `
 export const LeftContainer = styled.div`
     width: 70%;
-    max-width:850px;
-    display: flex;
-    margin-right:200px;
+    margin-right:100px;
 
     @media screen and (max-width:960px){
         width: 100%;
@@ -68,11 +66,10 @@ export const BackgroundImage = styled.img`
 export const Image = styled.img`
       position:absolute;
       z-index: 2;
-      width:70%;
-      max-width:550px;
-      margin: auto;
-      left:70px;
-      top:70px;
+      width:100%;
+      max-width:500px;
+      left:40px;
+      top:40px;
       @media screen and (max-width:960px) {
         width: 100%;
         min-width: 280px;
@@ -88,13 +85,19 @@ export const Image1 = styled.img`
       position:absolute;
       z-index: 4;
       width:100%;
-      width:300px;
-      top:-70px;
+      width:200px;
+      top:-100px;
       left:0px;
       align-items: left;
       @media screen and (max-width:960px) {
         width: 100%;
         max-width:250px;
+        top:-50px;
+      }
+
+      @media screen and (max-width:550px) {
+        width: 100%;
+        max-width:150px;
         top:-50px;
       }
 
@@ -105,16 +108,16 @@ export const Image2 = styled.img`
       width:100%;
       max-width:200px;
       top:230px;
-      right:100px;
-      align-items: right;
+      right:0px;
       @media screen and (max-width:1200px) {
         width: 100%;
         top:250px;
         right:0px;
       }
       @media screen and (max-width:768px){
-            right:200px;
-            width:150px;
+            width:120px;
+            right:60px;
+            margin-top:-100px;
       }
 `
 export const RightContainer = styled.div`

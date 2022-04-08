@@ -1,13 +1,18 @@
 import React from 'react'
-import { Container, Background, Image } from './Main.elements'
-import Bg from '../../../../assets/Realtors/bgRealtor.png'
-import MsgRealtor from '../../../../assets/Realtors/MessageRealtor.png'
+import { Container, Background, Image, ImageContainer } from './Main.elements'
+import circle from '../../../../assets/Buyer/circleBg.png'
+import bg from '../../../../assets/Buyer/Bg.png'
+import Fade from 'react-reveal'
 
 const Main = () => {
     return (
         <Container>
-            <Background src={Bg} alt="bg"/>
-            <Image src={MsgRealtor} alt="image"/>
+            <ImageContainer>
+                <Fade bottom cascade>
+                    <Background src={circle} alt="bg"/>
+                    <Image src={bg} alt="image"/>
+                </Fade>
+            </ImageContainer>
         </Container>
     )
 }

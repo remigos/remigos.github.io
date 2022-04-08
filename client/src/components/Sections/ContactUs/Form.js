@@ -4,7 +4,26 @@ import { Title } from '../../../globalStyles'
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-const Message  = () => { 
+import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles'
+
+const Message  = () => {
+  
+    const theme = createMuiTheme({
+      typography: {
+        fontFamily: [
+          'Poppins',
+          'sans-serif'
+        ].join(','),
+      },
+      palette: {
+        primary: {
+          main: '#00aeff',
+        },
+
+      },
+    })
+
+
     const [firstname,setFirstName] = useState("")
     const [lastname,setLastName] = useState("")
     const [email,setEmail] = useState("")
@@ -44,8 +63,10 @@ const Message  = () => {
 
         })
     }
+
    return (
-     <>
+     
+     <ThemeProvider theme={theme}>
      <Container>
         <Title>Contact Us</Title>
         <Text>Have an inquiry or some feedback for us? Fill out the from below to contact out team.</Text>
@@ -55,8 +76,8 @@ const Message  = () => {
         name="row-radio-buttons-group"
         defaultValue="general"
       >
-        <FormControlLabel value='general' onChange={(e)=> setSubject(e.target.value)} control={<Radio />} label="General" />
-        <FormControlLabel value="request MLS" onChange={(e)=> setSubject(e.target.value)} control={<Radio />} label="Request MLS" />
+        <FormControlLabel value='general' onChange={(e)=> setSubject(e.target.value)} control={<Radio color='primary'/>} label="General" />
+        <FormControlLabel value="request MLS" onChange={(e)=> setSubject(e.target.value)} control={<Radio color='primary'/>} label="Request MLS" />
       </RadioGroup>
         <NameContainer>
           <TextFieldName
@@ -93,13 +114,20 @@ const Message  = () => {
         value={message}
         onChange={(e)=>setMessage(e.target.value)}/>
         <div style={{display: subject === 'request MLS' ? 'flex' : 'none', flexDirection: 'column'}}>
-          <FormControlLabel value='REALTOR' onChange={(e)=> setUserType(e.target.value)} control={<Radio />} label="I am a REALTOR" />
-          <FormControlLabel value="Buyer" onChange={(e)=> setUserType(e.target.value)} control={<Radio />} label="I am a home buyer" />
+        <RadioGroup
+        column
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        defaultValue="general"
+      >
+          <FormControlLabel value='REALTOR' onChange={(e)=> setUserType(e.target.value)} control={<Radio color='primary'/>} label="I am a REALTOR" />
+          <FormControlLabel value="Buyer" onChange={(e)=> setUserType(e.target.value)} control={<Radio color='primary'/>} label="I am a home buyer" />
+          </RadioGroup>
         </div>
         </ColumnContainer>
         <Button onClick={() => PostData()}>Send</Button>
      </Container>
-     </>
+     </ThemeProvider>
    )
 }
 

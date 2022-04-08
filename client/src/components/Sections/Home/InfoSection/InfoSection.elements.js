@@ -112,6 +112,7 @@ export const Image1 = styled.img`
       @media screen and (max-width:768px){
           width:200px;
           top:-300px;
+          margin-left:80px;
       }
 `
 export const Image2 = styled.img`

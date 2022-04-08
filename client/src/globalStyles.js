@@ -28,9 +28,10 @@ export const TopContent = styled.div`
     display: flex;
     align-items:center;
     justify-content: center;
-    padding: 30px 0;
+    padding: 0 0 90px 0;
     width:100%;
-
+    max-width:1050px;
+    margin-top:-150px;
 `
 
 export const Title = styled.p`

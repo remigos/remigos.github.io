@@ -1,7 +1,9 @@
 import React from 'react'
 import InfoOne from '../../../../assets/Buyer/InfoOne.png'
-import { Container, TopContent, Title, Subtitle, Text } from '../../../../globalStyles'
-import {LeftContent, RightContent, Image, ImageContainer, BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
+import { TopContent, Subtitle, Text } from '../../../../globalStyles'
+import { BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Title } from './InfoOne.elements'
+import Fade from 'react-reveal'
 const InfoOneRealtors = () => {
     return (
         <Container>
@@ -9,15 +11,21 @@ const InfoOneRealtors = () => {
                 <Title>How the app works for clients</Title>
             </TopContent>
             <BottomContent>
-                <LeftContent>
+                <LeftContainer>
+                    <Fade left>
                     <Subtitle>Better Home Shopping</Subtitle>
+                    </Fade>
+                    <Fade left delay={200}>
                     <Text>Experience a better way to shop and discuss homes with your realtor with Remigo. Remigo lets you chat, save, favorite and rate specific homes with your realtor right on the property page itself.</Text>
-                </LeftContent>
-                <RightContent>
+                    </Fade>
+                </LeftContainer>
+                <RightContainer>
                 <ImageContainer>
-                    <Image src={InfoOne} alt="img"/>
+                    <Fade right>
+                        <BackgroundImage src={InfoOne} alt="img"/>
+                    </Fade>
                 </ImageContainer>   
-                 </RightContent>
+                 </RightContainer>
             </BottomContent>
         </Container>
     )

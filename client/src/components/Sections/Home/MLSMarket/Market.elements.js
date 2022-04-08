@@ -53,11 +53,21 @@ export const Title = styled.p`
     font-size: 48px;
     line-height: 60px;
     text-align: left;
-    padding: 30px 0;
     font-weight: 400;
     @media screen and (max-width:768px) {
         font-size: 30px;
         line-height: 40px;
+    }
+`
+export const Text = styled.p`
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    margin: 30px 0px;
+    font-weight: 300;
+    @media screen and (max-width:768px) {
+        font-size: 16px;
+        line-height: 24px;
     }
 `
 export const Button = styled.button`

@@ -1,21 +1,29 @@
 import React from 'react'
 import InfoOne from '../../../../assets/Buyer/InfoThree.png'
-import { Container, Subtitle, Text } from '../../../../globalStyles'
-import {LeftContent, RightContent, Image, ImageContainer, BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
+import { Subtitle, Text } from '../../../../globalStyles'
+import { BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage } from './InfoThree.elements'
+import Fade from 'react-reveal'
 
 const InfoThreeRealtors = () => {
     return (
         <Container>
             <BottomContent>
-                <LeftContent>
-                    <Subtitle>Search Anywhere, One Conversation</Subtitle>
-                    <Text>Pull listings into Remigo effortlessly just by pasting a link in the chat. Remigo will search the connected data feed for matching listings or create a new custom listing. Find a property on any website and bring it into the conversation with a few button clicks.</Text>
-                </LeftContent>
-                <RightContent>
+                <LeftContainer>
+                    <Fade left>
+                        <Subtitle>Search Anywhere, One Conversation</Subtitle>
+                    </Fade>
+                    <Fade left delay={300}>
+                        <Text>Pull listings into Remigo effortlessly just by pasting a link in the chat. Remigo will search the connected data feed for matching listings or create a new custom listing. Find a property on any website and bring it into the conversation with a few button clicks.</Text>
+                    </Fade>
+                </LeftContainer>
+                <RightContainer>
                 <ImageContainer>
-                    <Image src={InfoOne} alt="img"/>
+                    <Fade right>
+                    <BackgroundImage src={InfoOne} alt="img"/>
+                    </Fade>
                 </ImageContainer>   
-                 </RightContent>
+                 </RightContainer>
             </BottomContent>
         </Container>
     )

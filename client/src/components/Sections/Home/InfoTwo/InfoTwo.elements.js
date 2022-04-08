@@ -14,12 +14,17 @@ export const Container = styled.div`
         padding: 100px 70px 80px 70px;
         justify-content: center;
     }
+    @media screen and (max-width: 600px) {
+        padding:80px 10px;
+        justify-content: center;
+
+    }
 `
 export const RightContainer = styled.div`
   display: flex;
 
     @media screen and (max-width:960px){
-        max-width:100%;
+        width:100%;
     }
 `
 
@@ -80,6 +85,7 @@ export const LeftContainer = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px 0px;
+    margin-left:20px;
 
     @media screen and (max-width:960px) {
         justify-content:flex-start;

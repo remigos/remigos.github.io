@@ -46,6 +46,9 @@ export const RightContent = styled.div`
         width: 100%;
         margin-right: 40px;
     }
+    @media screen and (max-width:600px) {
+        margin-right: 100px;
+    }
 
     @media screen and (max-width:768px) {
         padding: 0px 0px;
@@ -58,24 +61,3 @@ export const ImageContainer = styled.div`
     width:100%;
 `
 
-export const Button = styled.button`
-    width:100%;
-    max-width: 396px;
-    height: 48px;
-    background-color:#E5F7FD;
-    border-radius:6px;
-    border:none;
-    align-items:center;
-    justify-content:center;
-    color:#00AEEF;
-    font-weight: 600;
-    cursor: pointer;
-    margin-bottom:50px;
-    :focus {
-        background-color: #fff;
-        border: 2px solid #00AEEF;
-    }
-
-    @media screen and (max-width:960px) {
-    }
-`
