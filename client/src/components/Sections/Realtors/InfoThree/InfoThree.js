@@ -1,6 +1,6 @@
 import React from 'react'
 import { Subtitle, Text } from '../../../../globalStyles'
-import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Image, Image1 } from './InfoThree.elements'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Image, Image1, Content } from './InfoThree.elements'
 import bg from '../../../../assets/Realtors/bg3.png'
 import view from '../../../../assets/Realtors/ShopView.png'
 import clients from '../../../../assets/Realtors/Clients.png'
@@ -9,6 +9,7 @@ import Fade from 'react-reveal/Fade';
 const InfoThreeRealtors = () => {
     return (
         <Container>
+            <Content>
                 <LeftContainer>
                     <Fade left>
                         <Subtitle>Effortless Organization</Subtitle>
@@ -26,6 +27,7 @@ const InfoThreeRealtors = () => {
                         </Fade>
                     </ImageContainer>   
                  </RightContainer>
+            </Content>
         </Container>
     )
 }

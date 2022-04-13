@@ -18,7 +18,6 @@ export const ImageContainer = styled.div`
     max-width:1100px;
     justify-content: center;
     align-items: center;
-    margin-left:80px;
     @media screen and (max-width:960px) {
         margin-left:0px;
 
@@ -30,13 +29,13 @@ export const Background = styled.img`
     position: absolute;
     z-index: -1;
     width:150px;
-    top:170px;
+    top:100px;
     right:200px;
 `
 
 export const Image = styled.img`
     width: 100%;
-    max-width: 1000px;
+    max-width: 2000px;
     height: auto;
     position: relative;
     z-index: 1;

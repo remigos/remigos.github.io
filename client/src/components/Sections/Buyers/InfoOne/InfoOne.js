@@ -2,7 +2,7 @@ import React from 'react'
 import InfoOne from '../../../../assets/Buyer/InfoOne.png'
 import { TopContent, Subtitle, Text } from '../../../../globalStyles'
 import { BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
-import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Title } from './InfoOne.elements'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Title, Content } from './InfoOne.elements'
 import Fade from 'react-reveal'
 const InfoOneRealtors = () => {
     return (
@@ -10,6 +10,7 @@ const InfoOneRealtors = () => {
             <TopContent>
                 <Title>How the app works for clients</Title>
             </TopContent>
+            <Content>
             <BottomContent>
                 <LeftContainer>
                     <Fade left>
@@ -27,6 +28,7 @@ const InfoOneRealtors = () => {
                 </ImageContainer>   
                  </RightContainer>
             </BottomContent>
+            </Content>
         </Container>
     )
 }

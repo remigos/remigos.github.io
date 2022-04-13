@@ -2,11 +2,12 @@ import React from 'react'
 import { Subtitle, Text } from '../../../../globalStyles.js'
 import InfoOne from '../../../../assets/Buyer/InfoTwo.png'
 import { BottomContent } from '../../../commons/BuyerRealtor/RowReverse/Row.elements'
-import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage } from './InfoTwo.elements'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Content } from './InfoTwo.elements'
 import Fade from 'react-reveal'
 const InfoTwoRealtors = () => {
     return (
         <Container>
+            <Content>
             <BottomContent>
                 <LeftContainer>
                     <ImageContainer>
@@ -24,6 +25,7 @@ const InfoTwoRealtors = () => {
                     </Fade>
               </RightContainer>
             </BottomContent>
+            </Content>
         </Container>
     )
 }

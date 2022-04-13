@@ -7,7 +7,7 @@ export const Container = styled.div`
     flex-direction: column;
     padding: 20px 40px;
     background-color: #fff;
-    align-items: center;
+    align-items: center;    
     @media screen and (max-width:960px) {
         flex-direction: column;
         padding: 100px 70px 80px 70px;
@@ -72,10 +72,12 @@ export const Content = styled.div`
     width:100%;
     display: flex;
     justify-content: space-between;
+
     @media screen and (max-width:960px) {
         flex-direction: column-reverse;
         justify-content: center;
     }
+
 `
 export const LeftContainer = styled.div`
     display: flex;
@@ -126,5 +128,9 @@ export const BottomContent = styled.div`
     @media screen and (max-width:960px) {
         flex-direction: column;
         padding: 0;
+    }
+
+    @media screen and (min-width:2400px) {
+        justify-content: center;
     }
 `

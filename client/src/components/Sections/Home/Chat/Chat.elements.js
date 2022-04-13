@@ -35,17 +35,6 @@ export const PanelContainer = styled.div`
     justify-content: center;
 `
 
-
-export const Icon = styled.img`
-    width:13px;
-    height:13px;
-    margin-right:7px;
-
-    :hover {
-        color: white;
-    }
-`
-
 export const LeftPanel = styled.div`
     width:25%;
     align-items: center
@@ -93,6 +82,7 @@ export const Button = styled.button`
     font-weight:600;
     border:none;
     font-size:16px;
+    cursor:pointer;
     :hover {
         background-color:transparent;
         color:#00AEEF;
@@ -124,7 +114,7 @@ export const RightPanel = styled.div`
 
 export const Image = styled.img`
     width:100%;
-    min-width:700px;
+    max-width:800px;
     @media screen and (max-width:960px) {
         min-width:200px;
     }

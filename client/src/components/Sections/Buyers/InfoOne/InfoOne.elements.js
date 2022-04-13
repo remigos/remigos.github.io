@@ -83,7 +83,6 @@ export const LeftContainer = styled.div`
     width: 100%;
     max-width:450px;
     flex-direction: column;
-    justify-content: flex-start;
     padding: 20px 40px;
 
     @media screen and (max-width:960px) {
@@ -124,7 +123,7 @@ export const BottomContent = styled.div`
     display: flex;
     width:100%;
     align-items:center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     @media screen and (max-width:960px) {
         flex-direction: column-reverse;

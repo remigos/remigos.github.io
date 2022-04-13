@@ -58,6 +58,7 @@ export const Button = styled.button`
     font-weight: 600;
     border:none;
     border-radius: 6px;
+    margin-top: 20px;
     cursor:pointer;
 
     :hover {
@@ -98,6 +99,7 @@ export const TextArea = styled.textarea`
     border:1px solid #E5E7EB;
     border-radius: 6px;
     padding:10px;
-    margin-bottom:10px;
+    margin-bottom:20px;
+    margin-top:10px;
 
 `

@@ -7,7 +7,6 @@ export const Container = styled.div`
     width:100%;
     padding:100px 20px;
     flex-direction:column;
-
     @media screen and (max-width:960px) {
         padding: 100px 0px;
     }
@@ -99,10 +98,20 @@ export const CardsContainer = styled.div`
     display:flex;
     width:100%;
     align-items:center;
-    justify-content:flex-start;
+    justify-content:center;
     margin-bottom: 50px;
     @media screen and (max-width:600px){
         display:none;
     }
 
 ` 
+export const Content = styled.div`
+    max-width: 1800px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width:960px) {
+        flex-direction: column;
+        justify-content: center;
+    }
+`

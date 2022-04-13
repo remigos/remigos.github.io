@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, TopContainer, Title, Subtitle, Card, Icon, Text, CardsContainer, BottomContainer} from './Benefits.elements'
+import { Container, TopContainer, Title, Subtitle, Card, Icon, Text, CardsContainer, BottomContainer, Content} from './Benefits.elements'
 import Com from '../../../../assets/Icon/communication.png'
 import HomeSearch from '../../../../assets/Icon/HomeSearch.png'
 import HomeList from '../../../../assets/Icon/HomeList.png'
@@ -16,6 +16,7 @@ const Benefits = () => {
             <TopContainer>
                 <Title>Buyer benefits</Title>
             </TopContainer>
+            <Content>
             <BottomContainer>
                 <CardsContainer>
                 <Fade bottom>       
@@ -59,6 +60,7 @@ const Benefits = () => {
                 </CardsContainer> 
                <SimpleSlider />
                </BottomContainer> 
+               </Content>
         </Container>
     )
 }

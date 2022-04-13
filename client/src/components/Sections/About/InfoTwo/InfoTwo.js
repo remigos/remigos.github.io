@@ -2,12 +2,12 @@ import React from 'react'
 import yellow from '../../../../assets/About/yellow.png'
 import { Subtitle, Text } from '../../../../globalStyles'
 import { BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
-import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage } from './InfoTwo.elements'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Content } from './InfoTwo.elements'
 import Fade from 'react-reveal'
 const InfoTwo = () => {
     return (
         <Container>
-
+            <Content>
             <BottomContent>
                 <LeftContainer>
                     <Fade left>
@@ -25,6 +25,7 @@ const InfoTwo = () => {
                 </ImageContainer>   
                  </RightContainer>
             </BottomContent>
+            </Content>
         </Container>
     )
 }

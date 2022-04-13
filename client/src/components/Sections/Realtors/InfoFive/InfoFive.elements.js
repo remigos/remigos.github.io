@@ -5,8 +5,7 @@ export const Container = styled.div`
     justify-content: center;
     width:100%;
     flex-direction: row;
-    padding: 70px 40px;
-    background-color: #fff;
+    padding: 140px 70px 140px 20px;
     align-items: center;
     @media screen and (max-width:960px) {
         flex-direction: column;
@@ -20,10 +19,8 @@ export const Container = styled.div`
     }
 `
 export const RightContainer = styled.div`
-    display: flex;
     width:100%;
-    align-items:center;
-
+    max-width:800px;
     @media screen and (max-width:960px){
         max-width:100%;
     }
@@ -36,6 +33,7 @@ export const ImageContainer = styled.div`
     align-items: center;
     display: flex;
     margin-top:-50px;
+    max-width:800px;
 `
 export const BackgroundImage = styled.img`
   position: relative;

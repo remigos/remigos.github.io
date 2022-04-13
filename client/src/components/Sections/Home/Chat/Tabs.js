@@ -5,13 +5,12 @@ import TabsListUnstyled from '@mui/base/TabsListUnstyled';
 import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
-import chatIcon from '../../../../assets/Icon/Chat.png'
-import shareIcon from '../../../../assets/Icon/Vector.png'
-import shapeIcon from '../../../../assets/Icon/Shape.png'
-import { Icon, LeftPanel, RightPanel, Title, Text, Button, Image } from './Chat.elements'
+import { LeftPanel, RightPanel, Title, Text, Button, Image } from './Chat.elements'
 import ShareView from '../../../../assets/Home/ShareView.png'
 import ChatView from '../../../../assets/Home/ChatView.png'
 import FeedbackView from '../../../../assets/Home/FeedbackView.png'
+import Fade from 'react-reveal'
+import './Icons.css'
 
 const Tab = styled(TabUnstyled)`
   font-family: 'Poppins', sans-serif;
@@ -77,64 +76,79 @@ export default function UnstyledTabsCustomized() {
     <TabsUnstyled defaultValue={0}>
       <TabsList>
         <Tab>
-            <Icon src={chatIcon} alt='chat'/>
-            Chat
+          <i class="material-icons">chat</i>
+          Chat
         </Tab>
         <Tab>
-            <Icon src={shareIcon} alt='chat'/>
-            Sharing
+          <i class="material-icons">share</i>
+        Sharing
         </Tab>
         <Tab>
-            <Icon src={shapeIcon} alt='chat'/>
-            Feedback
+          <i class="material-icons">star</i>
+        Feedback
         </Tab>
       </TabsList>
       <TabPanel value={0}>
             <LeftPanel>
+            <Fade>
+
                 <Title>
                 One Platform One Conversation
                 </Title>
                 <Text>
                 Remigo chat is specifically designed for sharing and discussing properties
                 </Text>
-                <Button>
+
+                <Button onClick={()=> window.open("https://app.remigo.com/onboarding", "_blank")}>
                     Get Started
                 </Button>
+                </Fade>
+
             </LeftPanel>
             <RightPanel>
-                <Image src={ChatView} alt="chat-view"/>
+                <Fade right>
+                  <Image src={ChatView} alt="chat-view"/>
+                </Fade>
             </RightPanel>
       </TabPanel>
       <TabPanel value={1}>
             <LeftPanel>
+                <Fade>
                 <Title>
                 Share Properties & Stay Organized
                 </Title>
                 <Text>
                 Share properties quickly and easily see which clients are saving the listing.
                 </Text>
-                <Button>
+                <Button onClick={()=> window.open("https://app.remigo.com/onboarding", "_blank")}>
                     Get Started
                 </Button>
+                </Fade>
             </LeftPanel>
             <RightPanel>
+                <Fade right>
                 <Image src={ShareView} alt="chat-view"/>
+                </Fade>
             </RightPanel>      
       </TabPanel>
       <TabPanel value={2}>
             <LeftPanel>
+            <Fade>
                 <Title>
                 Making Feedback Convenient
                 </Title>
                 <Text>
                 Engaging clients and receiving feedback on shared properties makes for a better shopping experience for all parties
                 </Text>
-                <Button>
+                <Button onClick={()=> window.open("https://app.remigo.com/onboarding", "_blank")}>
                     Get Started
                 </Button>
+              </Fade>
             </LeftPanel>
             <RightPanel>
+            <Fade right>
                 <Image src={FeedbackView} alt="chat-view"/>
+              </Fade>
             </RightPanel>      
       </TabPanel>
     </TabsUnstyled>

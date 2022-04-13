@@ -1,6 +1,6 @@
 import React from 'react'
 import { Subtitle, Text } from '../../../../globalStyles.js'
-import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Image, Image1, Image2, } from './InfoTwo.elements'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Image, Image1, Image2,Content} from './InfoTwo.elements'
 import bg from '../../../../assets/Realtors/Bg2.png'
 import view from '../../../../assets/Realtors/ShopView.png'
 import card1 from '../../../../assets/Realtors/Card.png'
@@ -10,6 +10,7 @@ import Fade from 'react-reveal/Fade';
 const InfoTwoRealtors = () => {
     return (
         <Container>
+            <Content>
                 <LeftContainer>
                     <ImageContainer> 
                     <Fade left cascade>
@@ -31,6 +32,7 @@ const InfoTwoRealtors = () => {
                     <Text>Stop hunting through emails and text messages. Property sharing, feedback, favorites; everything is accessible on the client chat history.</Text>      
                 </Fade>      
               </RightContainer>
+            </Content>
         </Container>
     )
 }

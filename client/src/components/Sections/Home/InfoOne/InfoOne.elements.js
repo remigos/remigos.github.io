@@ -20,7 +20,7 @@ export const Container = styled.div`
 export const LeftContainer = styled.div`
     width: 70%;
     margin-right:100px;
-
+    max-width:700px;
     @media screen and (max-width:960px){
         width: 100%;
         margin-right:0px;
@@ -41,17 +41,13 @@ export const Content = styled.div`
 `
 export const ImageContainer = styled.div`
     position: relative;
-    align-items: center;
-    justify-content: center;
     width:100%;
-    display: flex;
 `
 export const BackgroundImage = styled.img`
   position: relative;
   width:100%;
   max-width:670px;
   height:auto;
-  display:flex;
  @media screen and (max-width:960px) {
      width: 670px;
  }

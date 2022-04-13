@@ -1,6 +1,6 @@
 import React from 'react'
 import { TopContent, Title, Subtitle, Text } from '../../../../globalStyles'
-import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Image, BottomContent } from './InfoOne.elements'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Image, BottomContent,Content } from './InfoOne.elements'
 import Fade from 'react-reveal/Fade';
 import view from '../../../../assets/Home/ChatView.png'
 import bg from '../../../../assets/Realtors/Bg1.png'
@@ -12,6 +12,7 @@ const InfoOneRealtors = () => {
                 <Title>How the app works for realtors</Title>
             </TopContent>
             <BottomContent>
+                <Content>
                 <LeftContainer>
                 <Fade left>
                     <Subtitle>What Is Remigo</Subtitle>
@@ -28,8 +29,10 @@ const InfoOneRealtors = () => {
                     </Fade>
                 </ImageContainer>   
                  </RightContainer>
+                 </Content>
             </BottomContent>
         </Container>
+
     )
 }
 

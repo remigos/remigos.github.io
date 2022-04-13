@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width:100%;
     flex-direction: row;
     padding: 60px 70px 60px 20px;
@@ -108,7 +108,7 @@ export const RightContainer = styled.div`
     width: 100%;
     max-width:450px;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 20px 0px;
     margin-right:50px;
     @media screen and (max-width:960px) {

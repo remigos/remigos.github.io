@@ -5,22 +5,36 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles'
+import { grey } from '@mui/material/colors';
+import Typography from '@mui/material/Typography';
+
+
 
 const Message  = () => {
-  
+
+
     const theme = createMuiTheme({
       typography: {
         fontFamily: [
           'Poppins',
           'sans-serif'
         ].join(','),
+        fontSize: 14,
+        color:grey[500]
       },
       palette: {
         primary: {
           main: '#00aeff',
         },
-
       },
+      overrides: {
+        MuiFormControlLabel: {
+          label: {
+            fontSize: 14,
+            color:grey[500]
+          },
+        },
+      }
     })
 
 
@@ -76,8 +90,33 @@ const Message  = () => {
         name="row-radio-buttons-group"
         defaultValue="general"
       >
-        <FormControlLabel value='general' onChange={(e)=> setSubject(e.target.value)} control={<Radio color='primary'/>} label="General" />
-        <FormControlLabel value="request MLS" onChange={(e)=> setSubject(e.target.value)} control={<Radio color='primary'/>} label="Request MLS" />
+        <FormControlLabel
+         value='general' 
+         onChange={(e)=> setSubject(e.target.value)} 
+         control={
+           <Radio
+           sx={{
+            color: grey[500],
+            '&.Mui-checked': {
+              color: 'primary',
+            },
+          }}
+           />} 
+        label={<Typography sx={{color:'#374150'}}>General</Typography>} 
+        />
+        <FormControlLabel
+         value="request MLS" 
+         onChange={(e)=> setSubject(e.target.value)} 
+         control={
+           <Radio 
+           sx={{
+            color: grey[500],
+            '&.Mui-checked': {
+              color: 'primary',
+            },
+          }}/>
+          } 
+          label={<Typography sx={{color:'#374150'}}>Request MLS</Typography>} />
       </RadioGroup>
         <NameContainer>
           <TextFieldName
@@ -120,8 +159,34 @@ const Message  = () => {
         name="row-radio-buttons-group"
         defaultValue="general"
       >
-          <FormControlLabel value='REALTOR' onChange={(e)=> setUserType(e.target.value)} control={<Radio color='primary'/>} label="I am a REALTOR" />
-          <FormControlLabel value="Buyer" onChange={(e)=> setUserType(e.target.value)} control={<Radio color='primary'/>} label="I am a home buyer" />
+          <FormControlLabel 
+          value='REALTOR' 
+          onChange={(e)=> setUserType(e.target.value)} 
+          control={
+            <Radio
+            sx={{
+              color: grey[500],
+              '&.Mui-checked': {
+                color: 'primary',
+              },
+            }}
+            />
+          } 
+          label={<Typography sx={{color:'#374150'}}>I am a REALTOR</Typography>} />
+          <FormControlLabel 
+          value="Buyer" 
+          onChange={(e)=> setUserType(e.target.value)} 
+          control={
+            <Radio
+            sx={{
+              color: grey[500],
+              '&.Mui-checked': {
+                color: 'primary',
+              },
+            }}
+            />
+          } 
+          label={<Typography sx={{color:'#374150'}}>I am a Home Buyer</Typography>} />
           </RadioGroup>
         </div>
         </ColumnContainer>
