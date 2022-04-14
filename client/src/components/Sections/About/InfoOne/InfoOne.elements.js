@@ -20,6 +20,7 @@ export const Container = styled.div`
 export const LeftContainer = styled.div`
     width: 100%;
     max-width:500px;
+
     @media screen and (max-width:960px){
         width: 100%;
         margin-right:0px;
@@ -38,35 +39,17 @@ export const ImageContainer = styled.div`
 export const BackgroundImage = styled.img`
   position: relative;
   width:100%;
-  max-width:600px;
+  min-width:550px;
   height:auto;
   display: flex;
   z-index:1;
+
  @media screen and (max-width:960px) {
      width: 670px;
  }
  @media screen and (max-width:768px) {
      max-width:350px;
  }
-`
-
-export const Image = styled.img`
-      position:absolute;
-      z-index: 2;
-      width:100%;
-      max-width:500px;
-      top:50px;
-      left:50px;
-      @media screen and (max-width:960px) {
-        width: 100%;
-        min-width: 280px;
-        top:40px;
-        left:100px;
-      }
-      @media screen and (max-width:768px) {
-        max-width:280px;
-        left:40px;
-      }
 `
 export const Content = styled.div`
     max-width: 1800px;
@@ -86,6 +69,9 @@ export const RightContainer = styled.div`
     justify-content: flex-start;
     padding: 20px 0px;
     margin-right:50px;
+    @media screen and (min-width: 2500px) {
+        max-width:700px;
+    }
     @media screen and (max-width:960px) {
         justify-content:flex-start;
         max-width:900px;

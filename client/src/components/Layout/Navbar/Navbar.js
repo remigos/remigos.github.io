@@ -22,7 +22,9 @@ const Navbar = () => {
             <div onClick={handleClick} className="nav-icon">
                 {open ? <img src={Close} alt="close" width="25"/> : <img src={Menu} alt="Menu" width="25" />}
             </div>
-            <Image src={Logo} alt='logo'/>
+            <NavLink to="/dev-website">
+                <Image src={Logo} alt='logo'/>
+            </NavLink>
             <ul className={open ? 'nav-links active' : 'nav-links'}>  
             <LeftContainer>
                 <li className="nav-item">

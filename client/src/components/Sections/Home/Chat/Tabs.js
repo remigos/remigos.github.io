@@ -53,7 +53,7 @@ const Tab = styled(TabUnstyled)`
 const TabPanel = styled(TabPanelUnstyled)`
   width: 100%;
   font-size: 0.875rem;
-  fleex-direction: row;
+  flex-direction: row;
   display:flex;
   justify-content:space-between;
   @media screen and (max-width:768px){

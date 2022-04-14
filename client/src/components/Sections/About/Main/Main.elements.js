@@ -6,7 +6,7 @@ export const Container = styled.div`
     padding: 0 0;
     justify-content: center;
     align-items:center;
-    
+    height: 100vh;
 `
 
 export const Background = styled.img`
@@ -20,9 +20,10 @@ export const Background = styled.img`
 
 export const Image = styled.img`
     width: 100%;
-    max-width: 900px;
+    min-width: 900px;
     height: auto;
     position: relative;
     z-index: 1;
     margin-bottom: 70px;
+    max-width:1700px;
 `

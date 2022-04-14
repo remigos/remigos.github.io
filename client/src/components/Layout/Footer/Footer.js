@@ -41,7 +41,7 @@ const Footer = () => {
             </FooterTop>
             <FooterBottom>
                 <Text>
-                    © Remigo, Copyright 2021
+                    © Remigo, Copyright {new Date().getFullYear()}
                 </Text>
             </FooterBottom>
         </Container>

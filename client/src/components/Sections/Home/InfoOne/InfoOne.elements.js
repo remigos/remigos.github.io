@@ -121,11 +121,12 @@ export const RightContainer = styled.div`
     width: 100%;
     max-width:590px;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 20px 0px;
-
+    @media screen and (min-width: 2500px) {
+        max-width:700px;
+    }
     @media screen and (max-width:960px) {
-        justify-content:flex-start;
         max-width:900px;
     }
 

@@ -70,7 +70,7 @@ export const Content = styled.div`
     max-width: 1800px;
     width:100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     @media screen and (max-width:960px) {
         flex-direction: column;
         justify-content: center;
@@ -83,6 +83,9 @@ export const LeftContainer = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px 40px;
+    @media screen and (min-width: 2500px) {
+        max-width:700px;
+    }
 
     @media screen and (max-width:960px) {
         justify-content:flex-start;
@@ -114,6 +117,8 @@ export const BottomContent = styled.div`
     align-items:center;
     justify-content: space-between;
     flex-direction: row;
+
+
     @media screen and (max-width:960px) {
         flex-direction: column-reverse;
         padding: 0;

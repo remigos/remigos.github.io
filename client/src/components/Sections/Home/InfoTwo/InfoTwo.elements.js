@@ -22,9 +22,12 @@ export const Container = styled.div`
 `
 export const RightContainer = styled.div`
   display: flex;
-
+  max-width:700px;
+  width:70%;
+  margin-top:-80px;
     @media screen and (max-width:960px){
         width:100%;
+        margin-top:0px;
     }
 `
 
@@ -83,12 +86,13 @@ export const LeftContainer = styled.div`
     width: 100%;
     max-width:540px;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 20px 0px;
     margin-left:20px;
-
+    @media screen and (min-width: 2500px) {
+        max-width:700px;
+    }
     @media screen and (max-width:960px) {
-        justify-content:flex-start;
         max-width:100%;
     }
 

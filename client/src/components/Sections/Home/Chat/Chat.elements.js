@@ -37,7 +37,7 @@ export const PanelContainer = styled.div`
 
 export const LeftPanel = styled.div`
     width:25%;
-    align-items: center
+    align-items: center;
     justify-content: flex-start;
     flex-direction:column;
     padding:30px 0px;
@@ -103,7 +103,8 @@ export const RightPanel = styled.div`
     justify-content:center;
     align-items:center;
     display: flex;
-    margin-top:-70px;
+    margin-top:-40px;
+    height:600px;
     @media screen and (max-width:960px) {
         width: 100%;
         margin-top: 0;

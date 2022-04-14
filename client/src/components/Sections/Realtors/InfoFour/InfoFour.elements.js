@@ -111,6 +111,9 @@ export const RightContainer = styled.div`
     justify-content: center;
     padding: 20px 0px;
     margin-right:50px;
+    @media screen and (min-width: 2500px) {
+        max-width:700px;
+    }
     @media screen and (max-width:960px) {
         justify-content:flex-start;
         max-width:900px;

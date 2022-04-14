@@ -84,7 +84,10 @@ export const LeftContainer = styled.div`
     max-width:450px;
     flex-direction: column;
     padding: 20px 40px;
-
+    justify-content: center;
+    @media screen and (min-width: 2500px) {
+        max-width:700px;
+    }
     @media screen and (max-width:960px) {
         justify-content:flex-start;
         max-width:100%;

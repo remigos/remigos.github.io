@@ -6,7 +6,7 @@ export const Container = styled.div`
     justify-content: center;
     flex-direction: row;
     align-items: space-between;
-    padding: 20px 40px;
+    padding: 20px 40px 50px 40px;
     @media screen and (max-width:960px) {
         padding: 0;
         background-color: #FFF1F7;
@@ -36,7 +36,7 @@ export const Box = styled.div`
 `
 export const LeftContent = styled.div`
     width:40%;
-    align-items: center
+    align-items: center;
     justify-content: flex-start;
     flex-direction:column;
     padding:30px 50px;
