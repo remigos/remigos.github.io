@@ -4,6 +4,8 @@ import {Container,FooterTop,Image, LinkContent, Title, Links, FooterBottom,LinkC
 import Youtube from '../../../assets/Icon/Youtube.png';
 import Fb from '../../../assets/Icon/Facebook.png';
 import In from '../../../assets/Icon/Linkedin.png';
+import { NavLink } from 'react-router-dom'
+import './Footer.css'
 
 const Footer = () => {
     return (
@@ -14,14 +16,14 @@ const Footer = () => {
                     <LinkContent>
                         <Title>Company</Title>
                         {/*<Links href='/dev-website'>About</Links>*/}
-                        <Links href='/dev-website/contact-us'>Support</Links>
-                        <Links href='/dev-website/faq'>FAQ</Links>
-                        <Links href='/dev-website/contact-us'>Contact Us</Links>
+                        <NavLink to='/dev-website/contact-us' className="nav_link">Support</NavLink>
+                        <NavLink to='/dev-website/faq' className="nav_link">FAQ</NavLink>
+                        <NavLink to='/dev-website/contact-us' className="nav_link">Contact Us</NavLink>
                     </LinkContent>
                     <LinkContent>
                         <Title>Legal</Title>
                         <Links href='https://app.remigo.com/privacy'>Privacy policy</Links>
-                        <Links href='/dev-website/terms-and-conditions'>Terms and conditions</Links>
+                        <NavLink to='/dev-website/terms-and-conditions'>Terms and conditions</NavLink>
                     </LinkContent>
                     <LinkContent>
                         <Title>Social</Title>
