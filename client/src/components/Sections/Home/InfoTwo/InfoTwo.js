@@ -34,10 +34,10 @@ const InfoOne = () => {
             <RightContainer>
                 <ImageContainer>
                 <Fade right cascade delay={200}>
-                    <BackgroundImage src={bg2} alt="Bg"/>
-                    <Image src={Screens2} alt="img"/>
-                    <Image2 src={BuyerProperties} alt="Img"/>
-                    <Image1 src={Maps} alt="Img"/>
+                    <BackgroundImage src={bg2} alt="background"/>
+                    <Image src={Screens2} alt="desktop-chat"/>
+                    <Image2 src={BuyerProperties} alt="properties-cards"/>
+                    <Image1 src={Maps} alt="maps"/>
                 </Fade>
                 </ImageContainer>
             </RightContainer>

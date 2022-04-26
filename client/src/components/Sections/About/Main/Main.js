@@ -1,11 +1,11 @@
 import React from 'react'
 import { Container, Image } from './Main.elements'
-import people from '../../../../assets/About/main.png'
+import people from '../../../../assets/About/main_people.jpeg'
 
 const Main = () => {
     return (
-        <Container style={{padding:"70px"}}>
-            <Image src={people} alt="image"/>
+        <Container>
+            <Image src={people} alt="People-background"/>
         </Container>
     )
 }

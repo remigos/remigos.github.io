@@ -11,6 +11,9 @@ import Buyers from './pages/Buyers/Buyers'
 import About from './pages/About/About'
 import ScrollToTop from './components/scrollToTop'
 import ContactUs from './pages/ContactUs/ContactUs'
+import FaQ from './pages/FaQ/FaQ'
+import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions'
+
 
 function App() {
 
@@ -28,6 +31,8 @@ function App() {
           <Route path='/dev-website/buyers' exact component={Buyers}/>
           <Route path='/dev-website/about-us' exact component={About}/>
           <Route path='/dev-website/contact-us' exact component={ContactUs}/>
+          <Route path='/dev-website/faq' exact component={FaQ}/>
+          <Route path='/dev-website/terms-and-conditions' exact component={TermsAndConditions}/>
         </Switch>
         <Footer/>
     </Router>

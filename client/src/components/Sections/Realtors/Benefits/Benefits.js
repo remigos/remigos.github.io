@@ -11,7 +11,7 @@ const Benefits = () => {
     return (
         <Container>
             <TopContainer>
-                <Title>Realtor benefits</Title>
+                <Title>Realtor Benefits</Title>
             </TopContainer>
             <BottomContainer>
                 <CardsContainer>  
@@ -31,7 +31,7 @@ const Benefits = () => {
                 </Fade>
                 <Fade bottom delay={500}>            
                 <Card>
-                    <Icon src={Org} alt="organization"/>
+                    <Icon src={Org} alt="Organization"/>
                     <Subtitle>Effortless organization</Subtitle>
                     <Text>Keeping notes and feedback attached to properties provides a better, more convenient and professional experience for your clients.</Text>
                 </Card>

@@ -1,5 +1,6 @@
 
 export { default as Navbar } from './Layout/Navbar/Navbar';
+export { default as Footer } from './Layout/Footer/Footer';
 
 // Home Sections
 export { default as InfoSection } from './Sections/Home/InfoSection/InfoSection';
@@ -39,4 +40,8 @@ export { default as InfoFourAbout } from './Sections/About/InfoFour/InfoFour.js'
 
 //ContactUs Sections
 export { default as MainContact } from './Sections/ContactUs/Main'
-export { default as Footer } from './Layout/Footer/Footer';
+
+
+//FaQ Sections
+export { default as MainFaQ } from './Sections/FaQ/Main/Main'
+export { default as Acordion } from './Sections/FaQ/List/Acordion'

@@ -8,11 +8,7 @@ export const Container = styled.div`
     padding:100px 20px;
     flex-direction:column;
     @media screen and (max-width:960px) {
-        padding: 100px 0px;
-    }
-
-    @media screen and (max-width:768px) {
-        padding: 30px 0px;
+        padding: 100px 0px 30px 0px;
     }
 `
 
@@ -52,14 +48,19 @@ export const BottomContainer = styled.div`
 `
 
 export const Card = styled.div`
-    width: 100%;
-    max-width:400px;
-    min-height: 352px;
+    width:100%;
+    min-width:200px;
+    max-width:350px;
+    height: 352px;
     flex-direction: column;
     margin: 0px 40px;
     display: block;
-    padding: 0px 30px;
+    padding: 0px 20px;
+    margin: 0px 30px;
+    @media screen and (max-width:1000px) {
+        min-width:200px;
 
+    }
     @media screen and (max-width:768px) {
         width: 100%;
         margin: 0px 10px;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     width:100%;
-    padding: 30px 40px;
+    padding: 20px 40px 50px 40px;
     justify-content: center;
 
     @media screen and (max-width:960px) {
@@ -15,7 +15,7 @@ export const Box = styled.div`
     display:flex;
     width:100%;
     flex-direction: row;
-    padding: 30px 50px;
+    padding: 30px 40px;
     background-color:#E5F7FD;
     border-radius:30px;
     justify-content: center;
@@ -36,13 +36,14 @@ export const PanelContainer = styled.div`
 `
 
 export const LeftPanel = styled.div`
-    width:25%;
-    align-items: center;
+    width:40%;
+    align-items: flex-start;
     justify-content: flex-start;
     flex-direction:column;
     padding:30px 0px;
     display: flex;
     height:auto;
+    max-width:400px;
     @media screen and (max-width:960px) {
         width:40%;
     }
@@ -90,12 +91,6 @@ export const Button = styled.button`
 
     }
 
-    @media screen and (max-width:960px) {
-        width:221px;
-    }
-    @media screen and (max-width:768px) {
-        width:100%;
-    }
 `
 
 export const RightPanel = styled.div`

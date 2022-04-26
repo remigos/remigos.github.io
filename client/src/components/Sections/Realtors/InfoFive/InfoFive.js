@@ -18,16 +18,16 @@ const InfoFiveRealtors = () => {
                     <Text>Test out Remigo for free for the first 30 days. After your trial, pay a flat rate and cancel anytime. Remigo improves your everyday interactions with clients and will prove to be invaluable. </Text>
                     </Fade>
                     <Fade left delay={400}>
-                    <Button>Try it now</Button>
+                    <Button onClick={()=> window.open("https://app.remigo.com/onboarding", "_blank")}>Try it now</Button>
                     </Fade>
                 </LeftContainer>
                 <RightContainer>
                     <ImageContainer>
                         <Fade right cascade>
-                            <BackgroundImage src={bg}/>
-                            <Image src={view} alt="img"/>
-                            <Image1 src={invite}/>
-                            <Image2 src={trial}/>
+                            <BackgroundImage src={bg} alt="Background"/>
+                            <Image src={view} alt="Desktop-chat-view"/>
+                            <Image1 src={invite} alt="Trial-ended"/>
+                            <Image2 src={trial} alt="Countdown"/>
                         </Fade>
                     </ImageContainer>   
                  </RightContainer>

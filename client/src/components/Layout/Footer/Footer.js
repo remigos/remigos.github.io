@@ -15,13 +15,13 @@ const Footer = () => {
                         <Title>Company</Title>
                         {/*<Links href='/dev-website'>About</Links>*/}
                         <Links href='/dev-website/contact-us'>Support</Links>
-                        <Links href='/dev-website'>FAQ</Links>
+                        <Links href='/dev-website/faq'>FAQ</Links>
                         <Links href='/dev-website/contact-us'>Contact Us</Links>
                     </LinkContent>
                     <LinkContent>
                         <Title>Legal</Title>
                         <Links href='https://app.remigo.com/privacy'>Privacy policy</Links>
-                        <Links href='/dev-website/'>Terms and conditions</Links>
+                        <Links href='/dev-website/terms-and-conditions'>Terms and conditions</Links>
                     </LinkContent>
                     <LinkContent>
                         <Title>Social</Title>

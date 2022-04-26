@@ -163,6 +163,7 @@ export const Button = styled.button`
     }
 
     @media screen and (max-width:960px) {
+        font-size: 18px;
     }
 `
 export const Image2 = styled.img`

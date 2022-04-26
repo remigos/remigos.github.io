@@ -31,15 +31,14 @@
     border: 1px solid #111826;
     margin-right: 8px;
     cursor: pointer;
+    top:50px;
+    left:10px;
     align-items: center;
     justify-content: center;
+    padding:15px 18px;
 }
-.arrow-btn {
-  top: 50%;
-}
-.next {
-  float: right;
-}
+
+
 
 .carousel {
   width: 100%;
@@ -78,16 +77,6 @@
   background-color: #28B8A7;
 }
 
-.arrow_left {
-  width: 12px;
-  height: 20px;
-  transform: scaleX(-1);
-}
-.arrow_right {
-  width: 12px;
-  height: 20px;
-  align-items: center;
-}
 
 .quotation {
   width: 29px;
@@ -114,6 +103,7 @@
   width: 40px;
   height:40px;
   margin-right: 20px;
+  border-radius: 50%;
 }
 
 .avatar_container p {

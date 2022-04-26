@@ -127,7 +127,7 @@ export default function UnstyledTabsCustomized() {
             </LeftPanel>
             <RightPanel>
                 <Fade right>
-                <Image src={ShareView} alt="chat-view"/>
+                <Image src={ShareView} alt="share-view"/>
                 </Fade>
             </RightPanel>      
       </TabPanel>
@@ -147,7 +147,7 @@ export default function UnstyledTabsCustomized() {
             </LeftPanel>
             <RightPanel>
             <Fade right>
-                <Image src={FeedbackView} alt="chat-view"/>
+                <Image src={FeedbackView} alt="feedback-view"/>
               </Fade>
             </RightPanel>      
       </TabPanel>

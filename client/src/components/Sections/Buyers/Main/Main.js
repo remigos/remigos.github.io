@@ -9,8 +9,8 @@ const Main = () => {
         <Container>
             <ImageContainer>
                 <Fade bottom cascade>
-                    <Background src={circle} alt="bg"/>
-                    <Image src={bg} alt="image"/>
+                    <Background src={circle} alt="Circle"/>
+                    <Image src={bg} alt="Background-image"/>
                 </Fade>
             </ImageContainer>
         </Container>

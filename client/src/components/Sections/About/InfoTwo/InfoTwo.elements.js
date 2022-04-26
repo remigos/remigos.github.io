@@ -34,12 +34,14 @@ export const ImageContainer = styled.div`
     margin-right:100px;
 `
 export const BackgroundImage = styled.img`
-  position: relative;
-  width:100%;
-  max-width:500px;
-  height:auto;
+  width:500px;
+  height:500px;
   display: flex;
   z-index:1;
+  object-fit: cover;
+  border-radius: 30px;
+
+  
  @media screen and (max-width:960px) {
      width: 670px;
  }

@@ -32,6 +32,10 @@ export const TopContent = styled.div`
     width:100%;
     max-width:1050px;
     margin-top:-150px;
+
+    @media screen and (max-width:768px) {
+        padding:20px;
+    }
 `
 
 export const Title = styled.p`
@@ -55,6 +59,7 @@ export const Subtitle = styled.p`
 
     @media screen and (max-width:960px) {
         font-size: 24px;
+        margin-bottom: 20px;
     }
 `
 export const Text = styled.p`

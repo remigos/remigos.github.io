@@ -12,7 +12,7 @@ const InfoTwoRealtors = () => {
                 <LeftContainer>
                     <ImageContainer>
                         <Fade left>   
-                        <BackgroundImage src={InfoOne} alt="img"/>
+                        <BackgroundImage src={InfoOne} alt="Home-shopping"/>
                         </Fade>
                     </ImageContainer>
                 </LeftContainer>

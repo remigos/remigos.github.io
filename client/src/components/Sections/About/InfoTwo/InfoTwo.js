@@ -1,5 +1,5 @@
 import React from 'react'
-import yellow from '../../../../assets/About/yellow.png'
+import yellow from '../../../../assets/About/yellow.jpeg'
 import { Subtitle, Text } from '../../../../globalStyles'
 import { BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
 import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Content } from './InfoTwo.elements'
@@ -20,7 +20,7 @@ const InfoTwo = () => {
                 <RightContainer>
                 <ImageContainer>
                     <Fade right>
-                    <BackgroundImage src={yellow} alt="img"/>
+                    <BackgroundImage src={yellow} alt="Comunication"/>
                     </Fade>
                 </ImageContainer>   
                  </RightContainer>

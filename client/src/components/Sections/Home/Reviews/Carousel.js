@@ -2,9 +2,15 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import './Carousel.css'
 import { Card } from './Reviews.elements'
-import Arrow from '../../../../assets/Icon/Right.png'
 import quotationMarks from '../../../../assets/Icon/quotationMarks.png'
-import Avatar from '../../../../assets/Icon/avatar.png'
+import avatar_peter from '../../../../assets/Home/Avatar/avatar_peter.jpg'
+import avatar_catherine from '../../../../assets/Home/Avatar/avatar_catherine.jpg'
+import avatar_judy from '../../../../assets/Home/Avatar/avatar_judy.jpg'
+import avatar_alexa from '../../../../assets/Home/Avatar/avatar_alexa.jpg'
+import avatar_michael from '../../../../assets/Home/Avatar/avatar_michael.jpg'
+import avatar_janet from '../../../../assets/Home/Avatar/avatar_janet.jpg'
+import avatar_laura from '../../../../assets/Home/Avatar/avatar_laura.jpg'
+import avatar_jordan from '../../../../assets/Home/Avatar/avatar_jordan.jpg'
 
 
 function SampleNextArrow(props) {
@@ -58,8 +64,6 @@ export default class PreviousNextMethods extends Component {
           settings: {
             slidesToScroll:1,
             slidesToShow:1,
-            dots:true,
-
           }
         }
       ],
@@ -72,10 +76,14 @@ export default class PreviousNextMethods extends Component {
           <h2 className="title">What our customer say</h2>
           <div style={{ textAlign: "center" }}>
             <button className="button" onClick={this.previous}>
-                <img src={Arrow} alt='left-arrow' className="arrow_left"/>
+            <span class="material-symbols-outlined">
+            arrow_back_ios
+            </span>
             </button>
             <button className="button" onClick={this.next}>
-                <img src={Arrow} alt='right-arrow' className="arrow_right"/>
+                <span class="material-symbols-outlined">
+                arrow_forward_ios
+                </span>
             </button>
          </div>
       </div>
@@ -83,70 +91,80 @@ export default class PreviousNextMethods extends Component {
           <div key={1}>
             <Card>
               <img src={quotationMarks} alt='quotation-marks' className="quotation"/>
-              <p className="text_content">“River provides affordable care for our part-time members. We love it!”</p>
+              <p className="text_content">“The support is very fast and helpful.”</p>
               <div className="avatar_container">
-                <img src={Avatar} alt="avatar"/>
-                <p><span>Scott</span>, VP of People</p>
+                <img src={avatar_peter} alt="avatar"/>
+                <p><span>Peter</span>, Realtor</p>
               </div>
             </Card>
           </div>
           <div key={2}>
             <Card>
               <img src={quotationMarks} alt='quotation-marks' className="quotation"/>
-              <p className="text_content">“River provides affordable care for our part-time members. We love it!”</p>
+              <p className="text_content">“This is the best chat tool for home shopping.”</p>
               <div className="avatar_container">
-                <img src={Avatar} alt="avatar"/>
-                <p><span>Scott</span>, VP of People</p>
+                <img src={avatar_catherine} alt="avatar"/>
+                <p><span>Catherine</span>, Real Estate Agent</p>
               </div>
             </Card>
           </div>
           <div key={3}>
             <Card>
               <img src={quotationMarks} alt='quotation-marks' className="quotation"/>
-              <p className="text_content">“River provides affordable care for our part-time members. We love it!”</p>
+              <p className="text_content">“My clients love using Remigo to discuss properties.”</p>
               <div className="avatar_container">
-                <img src={Avatar} alt="avatar"/>
-                <p><span>Scott</span>, VP of People</p>
+                <img src={avatar_judy} alt="avatar"/>
+                <p><span>Judy</span>, Realtor</p>
               </div>
             </Card>
           </div>
           <div key={4}>
             <Card>
               <img src={quotationMarks} alt='quotation-marks' className="quotation"/>
-              <p className="text_content">“River provides affordable care for our part-time members. We love it!”</p>
+              <p className="text_content">“Remigo saves me time on the back and forth.”</p>
               <div className="avatar_container">
-                <img src={Avatar} alt="avatar"/>
-                <p><span>Scott</span>, VP of People</p>
+                <img src={avatar_alexa} alt="avatar"/>
+                <p><span>Alexa</span>, Realtor</p>
               </div>
             </Card>
           </div>
           <div key={5}>
             <Card>
               <img src={quotationMarks} alt='quotation-marks' className="quotation"/>
-              <p className="text_content">“River provides affordable care for our part-time members. We love it!”</p>
+              <p className="text_content">“Use Remigo! I can’t go back to text and calls to talk to my clients.”</p>
               <div className="avatar_container">
-                <img src={Avatar} alt="avatar"/>
-                <p><span>Scott</span>, VP of People</p>
+                <img src={avatar_michael} alt="avatar"/>
+                <p><span>Michael</span>, Realtor</p>
               </div>
             </Card>
           </div>
           <div key={6}>
             <Card>
               <img src={quotationMarks} alt='quotation-marks' className="quotation"/>
-              <p className="text_content">“River provides affordable care for our part-time members. We love it!”</p>
+              <p className="text_content">“My husband and I started using Remigo and it has helped so much!”</p>
               <div className="avatar_container">
-                <img src={Avatar} alt="avatar"/>
-                <p><span>Scott</span>, VP of People</p>
+                <img src={avatar_janet} alt="avatar"/>
+                <p><span>Janet</span>, Buyer</p>
               </div>
             </Card>
           </div>   
           <div key={7}>
             <Card>
               <img src={quotationMarks} alt='quotation-marks' className="quotation"/>
-              <p className="text_content">“River provides affordable care for our part-time members. We love it!”</p>
+              <p className="text_content">“I used Remigo with my agent and it made home shopping so much easier.”</p>
               <div className="avatar_container">
-                <img src={Avatar} alt="avatar"/>
-                <p><span>Scott</span>, VP of People</p>
+                <img src={avatar_laura} alt="avatar"/>
+                <p><span>Laura</span>, Buyer</p>
+              </div>
+            </Card>
+        </div> 
+          <div key={8}>
+            <Card>
+              <img src={quotationMarks} alt='quotation-marks' className="quotation"/>
+              <p className="text_content">“Talking to my agent was made so much easier with Remigo.”</p>
+              <div className="avatar_container">
+                <img src={avatar_jordan} alt="avatar"/>
+                <p><span>Jordan</span>, Buyer</p>
               </div>
             </Card>
         </div> 

@@ -14,10 +14,10 @@ const InfoOne = () => {
             <LeftContainer>
                 <ImageContainer>
                 <Fade left cascade>
-                    <BackgroundImage src={bg} alt="Bg"/>
-                    <Image src={Message} alt="Img" />
-                    <Image2 src={Client} alt="Img"/>
-                    <Image1 src={ChatClient} alt="Img"/>
+                    <BackgroundImage src={bg} alt="background"/>
+                    <Image src={Message} alt="desktop-view" />
+                    <Image2 src={Client} alt="clients"/>
+                    <Image1 src={ChatClient} alt="realtor-chat"/>
                 </Fade>
                 </ImageContainer>
             </LeftContainer>

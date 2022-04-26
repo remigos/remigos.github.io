@@ -10,19 +10,19 @@ import Fade from 'react-reveal/Fade';
 const Main = () => {
     return (
         <Container>
-            <Background src={Bg} alt="bg"/>
+            <Background src={Bg} alt="Background"/>
             <ImageContainer>
             <Fade bottom delay={300}>
-                <Image src={MsgRealtor} alt="image"/>
+                <Image src={MsgRealtor} alt="Desktop-chat"/>
             </Fade>
             <Fade left delay={600}>
-                <Card src={card}/>
+                <Card src={card} alt="Card"/>
             </Fade>
             <Fade right delay={900}>
-                <Profiles src={prof}/>
+                <Profiles src={prof} alt="Profiles"/>
             </Fade>
             <Fade top delay={1200}>
-                <Messages src={msg}/>
+                <Messages src={msg} alt="Messages"/>
             </Fade>
             </ImageContainer>
         </Container>

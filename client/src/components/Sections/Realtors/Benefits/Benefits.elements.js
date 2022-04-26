@@ -11,10 +11,6 @@ export const Container = styled.div`
     @media screen and (max-width:960px) {
         padding: 100px 0px;
     }
-
-    @media screen and (max-width:768px) {
-        padding: 30px 0px;
-    }
 `
 
 export const TopContainer = styled.div`

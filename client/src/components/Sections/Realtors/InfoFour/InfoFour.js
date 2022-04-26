@@ -12,9 +12,9 @@ const InfoFourRealtors = () => {
                 <LeftContainer>
                     <ImageContainer>
                         <Fade left cascade>
-                        <BackgroundImage src={bg} />   
-                        <Image src={view} alt="img"/>
-                        <Image1 src={msg}/>
+                        <BackgroundImage src={bg} alt="Background"/>   
+                        <Image src={view} alt="Desktop-map-view"/>
+                        <Image1 src={msg} alt="Messages"/>
                         </Fade>
                     </ImageContainer>
                 </LeftContainer>

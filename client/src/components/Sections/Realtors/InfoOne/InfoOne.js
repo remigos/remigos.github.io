@@ -24,8 +24,8 @@ const InfoOneRealtors = () => {
                 <RightContainer>
                 <ImageContainer>
                     <Fade right cascade delay={200}>
-                    <BackgroundImage src={bg} alt="Bg"/>
-                    <Image src={view} alt="img"/>
+                    <BackgroundImage src={bg} alt="Background"/>
+                    <Image src={view} alt="Desktop-chat"/>
                     </Fade>
                 </ImageContainer>   
                  </RightContainer>

@@ -12,9 +12,9 @@ const InfoSixRealtors = () => {
                 <LeftContainer>
                     <ImageContainer>
                         <Fade left cascade>
-                        <BackgroundImage src={bg}/>   
-                        <Image src={view} alt="img"/>
-                        <Image1 src={invite}/>
+                        <BackgroundImage src={bg} alt="Background"/>   
+                        <Image src={view} alt="Desktop-chat-view"/>
+                        <Image1 src={invite} alt="Invite-user"/>
                         </Fade>
                     </ImageContainer>
                 </LeftContainer>

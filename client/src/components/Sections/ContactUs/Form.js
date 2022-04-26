@@ -10,8 +10,11 @@ import Typography from '@mui/material/Typography';
 
 
 
+
 const Message  = () => {
 
+  const sgMail = require('@sendgrid/mail');
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const theme = createMuiTheme({
       typography: {
@@ -48,34 +51,35 @@ const Message  = () => {
     const [userType, setUserType] = useState("")
    
     const PostData = ()=>{
-        fetch("/send",{
-            method:"post",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({
-                firstname,
-                lastname,
-                phonenumber,
-                brokerage,
-                email,
-                subject,
-                message,
-                userType
-            })
-        }).then(res=>res.json())
-        .then(data=>{
-            setMessage('')
-            setFirstName('')
-            setLastName('')
-            setSubject('')
-            setEmail('')
-            setPhonenumber('')
-            setBrokerage('')
-            setUserType('')
-        }).catch(err=>{
-
-        })
+      const msg = {
+        to: email,
+        from: 'tttobis@gmail.com', // Use the email address or domain you verified above
+        subject: `${subject}`,
+        html: `<h3>Name: ${firstname}, ${lastname}</h3>
+        <br/>
+        <p>phone number: ${phonenumber}</p>
+        <p>Brokerage: ${brokerage}</p>
+        <p>User Type: ${userType}</p>
+        <p>${message}</p>`,
+      };
+      sgMail
+      .send(msg)
+      .then(() => {}, error => {
+        console.error(error);
+    
+        if (error.response) {
+          console.error(error.response.body)
+        } else {
+          setMessage('')
+          setFirstName('')
+          setLastName('')
+          setSubject('')
+          setEmail('')
+          setPhonenumber('')
+          setBrokerage('')
+          setUserType('')
+        }
+      });
     }
 
    return (

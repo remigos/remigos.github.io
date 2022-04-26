@@ -23,6 +23,8 @@ export const Box = styled.div`
     max-width:1800px;
     border-radius:30px;
     @media screen and (max-width:960px) {
+        margin: 0;
+        border-radius:0;
     }
 
 `
@@ -87,4 +89,16 @@ export const Name = styled.p`
     line-height: 24px;
     color: #00AEEF;
     font-weight: 600;
+`
+
+export const Icon = styled.img`
+    width:80px;
+    height:auto;
+    z-index: 1;
+    position: absolute;
+    margin:120px 90px;
+
+    @media screen and (max-width:960px) {
+        display:none;
+    }
 `

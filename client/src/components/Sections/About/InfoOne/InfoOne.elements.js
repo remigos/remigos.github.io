@@ -49,6 +49,7 @@ export const BackgroundImage = styled.img`
  }
  @media screen and (max-width:768px) {
      max-width:350px;
+     min-width:100px;
  }
 `
 export const Content = styled.div`

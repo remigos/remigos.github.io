@@ -16,7 +16,6 @@ export const Nav = styled.nav`
     @media screen and (max-width:768px) {
         position: sticky;
         justify-content: flex-start;
-        text-align:flex-start;
 
     }
 `;

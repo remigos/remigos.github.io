@@ -21,9 +21,9 @@ const InfoThreeRealtors = () => {
                 <RightContainer>
                     <ImageContainer>
                         <Fade right cascade> 
-                            <BackgroundImage src={bg} alt="img"/>
-                            <Image src={view} alt="img"/>
-                            <Image1 src={clients} alt="img"/>
+                            <BackgroundImage src={bg} alt="Background"/>
+                            <Image src={view} alt="Desktop-search-properties"/>
+                            <Image1 src={clients} alt="Clients"/>
                         </Fade>
                     </ImageContainer>   
                  </RightContainer>

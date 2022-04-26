@@ -31,7 +31,7 @@ export const Content = styled.div`
     width:100%;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
     @media screen and (max-width:960px) {
         flex-direction: column-reverse;
         justify-content: center;
@@ -140,7 +140,7 @@ export const RightContainer = styled.div`
 
     @media screen and (max-width:768px) {
         padding: 0px 20px;
-        margin-left:30px;
+        margin-right:0px;
     }
 `
 

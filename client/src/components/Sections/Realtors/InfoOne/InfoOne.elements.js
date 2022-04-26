@@ -72,9 +72,9 @@ export const Content = styled.div`
     width:100%;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
     @media screen and (max-width:960px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -106,7 +106,9 @@ export const Title = styled.p`
     margin-bottom: 20px;
     @media screen and (max-width:960px) {
         font-size: 24px;
-        line-height: 32px
+        line-height: 32px;
+        margin-bottom: 0px;
+        line-height:20px;
     }
 `
 export const Subtitle = styled.p`
@@ -125,10 +127,10 @@ export const BottomContent = styled.div`
     display: flex;
     width:100%;
     align-items:center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     @media screen and (max-width:960px) {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 0;
     }
 

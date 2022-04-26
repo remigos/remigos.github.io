@@ -4,8 +4,6 @@ export const Container = styled.div`
     display:flex;
     width: 100%;
     justify-content: center;
-    flex-direction: row;
-    align-items: space-between;
     padding: 20px 40px 50px 40px;
     @media screen and (max-width:960px) {
         padding: 0;
@@ -39,8 +37,8 @@ export const LeftContent = styled.div`
     align-items: center;
     justify-content: flex-start;
     flex-direction:column;
-    padding:30px 50px;
-
+    padding:30px 9px;
+    max-width:600px;
     @media screen and (max-width:960px) {
         width:40%;
     }
@@ -97,8 +95,9 @@ export const Button = styled.button`
 `
 export const RightContent = styled.div`
     width:70%;
-    justify-content:flex-end;
-    align-items:flex-end;
+    justify-content:center;
+    align-items:center;
+    display:flex;
     @media (max-width:960px) {
         width: 60%;
         margin-top: 0;

@@ -14,10 +14,10 @@ const InfoTwoRealtors = () => {
                 <LeftContainer>
                     <ImageContainer> 
                     <Fade left cascade>
-                        <BackgroundImage src={bg}/>  
-                        <Image src={view} alt="img"/>
-                        <Image1 src={card2} alt="img"/>
-                        <Image2 src={card1} alt="img"/>
+                        <BackgroundImage src={bg} alt="Background"/>  
+                        <Image src={view} alt="Desktop-search-properties"/>
+                        <Image1 src={card2} alt="Card"/>
+                        <Image2 src={card1} alt="Card"/>
                     </Fade>
                     </ImageContainer>
                 </LeftContainer>

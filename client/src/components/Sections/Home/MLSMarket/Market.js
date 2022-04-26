@@ -14,7 +14,7 @@ const Market = () => {
                     </Link>
                 </LeftContent>
                 <RightContent>
-                    <Image src={USAMap} alt='map'/>
+                    <Image src={USAMap} alt='USA-map'/>
                 </RightContent>
             </Box>
         </Container>

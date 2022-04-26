@@ -26,15 +26,15 @@ const InfoSection = ({lightBg, imgStart, lightText,lightTextDesc, description,he
                 </LeftContent>
                 <RightContent>
                     <ImageContainer>
-                    <BackgroundImage src={img} alt="Bg"/>
+                    <BackgroundImage src={img} alt="Home"/>
                     <Fade left delay={300}>
-                    <Image1 src={msg} alt="Img"/>
+                    <Image1 src={msg} alt="message-realtor"/>
                     </Fade>
                     <Fade right delay={700}>
-                    <Image2 src={cards} alt="Img"/>
+                    <Image2 src={cards} alt="card"/>
                     </Fade>
                     <Fade top delay={1200}>
-                    <Image3 src={msgBuyer} alt="Img"/>
+                    <Image3 src={msgBuyer} alt="message-buyer"/>
                     </Fade>
                     </ImageContainer>
                  </RightContent>

@@ -40,11 +40,11 @@ export const Card = styled.div`
     padding: 70px 50px !important;
     flex-direction: column;
     width:95%;
-    height:414px;
+    min-height:414px;
     @media screen and (max-width:960px) {
         width:100%;
-        height: auto;
         padding: 50px 20px !important;
+        min-height:250px;
 
     }
 `

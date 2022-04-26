@@ -3,10 +3,10 @@ import styled from 'styled-components'
 export const Container = styled.div`
     width: 100%;
     display: flex;
-    padding: 50px 0 200px;
+    padding: 0px 0 200px;
     justify-content: center;
     align-items:center;
-    min-height: 100vh;
+    min-height: 120vh;
 
     @media screen and (max-width:768px) {
         min-height: 50vh;

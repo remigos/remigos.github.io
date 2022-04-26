@@ -12,7 +12,7 @@ const InfoSixRealtors = () => {
                 <LeftContainer>
                     <ImageContainer>  
                         <Fade left> 
-                            <BackgroundImage src={InfoOne} alt="img"/>
+                            <BackgroundImage src={InfoOne} alt="Home-search"/>
                         </Fade>
                     </ImageContainer>
                 </LeftContainer>

@@ -23,7 +23,7 @@ const InfoOneRealtors = () => {
                 <RightContainer>
                 <ImageContainer>
                     <Fade right>
-                        <BackgroundImage src={InfoOne} alt="img"/>
+                        <BackgroundImage src={InfoOne} alt="Home"/>
                     </Fade>
                 </ImageContainer>   
                  </RightContainer>
