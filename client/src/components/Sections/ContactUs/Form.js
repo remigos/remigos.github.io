@@ -53,7 +53,7 @@ const Message  = () => {
     const PostData = ()=>{
       const msg = {
         to: email,
-        from: 'tttobis@gmail.com', // Use the email address or domain you verified above
+        from: 'tobias@remigo.com', // Use the email address or domain you verified above
         subject: `${subject}`,
         html: `<h3>Name: ${firstname}, ${lastname}</h3>
         <br/>

@@ -1,8 +1,5 @@
 import React from 'react'
-import { Container, LeftContainer, RightContainer, Title, Subtitle, ImageContainer, BackgroundImage, Image, Image1, Image2,Content } from './InfoOne.elements'
-import Message from '../../../../assets/Home/Message.png'
-import Client from '../../../../assets/Home/Clients.png'
-import ChatClient from '../../../../assets/Home/ChatClient.png'
+import { Container, LeftContainer, RightContainer, Title, Subtitle, ImageContainer, BackgroundImage, Content } from './InfoOne.elements'
 import bg from '../../../../assets/Home/bg1.png'
 import Fade from 'react-reveal/Fade';
 
@@ -15,9 +12,7 @@ const InfoOne = () => {
                 <ImageContainer>
                 <Fade left cascade>
                     <BackgroundImage src={bg} alt="background"/>
-                    <Image src={Message} alt="desktop-view" />
-                    <Image2 src={Client} alt="clients"/>
-                    <Image1 src={ChatClient} alt="realtor-chat"/>
+
                 </Fade>
                 </ImageContainer>
             </LeftContainer>

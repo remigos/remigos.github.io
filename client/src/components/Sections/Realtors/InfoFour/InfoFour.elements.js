@@ -48,7 +48,7 @@ export const ImageContainer = styled.div`
 export const BackgroundImage = styled.img`
   position: relative;
   width:100%;
-  max-width:700px;
+  max-width:600px;
   height:auto;
   display:flex;
   left:0;
@@ -60,46 +60,6 @@ export const BackgroundImage = styled.img`
     left:20px;
     top:20px;
  }
-
-`
-
-export const Image = styled.img`
-      position:absolute;
-      z-index: 2;
-      width:100%;
-      max-width:550px;
-      left:60px;
-      top:150px;
-      @media screen and (max-width:960px) {
-        width: 100%;
-        min-width: 280px;
-        top:40px;
-        left:100px;
-      }
-      @media screen and (max-width:768px){
-        max-width:280px;
-        left:40px;
-      }
-`
-export const Image1 = styled.img`
-      position:absolute;
-      z-index: 4;
-      width:100%;
-      width:400px;
-      bottom:0px;
-      right:-50px;
-      align-items: left;
-      @media screen and (max-width:960px) {
-        width: 100%;
-        max-width:250px;
-        top:-50px;
-      }
-      @media screen and (max-width:600px) {
-        width: 100%;
-        max-width:150px;
-        top:0px;
-        right:20px;
-      }
 
 `
 

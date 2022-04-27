@@ -34,19 +34,17 @@ export const ImageContainer = styled.div`
     margin-right:100px;
 `
 export const BackgroundImage = styled.img`
-  width:500px;
-  height:500px;
+  width:670px;
+  height:670px;
   display: flex;
   z-index:1;
   object-fit: cover;
   border-radius: 30px;
 
-  
- @media screen and (max-width:960px) {
-     width: 670px;
- }
  @media screen and (max-width:768px) {
      max-width:350px;
+     height:350px;
+
  }
 `
 
@@ -90,13 +88,15 @@ export const LeftContainer = styled.div`
     }
 
     @media screen and (max-width:960px) {
-        justify-content:flex-start;
-        max-width:100%;
+        justify-content:center;
+        padding: 20px 0px;
+        width:100%;
+        max-width:900px;
     }
 
     @media screen and (max-width:768px) {
-        max-width: 450px;
-        padding: 5px;
+        padding: 20px 0px;
+        width:100%;
     }
 `
 

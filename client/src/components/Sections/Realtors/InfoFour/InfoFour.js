@@ -1,9 +1,7 @@
 import React from 'react'
 import { Subtitle, Text } from '../../../../globalStyles.js'
-import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Image, Image1, Content } from './InfoFour.elements'
-import bg from '../../../../assets/Realtors/Bg4.png'
-import view from '../../../../assets/Realtors/ShopView.png'
-import msg from '../../../../assets/Realtors/Messages.png'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Content } from './InfoFour.elements'
+import bg from '../../../../assets/Realtors/InfoFour.png'
 import Fade from 'react-reveal'
 const InfoFourRealtors = () => {
     return (
@@ -13,8 +11,6 @@ const InfoFourRealtors = () => {
                     <ImageContainer>
                         <Fade left cascade>
                         <BackgroundImage src={bg} alt="Background"/>   
-                        <Image src={view} alt="Desktop-map-view"/>
-                        <Image1 src={msg} alt="Messages"/>
                         </Fade>
                     </ImageContainer>
                 </LeftContainer>

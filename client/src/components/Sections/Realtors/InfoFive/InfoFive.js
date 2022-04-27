@@ -1,10 +1,8 @@
 import React from 'react'
 import { Subtitle, Text } from '../../../../globalStyles'
-import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Image, Image1, Image2, Button, Content } from './InfoFive.elements'
-import bg from '../../../../assets/Realtors/Bg5.png'
-import view from '../../../../assets/Realtors/ShadowView.png'
-import invite from '../../../../assets/Realtors/ClockView.png'
-import trial from '../../../../assets/Realtors/TrialDay.png'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Button, Content } from './InfoFive.elements'
+import bg from '../../../../assets/Realtors/InfoFive.png'
+
 import Fade from 'react-reveal'
 const InfoFiveRealtors = () => {
     return (
@@ -25,9 +23,7 @@ const InfoFiveRealtors = () => {
                     <ImageContainer>
                         <Fade right cascade>
                             <BackgroundImage src={bg} alt="Background"/>
-                            <Image src={view} alt="Desktop-chat-view"/>
-                            <Image1 src={invite} alt="Trial-ended"/>
-                            <Image2 src={trial} alt="Countdown"/>
+
                         </Fade>
                     </ImageContainer>   
                  </RightContainer>

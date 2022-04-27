@@ -1,9 +1,8 @@
 import React from 'react'
 import { TopContent, Title, Subtitle, Text } from '../../../../globalStyles'
-import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Image, BottomContent,Content } from './InfoOne.elements'
+import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, BottomContent,Content } from './InfoOne.elements'
 import Fade from 'react-reveal/Fade';
-import view from '../../../../assets/Home/ChatView.png'
-import bg from '../../../../assets/Realtors/Bg1.png'
+import bg from '../../../../assets/Realtors/InfoOne.png'
 
 const InfoOneRealtors = () => {
     return (
@@ -25,7 +24,6 @@ const InfoOneRealtors = () => {
                 <ImageContainer>
                     <Fade right cascade delay={200}>
                     <BackgroundImage src={bg} alt="Background"/>
-                    <Image src={view} alt="Desktop-chat"/>
                     </Fade>
                 </ImageContainer>   
                  </RightContainer>

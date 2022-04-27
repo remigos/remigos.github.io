@@ -30,4 +30,12 @@ export const Title = styled.h1`
     color:#111826;
     text-align: center;
     margin-bottom:50px;
+
+    @media screen and (max-width:768px) {
+        font-size: 30px;
+        padding:1px;
+        margin-bottom:0px;
+        line-height: 40px;
+
+    }
 `

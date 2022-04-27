@@ -5,11 +5,9 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items:center;
-    height: 90vh;
-    @media screen and (max-width:768px) {
-        height: 40vh;
-        padding: 20px;
-    }
+    max-width:1800px;
+    padding:50px;
+
 `
 
 export const Image = styled.img`
@@ -19,7 +17,7 @@ export const Image = styled.img`
     z-index: 1;
 
     @media screen and (max-width:768px) {
-        min-width: 200px;
+        max-width: 400px;
         margin:0;
         margin-top: 0;
     }
@@ -35,4 +33,10 @@ export const ImageContainer = styled.div`
     align-items: center;
     justify-content: center;
     display: flex;
+    @media screen and (max-width:768px) {
+        max-width: 400px;
+        height: auto;
+        padding:40px;
+
+    }
 `

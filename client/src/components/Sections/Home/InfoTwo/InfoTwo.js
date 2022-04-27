@@ -1,9 +1,6 @@
 import React from 'react'
-import { Container, LeftContainer, RightContainer, Title, Subtitle, ImageContainer, BackgroundImage, Image, Image1, Image2, Content } from './InfoTwo.elements'
+import { Container, LeftContainer, RightContainer, Title, Subtitle, ImageContainer, BackgroundImage, Content } from './InfoTwo.elements'
 import bg2 from '../../../../assets/Home/bg2.png'
-import Screens2 from '../../../../assets/Home/Screens2.png'
-import BuyerProperties from '../../../../assets/Home/BuyerProperties.png'
-import Maps from '../../../../assets/Home/Maps.png'
 import Fade from 'react-reveal/Fade';
 
 const InfoOne = () => {
@@ -35,9 +32,7 @@ const InfoOne = () => {
                 <ImageContainer>
                 <Fade right cascade delay={200}>
                     <BackgroundImage src={bg2} alt="background"/>
-                    <Image src={Screens2} alt="desktop-chat"/>
-                    <Image2 src={BuyerProperties} alt="properties-cards"/>
-                    <Image1 src={Maps} alt="maps"/>
+
                 </Fade>
                 </ImageContainer>
             </RightContainer>

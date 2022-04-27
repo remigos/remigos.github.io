@@ -19,7 +19,7 @@ const Accordion = styled((props) => (
   },
   '&:before': {
     display: 'none',
-    margin:'0px 30px',
+    margin:'0px 10px',
   },
 }));
 
@@ -37,6 +37,7 @@ const AccordionSummary = styled((props) => (
   padding:'20px 20px',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(180deg)',
+
   },
   '& .MuiAccordionSummary-content': {
 
@@ -44,7 +45,8 @@ const AccordionSummary = styled((props) => (
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(3),
+  paddingBottom: '40px', 
+  marginTop:'-30px'
 }));
 
 export default function CustomizedAccordions() {
@@ -55,7 +57,7 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div style={{padding:'40px 0px'}}>
+    <div style={{padding:'40px 0px', justifyContent:'center', alignItems:'center', maxWidth:'1800px'}}>
     <Title>Frequently Asked Questions</Title>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">

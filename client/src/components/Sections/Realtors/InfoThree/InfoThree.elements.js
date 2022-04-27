@@ -33,7 +33,7 @@ export const ImageContainer = styled.div`
 export const BackgroundImage = styled.img`
   position: relative;
   width:100%;
-  max-width:700px;
+  max-width:600px;
   height:auto;
   display: flex;
   z-index:1;
@@ -45,24 +45,6 @@ export const BackgroundImage = styled.img`
  }
 `
 
-export const Image = styled.img`
-      position:absolute;
-      z-index: 2;
-      width:100%;
-      max-width:600px;
-      top:50px;
-      left:50px;
-      @media screen and (max-width:960px) {
-        width: 100%;
-        min-width: 280px;
-        top:40px;
-        left:100px;
-      }
-      @media screen and (max-width:768px) {
-        max-width:280px;
-        left:40px;
-      }
-`
 export const Content = styled.div`
     max-width: 1800px;
     width:100%;
@@ -112,24 +94,4 @@ export const Subtitle = styled.p`
     @media screen and (max-width:960px) {
         font-size: 16px;
     }
-`
-export const Image1 = styled.img`
-      position:absolute;
-      z-index: 4;
-      width:100%;
-      width:200px;
-      top:100px;
-      right:0px;
-      align-items: left;
-      @media screen and (max-width:960px) {
-        width: 100%;
-        max-width:250px;
-        top:-50px;
-      }
-      @media screen and (max-width:600px) {
-        width: 100%;
-        max-width:150px;
-        top:0px;
-      }  
-
 `

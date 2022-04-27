@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { Card, LeftContainer, RightContainer, Image, Name, Icon } from './InfoFour.elements'
-import profile from '../../../../assets/About/Profile.png'
+import Caitlin from '../../../../assets/About/Caitlin_profile.png'
+import Hunter from '../../../../assets/About/Hunter_profile.png'
+import Katie from '../../../../assets/About/Katie_profile.png'
+
 import { Text } from '../../../../globalStyles'
 import './Carousel.css'
 import quotation from '../../../../assets/About/quotationMark.png'
-import Arrow from '../../../../assets/Icon/Right.png'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -61,10 +63,14 @@ export default class SimpleSlider extends Component {
           <h2 className="title" style={{visibility:'hidden'}}>test</h2>
           <div style={{ textAlign: "center" }}>
             <button className="button" onClick={this.previous}>
-                <img src={Arrow} alt='left-arrow' className="arrow_left"/>
+              <span class="material-symbols-outlined">
+              arrow_back_ios
+              </span>
             </button>
             <button className="button" onClick={this.next}>
-                <img src={Arrow} alt='right-arrow' className="arrow_right"/>
+              <span class="material-symbols-outlined">
+              arrow_forward_ios
+              </span>
             </button>
          </div>
       </div>
@@ -78,7 +84,7 @@ export default class SimpleSlider extends Component {
                         <Text>Real Estate Agent</Text>
                    </LeftContainer>
                    <RightContainer>
-                            <Image src={profile} alt="profile"/>
+                            <Image src={Hunter} alt="profile"/>
                    </RightContainer>
                 </Card>
           </div>
@@ -90,7 +96,7 @@ export default class SimpleSlider extends Component {
                         <Text>Real Estate Agent</Text>
                    </LeftContainer>
                    <RightContainer>
-                            <Image src={profile} alt="profile"/>
+                            <Image src={Caitlin} alt="profile"/>
                    </RightContainer>
                 </Card>
           </div>
@@ -102,7 +108,7 @@ export default class SimpleSlider extends Component {
                         <Text>Home Buyer</Text>
                    </LeftContainer>
                    <RightContainer>
-                            <Image src={profile} alt="profile"/>
+                            <Image src={Katie} alt="profile"/>
                    </RightContainer>
                 </Card>
           </div>

@@ -23,7 +23,7 @@ const Footer = () => {
                     <LinkContent>
                         <Title>Legal</Title>
                         <Links href='https://app.remigo.com/privacy'>Privacy policy</Links>
-                        <NavLink to='/dev-website/terms-and-conditions'>Terms and conditions</NavLink>
+                        <NavLink to='/dev-website/terms-and-conditions' className="nav_link">Terms and conditions</NavLink>
                     </LinkContent>
                     <LinkContent>
                         <Title>Social</Title>

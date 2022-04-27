@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width:100%;
     flex-direction: column;
     padding: 0 20px;
