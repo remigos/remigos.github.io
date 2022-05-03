@@ -5,7 +5,7 @@ export const Container = styled.div`
     justify-content: center;
     width:100%;
     flex-direction: row;
-    padding: 60px 70px 60px 20px;
+    padding: 40px 70px 40px 20px;
     background-color: #fff;
     align-items: center;
     @media screen and (max-width:960px) {
@@ -48,13 +48,13 @@ export const ImageContainer = styled.div`
 export const BackgroundImage = styled.img`
   position: relative;
   width:100%;
-  max-width:600px;
+  max-width:670px;
   height:auto;
   display:flex;
   left:0;
- @media screen and (max-width:960px) {
-     width: 670px;
- }
+  @media screen and (min-width:1800px) {
+    max-width:770px;
+}
  @media screen and (max-width:768px){
     width: 350px;
     left:20px;

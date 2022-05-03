@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  padding: 20px 70px;
+  padding: 20px 30px;
 
 }
 .title {
@@ -44,7 +44,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 70px;
+  padding: 50px 30px;
 }
 
 .dots {

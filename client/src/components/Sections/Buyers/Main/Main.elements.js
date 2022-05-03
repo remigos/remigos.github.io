@@ -7,6 +7,11 @@ export const Container = styled.div`
     justify-content: center;
     align-items:center;
     min-height:100vh;
+    
+    @media screen and (min-width:1800px) {
+        min-height:40vh;
+
+    }
     @media screen and (max-width:960px) {
         min-height:30vh;
         padding: 100px 20px;

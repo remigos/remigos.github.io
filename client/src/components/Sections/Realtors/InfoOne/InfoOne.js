@@ -2,7 +2,7 @@ import React from 'react'
 import { TopContent, Title, Subtitle, Text } from '../../../../globalStyles'
 import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, BottomContent,Content } from './InfoOne.elements'
 import Fade from 'react-reveal/Fade';
-import bg from '../../../../assets/Realtors/InfoOne.png'
+import bg from '../../../../assets/Realtors/InfoOne.jpg'
 
 const InfoOneRealtors = () => {
     return (

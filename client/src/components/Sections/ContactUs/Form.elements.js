@@ -8,9 +8,11 @@ export const Container = styled.div`
     align-items: left;
     flex-direction: column;
     border-radius: 6px;
-    box-shadow: 0px 0px 20px 0px #dedede;
+    box-shadow: 0px 0px 10px 0px #777;
     height: auto;
     margin-left: -40px;
+    z-index: 3;
+    background-color: #fff;
     @media screen and (max-width:950px) {
         border-radius: none;
         box-shadow: none;

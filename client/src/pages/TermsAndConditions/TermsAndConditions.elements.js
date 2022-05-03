@@ -64,7 +64,6 @@ export const Span = styled.a`
     font-size: 18px;
     line-height: 30px;
     color:#00AEEF;
-    border-bottom: #00AEEF 0.1em solid;
     cursor:pointer;
     text-align: left;
 

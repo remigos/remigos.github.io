@@ -1,7 +1,7 @@
 import React from 'react'
 import { Subtitle, Text } from '../../../../globalStyles.js'
 import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Content} from './InfoTwo.elements'
-import bg from '../../../../assets/Realtors/InfoTwo.png'
+import bg from '../../../../assets/Realtors/InfoTwo.jpg'
 import Fade from 'react-reveal/Fade';
 
 const InfoTwoRealtors = () => {

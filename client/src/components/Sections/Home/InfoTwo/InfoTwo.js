@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, LeftContainer, RightContainer, Title, Subtitle, ImageContainer, BackgroundImage, Content } from './InfoTwo.elements'
-import bg2 from '../../../../assets/Home/bg2.png'
+import bg2 from '../../../../assets/Home/bg2.jpg'
 import Fade from 'react-reveal/Fade';
 
 const InfoOne = () => {

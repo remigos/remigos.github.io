@@ -45,9 +45,9 @@ export const BackgroundImage = styled.img`
   height:auto;
   display: flex;
 
- @media screen and (max-width:960px) {
-     width: 670px;
- }
+  @media screen and (min-width:1800px) {
+    max-width:770px;
+}
  @media screen and (max-width:768px) {
      max-width:350px;
  }

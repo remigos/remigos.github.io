@@ -2,14 +2,14 @@ import React from 'react'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import GlobalStyle from './globalStyles'
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom'
 import Home from './pages/HomePage/Home'
 import {Footer} from './components'
 import Navbar from './components/Layout/Navbar/Navbar'
 import Realtors from './pages/Realtors/Realtor'
 import Buyers from './pages/Buyers/Buyers'
 import About from './pages/About/About'
-import ScrollToTop from './components/scrollToTop'
+//import ScrollToTop from './components/scrollToTop'
 import ContactUs from './pages/ContactUs/ContactUs'
 import FaQ from './pages/FaQ/FaQ'
 import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions'
@@ -21,19 +21,16 @@ function App() {
     <Router>
         <GlobalStyle/>
         <Navbar />
-        <ScrollToTop/>
-        <Switch>
-          <Route exact path="/">
-            <Redirect to="/dev-website" />
-          </Route>
-          <Route path='/dev-website' exact component={Home}/>
-          <Route path='/dev-website/realtors' exact component={Realtors}/>
-          <Route path='/dev-website/buyers' exact component={Buyers}/>
-          <Route path='/dev-website/about-us' exact component={About}/>
-          <Route path='/dev-website/contact-us' exact component={ContactUs}/>
-          <Route path='/dev-website/faq' exact component={FaQ}/>
-          <Route path='/dev-website/terms-and-conditions' exact component={TermsAndConditions}/>
-        </Switch>
+        <Routes>
+        <Route path="/" element={<Navigate to="/dev-website" />} />
+          <Route path='/dev-website' element={<Home/>}/>
+          <Route path='/realtors' element={<Realtors/>}/>
+          <Route path='/buyers' element={<Buyers/>}/>
+          <Route path='/about-us' element={<About/>}/>
+          <Route path='/contact-us' element={<ContactUs/>}/>
+          <Route path='/faq' element={<FaQ/>}/>
+          <Route path='/terms-and-conditions' element={<TermsAndConditions/>}/>
+        </Routes>
         <Footer/>
     </Router>
   );

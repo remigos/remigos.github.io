@@ -7,7 +7,10 @@ export const Container = styled.div`
     align-items:center;
     max-width:1800px;
     padding:50px;
+@media screen and (max-width:768px) {
+    padding:10px;
 
+}
 `
 
 export const Image = styled.img`

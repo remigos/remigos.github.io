@@ -15,7 +15,7 @@ export const Box = styled.div`
     display:flex;
     width:100%;
     flex-direction: row;
-    padding: 30px 40px;
+    padding: 30px;
     background-color:#E5F7FD;
     border-radius:30px;
     justify-content: center;
@@ -43,7 +43,7 @@ export const LeftPanel = styled.div`
     padding:30px 0px;
     display: flex;
     height:auto;
-    max-width:400px;
+    max-width:450px;
     @media screen and (max-width:960px) {
         width:40%;
     }

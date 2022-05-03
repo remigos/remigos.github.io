@@ -5,6 +5,10 @@ export const Subtitle = styled.p`
     font-size: 24px;
     line-height: 32px;
     color:#111826;
+    @media screen and (max-width:768px) {
+        font-size: 20px;
+        line-height: 28px;
+    }
 `
 
 export const Text = styled.p`
@@ -12,6 +16,10 @@ export const Text = styled.p`
     font-size: 18px;
     line-height: 30px;
     color:#374150;
+    @media screen and (max-width:768px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 `
 
 export const Span = styled.a`

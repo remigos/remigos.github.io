@@ -1,14 +1,26 @@
 import styled from'styled-components'
 
+
 export const Container = styled.div`
     display: flex;
+    justify-content: center;
     width:100%;
-    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width:960px) {
+        padding: 0px 30px;
+        justify-content: center;
+    }
+`
+
+
+export const Content = styled.div`
+    display: flex;
+    width:100%;
+    justify-content:space-between;
+    align-items: center;
     padding: 0px 0px;
     flex-direction: row;
-    max-width:2000px;
-    min-height:100vh;
-    height:auto;
+    max-width:1800px;
     @media screen and (max-width:950px) {
         flex-direction:column;
     }
@@ -41,10 +53,9 @@ export const ImageContainer = styled.div`
 `
 
 export const Image = styled.img`
-    position: relative;
+    position: absolute;
     top:0;
-    left:0;
-    max-width:650px;
-    object-fit: cover;
+    max-width:1800px;
     width:100%;
+    z-index:-2;
 `

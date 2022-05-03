@@ -37,8 +37,8 @@ export const LeftContent = styled.div`
     align-items: center;
     justify-content: flex-start;
     flex-direction:column;
-    padding:30px 9px;
-    max-width:600px;
+    padding:30px 0px;
+    max-width:500px;
     @media screen and (max-width:960px) {
         width:40%;
     }

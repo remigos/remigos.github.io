@@ -1,5 +1,5 @@
 import React from 'react'
-import InfoOne from '../../../../assets/Buyer/InfoThree.png'
+import InfoOne from '../../../../assets/Buyer/InfoThree.jpg'
 import { Subtitle, Text } from '../../../../globalStyles'
 import { BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
 import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage, Content } from './InfoThree.elements'

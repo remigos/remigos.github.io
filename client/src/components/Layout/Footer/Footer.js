@@ -16,14 +16,14 @@ const Footer = () => {
                     <LinkContent>
                         <Title>Company</Title>
                         {/*<Links href='/dev-website'>About</Links>*/}
-                        <NavLink to='/dev-website/contact-us' className="nav_link">Support</NavLink>
-                        <NavLink to='/dev-website/faq' className="nav_link">FAQ</NavLink>
-                        <NavLink to='/dev-website/contact-us' className="nav_link">Contact Us</NavLink>
+                        <NavLink to='/contact-us' className="nav_link">Support</NavLink>
+                        <NavLink to='/faq' className="nav_link">FAQ</NavLink>
+                        <NavLink to='/contact-us' className="nav_link">Contact Us</NavLink>
                     </LinkContent>
                     <LinkContent>
                         <Title>Legal</Title>
                         <Links href='https://app.remigo.com/privacy'>Privacy policy</Links>
-                        <NavLink to='/dev-website/terms-and-conditions' className="nav_link">Terms and conditions</NavLink>
+                        <NavLink to='/terms-and-conditions' className="nav_link">Terms and conditions</NavLink>
                     </LinkContent>
                     <LinkContent>
                         <Title>Social</Title>

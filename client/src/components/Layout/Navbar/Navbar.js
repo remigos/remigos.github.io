@@ -25,13 +25,12 @@ const Navbar = () => {
             <NavLink to="/dev-website">
                 <Image src={Logo} alt='logo'/>
             </NavLink>
-            <ul className={open ? 'nav-links active' : 'nav-links'}>  
+            <ul className={open ? 'nav-links active' : 'nav-links'} end>  
             <LeftContainer>
                 <li className="nav-item">
                 <NavLink
                   exact
-                  activeClassName="navbar__link--active"
-                  className="navbar__link"
+                  className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
                   to="/dev-website"
                   onClick={closeMenu}
                 >
@@ -40,9 +39,9 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                 <NavLink
-                  className="navbar__link"
-                  activeClassName="navbar__link--active"
-                  to="/dev-website/realtors"
+                exact
+                  className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
+                  to="/realtors"
                   onClick={closeMenu}
                 >
                     <p>
@@ -52,9 +51,11 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                 <NavLink
-                  activeClassName="navbar__link--active"
-                  className="navbar__link"
-                  to="/dev-website/buyers"
+                exact
+                  className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
+                  to="/buyers"
+                  onClick={closeMenu}
+
                 >
                     <p>
                         Buyers
@@ -63,9 +64,10 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                 <NavLink
-                activeClassName="navbar__link--active"
-                className="navbar__link"
-                to="/dev-website/about-us"
+                exact
+                className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
+                to="/about-us"
+                onClick={closeMenu}
               >
               <p>
               About

@@ -9,12 +9,8 @@ import { grey } from '@mui/material/colors';
 import Typography from '@mui/material/Typography';
 
 
+const Message  = (props) => {
 
-
-const Message  = () => {
-
-  const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const theme = createMuiTheme({
       typography: {
@@ -47,13 +43,44 @@ const Message  = () => {
     const [phonenumber,setPhonenumber] = useState("")
     const [brokerage,setBrokerage] = useState("")
     const [message,setMessage] = useState("")
-    const [subject,setSubject] = useState("general")
+    const [subject,setSubject] = useState("")
     const [userType, setUserType] = useState("")
-   
-    const PostData = ()=>{
-      const msg = {
+    const PostData = () => {
+      fetch("/send",{
+        method:"post",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+            firstname,
+            lastname,
+            phonenumber,
+            brokerage,
+            email,
+            subject,
+            message,
+            userType
+        })
+    }).then(res=>res.json())
+    .then(data=>{
+        setMessage('')
+        setFirstName('')
+        setLastName('')
+        setSubject('')
+        setEmail('')
+        setPhonenumber('')
+        setBrokerage('')
+        setUserType('')
+    }).catch(err=>{
+
+    })
+    
+/* This is with the sendgrid library but isn't working  https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail
+  const sgMail = require('@sendgrid/mail');
+  sgMail.setApiKey(process.env.SENDGIRD_API_KEY);
+     const msg = {
         to: email,
-        from: 'tobias@remigo.com', // Use the email address or domain you verified above
+        from: 'tobias@remigo.com', 
         subject: `${subject}`,
         html: `<h3>Name: ${firstname}, ${lastname}</h3>
         <br/>
@@ -79,11 +106,10 @@ const Message  = () => {
           setBrokerage('')
           setUserType('')
         }
-      });
+      });*/
     }
 
    return (
-     
      <ThemeProvider theme={theme}>
      <Container>
         <Title>Contact Us</Title>
@@ -92,10 +118,10 @@ const Message  = () => {
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
-        defaultValue="general"
+        defaultValue={props.subject}
       >
         <FormControlLabel
-         value='general' 
+         value='General' 
          onChange={(e)=> setSubject(e.target.value)} 
          control={
            <Radio
@@ -161,7 +187,7 @@ const Message  = () => {
         column
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
-        defaultValue="general"
+        defaultValue="REALTOR"
       >
           <FormControlLabel 
           value='REALTOR' 
@@ -197,6 +223,7 @@ const Message  = () => {
         <Button onClick={() => PostData()}>Send</Button>
      </Container>
      </ThemeProvider>
+     
    )
 }
 

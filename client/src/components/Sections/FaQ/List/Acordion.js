@@ -5,21 +5,19 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import {Title, Subtitle, Text, Span} from './Acordion.elements'
-
+import Fade from 'react-reveal'
 
 const Accordion = styled((props) => (
-  <MuiAccordion  elevation={0} square {...props} />
+  <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   borderTop:0,
   borderBottom: `1px solid #E5E7EB`,
-  margin:'0px 30px',
+  margin:'10px 0px',
   '&:not(:last-child)': {
     borderBottom: `1px solid #E5E7EB`,
-    margin:'0px 30px',
   },
   '&:before': {
     display: 'none',
-    margin:'0px 10px',
   },
 }));
 
@@ -29,24 +27,30 @@ const AccordionSummary = styled((props) => (
     {...props}
   />
 ))(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === 'dark'
-      ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(0, 0, 0, .0)',
+  backgroundColor: '#fff',
   flexDirection: 'row',
-  padding:'20px 20px',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(180deg)',
 
   },
   '& .MuiAccordionSummary-content': {
-
+    padding:'20px 0px 20px 0px',
   },
+  '& .MuiAccordionSummary-content.Mui-expanded': {
+    padding:'20px 0px 0px 0px',
+  },
+  '& .MuiAccordionDetails-root': {
+    opacity:0,
+  },
+  '& .MuiAccordionDetails-root.Mui-expanded': {
+    opacity:1,
+  }
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  paddingBottom: '40px', 
-  marginTop:'-30px'
+  paddingTop: theme.spacing(3),
+  paddingBottom: theme.spacing(3),
+
 }));
 
 export default function CustomizedAccordions() {
@@ -55,11 +59,12 @@ export default function CustomizedAccordions() {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-
   return (
-    <div style={{padding:'40px 0px', justifyContent:'center', alignItems:'center', maxWidth:'1800px'}}>
-    <Title>Frequently Asked Questions</Title>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+    <div style={{padding:'0px 0px', justifyContent:'center', alignItems:'center', maxWidth:'1800px'}}>
+    <Fade bottom>
+      <Title>Frequently Asked Questions</Title>
+    </Fade>
+      <Accordion TransitionProps={{ unmountOnExit: true }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Subtitle>Does Remigo cost money?</Subtitle>
         </AccordionSummary>
