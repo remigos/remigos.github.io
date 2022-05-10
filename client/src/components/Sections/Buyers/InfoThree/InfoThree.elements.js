@@ -10,7 +10,7 @@ export const Container = styled.div`
     align-items: center;
     @media screen and (max-width:960px) {
         flex-direction: column;
-        padding: 100px 70px 80px 70px;
+        padding: 100px 40px 80px 40px;
         justify-content: center;
     }
     @media screen and (max-width:600px) {
@@ -49,25 +49,6 @@ export const BackgroundImage = styled.img`
      max-width:350px;
  }
 `
-
-export const Image = styled.img`
-      position:absolute;
-      z-index: 2;
-      width:100%;
-      max-width:500px;
-      top:50px;
-      left:50px;
-      @media screen and (max-width:960px) {
-        width: 100%;
-        min-width: 280px;
-        top:40px;
-        left:100px;
-      }
-      @media screen and (max-width:768px) {
-        max-width:280px;
-        left:40px;
-      }
-`
 export const Content = styled.div`
     max-width: 1800px;
     width:100%;
@@ -91,12 +72,9 @@ export const LeftContainer = styled.div`
     @media screen and (max-width:960px) {
         justify-content:flex-start;
         max-width:100%;
+        padding:0;
     }
 
-    @media screen and (max-width:768px) {
-        max-width: 350px;
-        padding: 5px;
-    }
 `
 
 export const Title = styled.p`

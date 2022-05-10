@@ -1,7 +1,6 @@
 import React from 'react'
 import InfoOne from '../../../../assets/Buyer/InfoFive.jpg'
 import { Subtitle, Text } from '../../../../globalStyles'
-import { BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
 import { Container, LeftContainer, RightContainer, ImageContainer, BackgroundImage,Content } from './InfoFive.elements'
 import Fade from 'react-reveal'
 
@@ -9,7 +8,6 @@ const InfoFiveRealtors = () => {
     return (
         <Container>
             <Content>
-            <BottomContent>
                 <LeftContainer>
                     <Fade left>
                         <Subtitle>Get Started Today</Subtitle>
@@ -25,7 +23,6 @@ const InfoFiveRealtors = () => {
                         </Fade>
                     </ImageContainer>   
                  </RightContainer>
-            </BottomContent>
             </Content>
         </Container>
     )

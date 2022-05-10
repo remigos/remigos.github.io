@@ -60,6 +60,8 @@ export const Card = styled.div`
     @media screen and (max-width:768px) {
         width: 100%;
         margin: 0px 10px;
+        max-width:240px;
+        padding: 0px 10px;
 
     }
 `
@@ -67,6 +69,11 @@ export const Card = styled.div`
 export const Icon = styled.img`
     width: 80px;
     height:80px;
+
+    @media screen and (max-width:768px) {
+        width: 60px;
+    height:60px;
+    }
 `
 
 export const Subtitle = styled.p`
@@ -76,6 +83,8 @@ export const Subtitle = styled.p`
     padding: 25px 0px;
     @media screen and (max-width:768px){
         padding: 10px 0px;
+        font-size: 18px;
+
     }
 `
 
@@ -87,6 +96,8 @@ export const Text = styled.p`
 
     @media screen and (max-width:768px){
         padding: 10px 0px;
+        font-size: 14px;
+
     }
 
 `

@@ -9,7 +9,7 @@ export const Container = styled.div`
     align-items: center;
     @media screen and (max-width:960px) {
         flex-direction: column;
-        padding: 100px 70px 80px 70px;
+        padding: 100px 40px 80px 40px;
         justify-content: center;
     }
     @media screen and (max-width:600px) {
@@ -92,11 +92,8 @@ export const LeftContainer = styled.div`
     @media screen and (max-width:960px) {
         justify-content:flex-start;
         max-width:100%;
-    }
-
-    @media screen and (max-width:768px) {
-        max-width: 350px;
-        padding: 10px;
+        padding: 0px 0px 70px 0px;
+        
     }
 `
 

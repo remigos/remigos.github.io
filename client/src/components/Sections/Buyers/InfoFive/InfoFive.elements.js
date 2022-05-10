@@ -10,11 +10,8 @@ export const Container = styled.div`
     align-items: center;
     @media screen and (max-width:960px) {
         flex-direction: column;
-        padding: 100px 70px 80px 70px;
+        padding: 100px 40px 80px 40px;
         justify-content: center;
-    }
-    @media screen and (max-width:960px) {
-        padding: 100px 20px 80px 20px;
     }
 `
 export const RightContainer = styled.div`
@@ -86,13 +83,9 @@ export const LeftContainer = styled.div`
     @media screen and (min-width: 2500px) {
         max-width:700px;
     }
-    @media screen and (max-width:960px) {
-        max-width:100%;
-    }
-
     @media screen and (max-width:768px) {
-        max-width: 350px;
-        padding: 5px;
+        max-width: 100%;
+        padding: 0;
     }
 `
 
@@ -113,18 +106,5 @@ export const Subtitle = styled.p`
 
     @media screen and (max-width:960px) {
         font-size: 16px;
-    }
-`
-
-
-export const BottomContent = styled.div`
-    display: flex;
-    width:100%;
-    align-items:center;
-    justify-content: space-between;
-    flex-direction: row;
-    @media screen and (max-width:960px) {
-        flex-direction: column-reverse;
-        padding: 0;
     }
 `

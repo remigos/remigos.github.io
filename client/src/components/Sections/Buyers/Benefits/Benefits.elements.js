@@ -30,6 +30,8 @@ export const Title = styled.p`
     }
     @media screen and (max-width:768px) {
         font-size: 24px;
+        margin-bottom: 0px;
+
     }
 `
 
@@ -39,7 +41,7 @@ export const BottomContainer = styled.div`
     padding: 20px 20px;
     width:100%;
     @media screen and (max-width:960px) {
-        padding:100px 0px;
+        padding:50px 0px;
     }
     @media screen and (max-width:600px) {
         display:block;
@@ -49,7 +51,6 @@ export const BottomContainer = styled.div`
 
 export const Card = styled.div`
     width:100%;
-    min-width:200px;
     max-width:350px;
     height: 352px;
     flex-direction: column;
@@ -57,13 +58,10 @@ export const Card = styled.div`
     display: block;
     padding: 0px 20px;
     margin: 0px 30px;
-    @media screen and (max-width:1000px) {
-        min-width:200px;
-
-    }
     @media screen and (max-width:768px) {
-        width: 100%;
-        margin: 0px 10px;
+        width: 230px;
+        margin: 30px 10px;
+        padding: 0px 10px;
 
     }
 `
@@ -71,6 +69,11 @@ export const Card = styled.div`
 export const Icon = styled.img`
     width: 80px;
     height:80px;
+
+    @media screen and (max-width:768px) {
+        width: 60px;
+        height:60px;
+    }
 `
 
 export const Subtitle = styled.p`
@@ -80,6 +83,8 @@ export const Subtitle = styled.p`
     padding: 25px 0px;
     @media screen and (max-width:768px){
         padding: 10px 0px;
+        font-size: 18px;
+
     }
 `
 
@@ -91,6 +96,7 @@ export const Text = styled.p`
 
     @media screen and (max-width:768px){
         padding: 10px 0px;
+
     }
 
 `

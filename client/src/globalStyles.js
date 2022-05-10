@@ -34,7 +34,7 @@ export const TopContent = styled.div`
     margin-top:-150px;
 
     @media screen and (max-width:768px) {
-        padding:20px;
+        padding: 15px 0px;
     }
 `
 

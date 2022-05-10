@@ -9,7 +9,7 @@ import Navbar from './components/Layout/Navbar/Navbar'
 import Realtors from './pages/Realtors/Realtor'
 import Buyers from './pages/Buyers/Buyers'
 import About from './pages/About/About'
-//import ScrollToTop from './components/scrollToTop'
+import ScrollToTop from './components/scrollToTop'
 import ContactUs from './pages/ContactUs/ContactUs'
 import FaQ from './pages/FaQ/FaQ'
 import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions'
@@ -21,6 +21,7 @@ function App() {
     <Router>
         <GlobalStyle/>
         <Navbar />
+        <ScrollToTop>
         <Routes>
         <Route path="/" element={<Navigate to="/dev-website" />} />
           <Route path='/dev-website' element={<Home/>}/>
@@ -31,6 +32,7 @@ function App() {
           <Route path='/faq' element={<FaQ/>}/>
           <Route path='/terms-and-conditions' element={<TermsAndConditions/>}/>
         </Routes>
+        </ScrollToTop>
         <Footer/>
     </Router>
   );

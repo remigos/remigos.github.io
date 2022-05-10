@@ -11,10 +11,10 @@ const InfoTwo = () => {
             <BottomContent>
                 <LeftContainer>
                     <Fade left>
-                    <Subtitle>Missing Margin</Subtitle>
+                    <Subtitle>Looking Forward</Subtitle>
                     </Fade>
                     <Fade left delay={300}> 
-                    <Text>We have spent years in the real estate industry in one way or another and want to leverage our experience and skills to create something amazing. Join us as we explore a better way to communicate about homes</Text>
+                    <Text>Our team has spent years in the real estate and tech industry, developing and launching platforms that speed up communication and close more deals for our users. We are looking forward to leveraging our experience and skills to create something amazing. Join us as we explore a better way to communicate about homes.</Text>
                     </Fade>
                 </LeftContainer>
                 <RightContainer>

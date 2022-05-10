@@ -6,7 +6,7 @@ const TermsAndConditions = () => {
         <Container>
         <Content>
             <Title>Agent Terms of Use</Title>
-            <TextItalic>Last Updated: February 10, 2022</TextItalic>
+            <TextItalic>Last Updated: April 10, 2022</TextItalic>
             <Paragraph>These Terms of Use (“<Bold>Terms”</Bold>) apply to your access to and use of the www.Remigo.com website, mobile applications, and all other web sites, provided by us with a link to these Terms (collectively the “<Bold>Sites</Bold>”), as well as the products, content, features and services available on or through the Sites (collectively, together with the Sites, the “<Bold>Services</Bold>”) provided by Remigo, Inc. (“<Bold>Remigo</Bold>” or “<Bold>we</Bold>” or “<Bold>us</Bold>”).</Paragraph>
             <Paragraph>BY CLICKING “I ACCEPT” OR BY ACCESSING OR USING OUR SERVICES, YOU AGREE TO BE BOUND BY THESE TERMS AND ALL TERMS INCORPORATED BY REFERENCE. IF YOU DO NOT AGREE TO THESE TERMS IN THEIR ENTIRETY, DO NOT USE OUR SERVICES.</Paragraph>
             <Paragraph>If you are a real estate agent who received access to the Services from your real estate brokerage company, your use is also subject to the agreement between Remigo and the brokerage company (“Broker Agreement”) and in the event of any conflict between these Terms and the Broker Agreement, the Broker Agreement will govern.</Paragraph>

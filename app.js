@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport(sendGridTransport({
 app.post('/send', (req, res) => {
     const { firstname,lastname, email,phonenumber,brokerage, message, subject } = req.body
     transporter.sendMail({
-        to:'tttobis@gmail.com',
+        to:'noreply@remigo.com',
         from: email,
         subject:subject,
         html:`<h3>Name: ${firstname}, ${lastname}</h3>

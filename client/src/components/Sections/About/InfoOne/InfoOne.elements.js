@@ -90,12 +90,9 @@ export const Title = styled.p`
     padding-bottom: 60px;
     color: #111826;
     @media screen and (max-width:960px) {
-        font-size: 30px;
+        font-size: 32px;
         line-height: 40px;
-    }
-    @media screen and (max-width:600px) {
-        padding-bottom: 0px;
-
+        padding-bottom: 10px;
     }
 
 `

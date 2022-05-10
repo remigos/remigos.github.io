@@ -80,7 +80,7 @@ const Message  = (props) => {
   sgMail.setApiKey(process.env.SENDGIRD_API_KEY);
      const msg = {
         to: email,
-        from: 'tobias@remigo.com', 
+        from: 'noreply@remigo.com', 
         subject: `${subject}`,
         html: `<h3>Name: ${firstname}, ${lastname}</h3>
         <br/>
@@ -182,7 +182,7 @@ const Message  = (props) => {
         placeholder="Comment"
         value={message}
         onChange={(e)=>setMessage(e.target.value)}/>
-        <div style={{display: subject === 'request MLS' ? 'flex' : 'none', flexDirection: 'column'}}>
+        <div style={{display: (subject === 'request MLS' || props.subject === 'request MLS') ? 'flex' : 'none', flexDirection: 'column'}}>
         <RadioGroup
         column
         aria-labelledby="demo-row-radio-buttons-group-label"
