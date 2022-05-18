@@ -1,8 +1,7 @@
 import React from 'react'
 import { Subtitle, Text, TopContent } from '../../../../globalStyles.js'
 import InfoOne from '../../../../assets/About/Home.png'
-import { BottomContent} from '../../../commons/BuyerRealtor/RowReverse/Row.elements'
-import { Container, LeftContainer,Title, RightContainer, ImageContainer, BackgroundImage, Content } from './InfoOne.elements'
+import { Container, LeftContainer,Title, BottomContent, RightContainer, ImageContainer, BackgroundImage, Content } from './InfoOne.elements'
 import Fade from 'react-reveal'
 const InfoTwoRealtors = () => {
     return (

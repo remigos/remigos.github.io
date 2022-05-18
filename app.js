@@ -1,39 +1,23 @@
-const express = require('express')
-const app = express()
-const nodemailer = require('nodemailer')
-const sendGridTransport = require('nodemailer-sendgrid-transport');
-const {SENDGRID_API} = require('./config/keys')
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-const PORT = process.env.PORT || 3000
+const msg = {
+  to: 'tobias@remigo.com', // Change to your recipient
+  from: 'test@example.com', // Change to your verified sender
+  subject: 'Sending with SendGrid is Fun',
+  text: 'and easy to do anywhere, even with Node.js',
+  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+}
 
-app.use(express.json())
+sgMail
+  .send(msg)
+  .then((response) => {
+    console.log(response[0].statusCode)
+    console.log(response[0].headers)
+  })
+  .catch((error) => {
+    console.error(error)
+    console.log(error[0].statusCode)
+    console.log(error[0].headers)
 
-const transporter = nodemailer.createTransport(sendGridTransport({
-    auth:{
-        api_key:SENDGRID_API
-    }
-}))
-
-app.post('/send', (req, res) => {
-    const { firstname,lastname, email,phonenumber,brokerage, message, subject } = req.body
-    transporter.sendMail({
-        to:'noreply@remigo.com',
-        from: email,
-        subject:subject,
-        html:`<h3>Name: ${firstname}, ${lastname}</h3>
-            <br/>
-            <p>phone number: ${phonenumber}</p>
-            <p>Borkerage: ${brokerage}</p>
-            <p>${message}</p>`
-    }).then(resp => {
-        res.json({resp})
-    })
-    .catch(err => {
-    })
-})
-
-
-
-app.listen(PORT,()=>{
-    console.log("server is running on",PORT)
-})
+  })

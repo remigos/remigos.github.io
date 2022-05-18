@@ -9,7 +9,7 @@ export const Content = styled.div`
     max-width:1800px;
     flex-direction: column;
     @media screen and (max-width:768px) {
-        padding: 20px;
+        padding: 10px;
     }
 `
 
@@ -21,6 +21,13 @@ export const Title = styled.p`
     color:#111826;
     margin-bottom:50px;
     text-align: left;
+
+    @media screen and (max-width: 768px) {
+        font-size: 32px;
+        line-height: 24px;
+        margin:30px 0px;
+
+    }
 `
 
 export const TextItalic = styled.p`
@@ -30,7 +37,12 @@ export const TextItalic = styled.p`
     color:#374150;
     margin-bottom:50px;
     text-align: left;
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom:30px;
 
+    }
     `
 
 export const Subtitle = styled.p`
@@ -40,7 +52,11 @@ export const Subtitle = styled.p`
     color:#111826;
     margin-bottom:20px;
     text-align: left;
+    @media screen and (max-width: 768px) {
+        font-size: 22px;
+        margin-bottom:15px;
 
+    }
 `
 
 export const Paragraph = styled.p`
@@ -50,6 +66,12 @@ export const Paragraph = styled.p`
     color:#374150;
     margin-bottom:40px;
     text-align: left;
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom:30px;
+
+    }
 
 `
 export const Bold = styled.span`
@@ -57,7 +79,9 @@ export const Bold = styled.span`
     font-size: 18px;
     color:#374150;
     text-align: left;
-
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
 `
 export const Span = styled.a`
     font-weight: 400;
@@ -66,7 +90,9 @@ export const Span = styled.a`
     color:#00AEEF;
     cursor:pointer;
     text-align: left;
-
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
 `
 export const Link = styled.a`
     font-weight: 400;
@@ -75,5 +101,8 @@ export const Link = styled.a`
     color:#00AEEF;
     cursor:pointer;
     text-align: left;
-
+    word-wrap: break-word; 
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
 `

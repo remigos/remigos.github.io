@@ -18,6 +18,37 @@ export const LeftContent = styled.div`
         margin-top:70px;
     }
 `
+export const RightContent = styled.div`
+    display: flex;
+    width: 30%;
+    max-width:500px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 10px;
+    margin: 0px 150px;
+    @media screen and (max-width:960px) {
+        justify-content:flex-start;
+        width: 100%;
+        margin-right: 40px;
+    }
+
+    @media screen and (max-width:768px) {
+        padding: 0px 0px;
+        margin: 20px 0px 20px 30px;
+
+    }
+`
+export const BottomContent = styled.div`
+    display: flex;
+    width:100%;
+    align-items:center;
+    justify-content: space-between;
+    flex-direction: row;
+    @media screen and (max-width:960px) {
+        flex-direction: column;
+        padding: 0;
+    }
+`
 export const BackgroundImage = styled.img`
   position: relative;
   width:auto;

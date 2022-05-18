@@ -7,7 +7,7 @@ export const Container = styled.div`
     width:100%;
     align-items: center;
     @media screen and (max-width:960px) {
-        padding: 0px 30px;
+        padding: 0px 0px;
         justify-content: center;
     }
 `
@@ -30,7 +30,10 @@ export const LeftContainer = styled.div`
     flex-direction: column;
     width: 100%;
     max-width:650px;
-
+    display: flex;
+    @media screen and (max-width:600px) {
+        margin-bottom:150px;
+    }
 `
 
 export const RightContainer = styled.div`
@@ -45,6 +48,7 @@ export const RightContainer = styled.div`
     @media screen and (max-width:950px) {
         max-width:100%;
         margin: 0px;
+        
     }
 `
 
@@ -58,4 +62,8 @@ export const Image = styled.img`
     max-width:1800px;
     width:100%;
     z-index:-2;
+    @media screen and (max-width:600px) {
+        top:70px;
+        max-height:100%;
+    }
 `

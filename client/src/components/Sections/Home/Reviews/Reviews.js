@@ -1,12 +1,12 @@
 import React from 'react'
 import { Container, Box} from './Reviews.elements'
-import PreviousNextMethods from './Carousel'
+import Carousel from './Carousel'
 
 const Reviews = () => {
     return (
         <Container>
             <Box>
-                <PreviousNextMethods/>
+                <Carousel/>
             </Box>
         </Container>
     )

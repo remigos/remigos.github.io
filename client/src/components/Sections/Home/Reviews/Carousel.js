@@ -13,7 +13,7 @@ import avatar_laura from '../../../../assets/Home/Avatar/avatar_laura.jpg'
 import avatar_jordan from '../../../../assets/Home/Avatar/avatar_jordan.jpg'
 
 
-function SampleNextArrow(props) {
+function NextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -24,7 +24,7 @@ function SampleNextArrow(props) {
   );
 }
 
-function SamplePrevArrow(props) {
+function PrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -38,7 +38,7 @@ function SamplePrevArrow(props) {
 
 
 
-export default class PreviousNextMethods extends Component {
+export default class Carousel extends Component {
   constructor(props) {
     super(props);
     this.next = this.next.bind(this);
@@ -67,8 +67,8 @@ export default class PreviousNextMethods extends Component {
           }
         }
       ],
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />
     };
     return (
       <div style={{justifyContent: 'center', alignItems: 'center', paddingTop:'4%'}}>

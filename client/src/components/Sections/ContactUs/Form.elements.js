@@ -14,8 +14,7 @@ export const Container = styled.div`
     z-index: 3;
     background-color: #fff;
     @media screen and (max-width:950px) {
-        border-radius: none;
-        box-shadow: none;
+
         max-width: 600px;
         margin-left: 0px;
     }

@@ -15,7 +15,8 @@ export const Nav = styled.nav`
     z-index:999;
     @media screen and (max-width:768px) {
         position: sticky;
-        justify-content: flex-start;
+        justify-content: space-between;
+        align-items: center;
 
     }
 `;
@@ -51,9 +52,8 @@ export const Image = styled.img`
         margin-right:0;
     }
   @media screen and (max-width:768px){
-      margin-left:25%;
-      top:0;
       width: 105px; 
+      margin-right:125px;
 
   }
 

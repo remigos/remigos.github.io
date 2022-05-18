@@ -27,10 +27,13 @@ export const Span = styled.a`
     font-size: 18px;
     line-height: 30px;
     color:#00AEEF;
-    border-bottom: #00AEEF 0.1em solid;
     cursor:pointer;
+    text-align: left;
+    word-wrap: break-word; 
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
 `
-
 export const Title = styled.h1`
     font-weight: 400;
     font-size: 48px;

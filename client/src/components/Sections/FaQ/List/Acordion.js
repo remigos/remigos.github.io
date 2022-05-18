@@ -70,7 +70,7 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Text>
-          Remigo is free to use for buyers. Real estate agents are billed monthly for the use of Remigo. The billing information will be available in your account or on the pricing page. If you have questions about your bill please contact <Span>support@remigo.com</Span>
+          Remigo is free to use for buyers. Real estate agents are billed monthly for the use of Remigo. The billing information will be available in your account or on the pricing page. If you have questions about your bill please contact <a href="mailto:support@remigo.com"><Span>support@remigo.com</Span></a>
           </Text>
         </AccordionDetails>
       </Accordion>
@@ -80,7 +80,7 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Text>
-          We are working on building out support for new cities everyday but if you have interest in a specific city please reach out to <Span>support@remigo.com</Span>. We prioritize development of data feed by demand and technical availability.
+          We are working on building out support for new cities everyday but if you have interest in a specific city please reach out to <a href="mailto:support@remigo.com"><Span>support@remigo.com</Span></a>. We prioritize development of data feed by demand and technical availability.
           </Text>
         </AccordionDetails>
       </Accordion>
@@ -100,7 +100,7 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Text>
-            Email <Span>support@remigo.com</Span> to delete your account and data.
+            Email <a href="mailto:support@remigo.com"><Span>support@remigo.com</Span></a> to delete your account and data.
           </Text>
         </AccordionDetails>
       </Accordion>
@@ -150,7 +150,7 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Text>
-          First, use the “forgot password” option on the login page. If this does not solve your problem for any reason please reach out to <Span>support@remigo.com</Span>. We may require you to prove your identity before we can assist you in some circumstances.
+          First, use the “forgot password” option on the login page. If this does not solve your problem for any reason please reach out to <a href="mailto:support@remigo.com"><Span>support@remigo.com</Span></a>. We may require you to prove your identity before we can assist you in some circumstances.
           </Text>
         </AccordionDetails>
       </Accordion>

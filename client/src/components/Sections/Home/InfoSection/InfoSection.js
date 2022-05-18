@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container } from '../../../../globalStyles'
-import { RightContent, BottomContent } from '../../../commons/BuyerRealtor/Row/Row.elements'
-import { Button, Title, Text, LeftContent,BackgroundImage,Image2,Image1,Image3,Content,ImageContainer } from './InfoSection.elements'
+import { Button, Title, RightContent, Text, BottomContent, LeftContent,BackgroundImage,Image2,Image1,Image3,Content,ImageContainer } from './InfoSection.elements'
 import msg from '../../../../assets/Home/ChatBox.png'
 import cards from '../../../../assets/Home/Card.png'
 import msgBuyer from '../../../../assets/Home/ChatBoxBuyer.png'
