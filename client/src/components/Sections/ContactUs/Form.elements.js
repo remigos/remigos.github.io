@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const FormContainer = styled.div`
     width:100%;
     display: flex;
     max-width:550px;
@@ -49,7 +49,7 @@ export const Text = styled.p`
     color:#374150;
     margin:20px 0px;
 `
-export const Button = styled.button`
+export const FormButton = styled.button`
     width: 100%;
     background-color: #28B8A7;
     height:48px;

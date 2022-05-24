@@ -7,7 +7,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles'
 import { grey } from '@mui/material/colors';
 import Typography from '@mui/material/Typography';
-
+import { useNavigate } from "react-router-dom";
 
 const Message  = (props) => {
 
@@ -43,26 +43,33 @@ const Message  = (props) => {
     const [phonenumber,setPhonenumber] = useState("")
     const [brokerage,setBrokerage] = useState("")
     const [message,setMessage] = useState("")
-    const [subject,setSubject] = useState("")
-    const [userType, setUserType] = useState("")
+    const [subject,setSubject] = useState("General")
+    const [userType, setUserType] = useState("none");
+    const navigate = useNavigate();
+
     const PostData = () => {
-      fetch("/send",{
+      var data = {
+        firstname: firstname,
+        lastname:lastname,
+        phonenumber:phonenumber,
+        brokerage:brokerage,
+        email:email,
+        subject:subject,
+        message:message,
+        userType:userType
+      }
+        fetch("https://o8crk98988.execute-api.us-east-1.amazonaws.com/serverless_lambda_stage/sendgrid",{
         method:"post",
+        mode: 'no-cors',
         headers:{
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST,OPTIONS"
+
         },
-        body:JSON.stringify({
-            firstname,
-            lastname,
-            phonenumber,
-            brokerage,
-            email,
-            subject,
-            message,
-            userType
-        })
-    }).then(res=>res.json())
-    .then(data=>{
+        body:JSON.stringify(data)
+    })
+    .then(() => {
         setMessage('')
         setFirstName('')
         setLastName('')
@@ -71,43 +78,11 @@ const Message  = (props) => {
         setPhonenumber('')
         setBrokerage('')
         setUserType('')
+        navigate('/contact-us',{state:{success:true}});
     }).catch(err=>{
 
-    })
-    
-/* This is with the sendgrid library but isn't working  https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail
-  const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey(process.env.SENDGIRD_API_KEY);
-     const msg = {
-        to: email,
-        from: 'noreply@remigo.com', 
-        subject: `${subject}`,
-        html: `<h3>Name: ${firstname}, ${lastname}</h3>
-        <br/>
-        <p>phone number: ${phonenumber}</p>
-        <p>Brokerage: ${brokerage}</p>
-        <p>User Type: ${userType}</p>
-        <p>${message}</p>`,
-      };
-      sgMail
-      .send(msg)
-      .then(() => {}, error => {
-        console.error(error);
-    
-        if (error.response) {
-          console.error(error.response.body)
-        } else {
-          setMessage('')
-          setFirstName('')
-          setLastName('')
-          setSubject('')
-          setEmail('')
-          setPhonenumber('')
-          setBrokerage('')
-          setUserType('')
-        }
-      });*/
-    }
+    })  
+  }
 
    return (
      <ThemeProvider theme={theme}>

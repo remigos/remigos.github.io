@@ -54,6 +54,7 @@ export const RightContainer = styled.div`
 
 export const ImageContainer = styled.div`
     width:100%;
+
 `
 
 export const Image = styled.img`

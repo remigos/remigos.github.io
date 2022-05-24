@@ -94,6 +94,7 @@ resource "aws_iam_role_policy_attachment" "lambda_policy" {
 resource "aws_apigatewayv2_api" "lambda" {
   name          = "serverless_lambda_gw"
   protocol_type = "HTTP"
+
 }
 
 resource "aws_apigatewayv2_stage" "lambda" {
