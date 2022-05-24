@@ -16,7 +16,7 @@ module.exports.handler = async (event) => {
     const { firstname,lastname, email, phonenumber ,brokerage , message , subject, userType } = JSON.parse(event.body)
     let resp;
     resp = await transporter.sendMail({
-        to:'tobias@remigo.com',
+        to:'support@remigo.com',
         from: 'remigo.team@gmail.com',
         subject:subject,
         html:`<h3>Name: ${firstname}, ${lastname}</h3>

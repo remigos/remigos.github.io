@@ -83,6 +83,7 @@ export const TextField = styled.input`
     margin-bottom:10px;
     padding:0px 10px;
     margin-top:10px;
+    font-size:14px;
 `
 export const TextFieldName = styled.input`
     width:47%;
@@ -93,6 +94,8 @@ export const TextFieldName = styled.input`
     margin-bottom:10px;
     padding:0px 10px;
     margin-top:30px;
+    font-size:14px;
+
 `
 export const TextArea = styled.textarea`
     width:100%;
@@ -102,5 +105,6 @@ export const TextArea = styled.textarea`
     padding:10px;
     margin-bottom:20px;
     margin-top:10px;
+    font-size:14px;
 
 `
