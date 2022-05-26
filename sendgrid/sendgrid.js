@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer')
 const sendGridTransport = require('nodemailer-sendgrid-transport');
 
 //Create it locally
-const {SENDGRID_API_KEY} = require('./config/keys.js')
+const SENDGRID_API_KEY= require('./config/keys.js')
 
 module.exports.handler = async (event) => {
 
@@ -30,8 +30,6 @@ module.exports.handler = async (event) => {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        "Access-Control-Allow-Headers" : "Content-Type",
-        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
         message:  resp,

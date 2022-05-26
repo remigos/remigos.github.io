@@ -1,206 +1,243 @@
-import React,{useState} from 'react'
-import { Container, Text, NameContainer,ColumnContainer, TextFieldName, TextField,TextArea ,Button} from './Form.elements'
-import { Title } from '../../../globalStyles'
+// Helper styles for demo
+import "./Form.css";
+import React from "react";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import { NameContainer } from './Form.elements'
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles'
 import { grey } from '@mui/material/colors';
 import Typography from '@mui/material/Typography';
-import { useNavigate } from "react-router-dom";
 
-const Message  = (props) => {
+const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+const Formfield = () => (
 
+  <div>
+    <Formik
+      initialValues={{ 
+          email: "" ,
+          firstname:"",
+          lastname:"",
+          brokerage:"",
+          message:"",
+          phonenumber:"",
+          subject: "General",
+          "userType": "none"
 
-    const theme = createMuiTheme({
-      typography: {
-        fontFamily: [
-          'Poppins',
-          'sans-serif'
-        ].join(','),
-        fontSize: 14,
-        color:grey[500]
-      },
-      palette: {
-        primary: {
-          main: '#00aeff',
-        },
-      },
-      overrides: {
-        MuiFormControlLabel: {
-          label: {
-            fontSize: 14,
-            color:grey[500]
-          },
-        },
-      }
-    })
+    }}
+      onSubmit={async values => {
+        await new Promise(resolve => setTimeout(resolve, 500));
+        alert(JSON.stringify(values, null, 2));
+      }}
+      validationSchema={Yup.object().shape({
+        email: Yup.string().email().required("Required"),
+        firstname: Yup.string().required("Required"),
+        lastname: Yup.string().required("Required"),
+        brokerage: Yup.string(),
+        phonenumber: Yup.string().matches(phoneRegExp, 'Phone number is not valid'),
+        message: Yup.string().required("Required").max(140)
 
-
-    const [firstname,setFirstName] = useState("")
-    const [lastname,setLastName] = useState("")
-    const [email,setEmail] = useState("")
-    const [phonenumber,setPhonenumber] = useState("")
-    const [brokerage,setBrokerage] = useState("")
-    const [message,setMessage] = useState("")
-    const [subject,setSubject] = useState("General")
-    const [userType, setUserType] = useState("none");
-    const navigate = useNavigate();
-
-    const PostData = () => {
-      var data = {
-        firstname: firstname,
-        lastname:lastname,
-        phonenumber:phonenumber,
-        brokerage:brokerage,
-        email:email,
-        subject:subject,
-        message:message,
-        userType:userType
-      }
-        fetch("https://o8crk98988.execute-api.us-east-1.amazonaws.com/serverless_lambda_stage/sendgrid",{
-        method:"post",
-        mode: 'no-cors',
-        headers:{
-            "Content-Type":"application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "POST,OPTIONS"
-
-        },
-        body:JSON.stringify(data)
-    })
-    .then(() => {
-        setMessage('')
-        setFirstName('')
-        setLastName('')
-        setSubject('')
-        setEmail('')
-        setPhonenumber('')
-        setBrokerage('')
-        setUserType('')
-        navigate('/contact-us',{state:{success:true}});
-    }).catch(err=>{
-
-    })  
-  }
-
-   return (
-     <ThemeProvider theme={theme}>
-     <Container>
-        <Title>Contact Us</Title>
-        <Text>Have an inquiry or some feedback for us? Fill out the from below to contact out team.</Text>
-        <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-        defaultValue={props.subject}
-      >
-        <FormControlLabel
-         value='General' 
-         onChange={(e)=> setSubject(e.target.value)} 
-         control={
-           <Radio
-           sx={{
-            color: grey[500],
-            '&.Mui-checked': {
-              color: 'primary',
-            },
-          }}
-           />} 
-        label={<Typography sx={{color:'#374150'}}>General</Typography>} 
-        />
-        <FormControlLabel
-         value="request MLS" 
-         onChange={(e)=> setSubject(e.target.value)} 
-         control={
-           <Radio 
-           sx={{
-            color: grey[500],
-            '&.Mui-checked': {
-              color: 'primary',
-            },
-          }}/>
-          } 
-          label={<Typography sx={{color:'#374150'}}>Request MLS</Typography>} />
-      </RadioGroup>
-        <NameContainer>
-          <TextFieldName
-          type="text"
-          value={firstname}
-          placeholder="First Name"
-          onChange={(e)=>setFirstName(e.target.value)}
-          />
-        <TextFieldName
-        type="text"
-        placeholder="Last Name"
-        value={lastname}
-        onChange={(e)=>setLastName(e.target.value)}/>
-        </NameContainer>
-        <ColumnContainer>
-        <TextField
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e)=>setEmail(e.target.value)}/>
-        <TextField
-        type="tel"
-        placeholder="Phone"
-        value={phonenumber}
-        onChange={(e)=>setPhonenumber(e.target.value)}/>
-        <TextField
-        type="text"
-        placeholder="Brokerage"
-        value={brokerage}
-        onChange={(e)=>setBrokerage(e.target.value)}/>
-        <TextArea
-        type="text"
-        placeholder="Comment"
-        value={message}
-        onChange={(e)=>setMessage(e.target.value)}/>
-        <div style={{display: (subject === 'request MLS' || props.subject === 'request MLS') ? 'flex' : 'none', flexDirection: 'column'}}>
-        <RadioGroup
-        column
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-        defaultValue="REALTOR"
-      >
-          <FormControlLabel 
-          value='REALTOR' 
-          onChange={(e)=> setUserType(e.target.value)} 
-          control={
-            <Radio
-            sx={{
-              color: grey[500],
-              '&.Mui-checked': {
-                color: 'primary',
-              },
-            }}
+      })}
+    >
+      {props => {
+        const {
+          values,
+          touched,
+          errors,
+          isSubmitting,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          setFieldValue
+        } = props;
+        console.log(values.subject)
+        return (
+          <form onSubmit={handleSubmit}>
+          <RadioGroup
+               row
+               aria-labelledby="demo-row-radio-buttons-group-label"
+               name="row-radio-buttons-group"
+               defaultValue={values.subject}
+             >
+               <FormControlLabel
+               type="radio"
+                value="General"
+                name="subject"
+                checked={values.subject === "General"}
+                onChange={() => setFieldValue("subject", "General")}
+                control={
+                  <Radio
+                  sx={{
+                   color: grey[500],
+                   '&.Mui-checked': {
+                     color: 'primary',
+                   },
+                 }}
+                  />} 
+               label={<Typography sx={{color:'#374150'}}>General</Typography>} 
+               />
+               <FormControlLabel
+               type="radio"
+                value="request MLS" 
+                name="subject"
+                checked={values.subject === "request MLS"}
+                onChange={() => setFieldValue("subject", "request MLS")}
+                control={
+                  <Radio 
+                  sx={{
+                   color: grey[500],
+                   '&.Mui-checked': {
+                     color: 'primary',
+                   },
+                 }}/>
+                 } 
+                 label={<Typography sx={{color:'#374150'}}>Request MLS</Typography>} />
+             </RadioGroup>
+          <NameContainer>
+            <input
+              id="firstname"
+              placeholder="First Name"
+              type="text"
+              value={values.firstname}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={
+                errors.firstname && touched.firstname
+                  ? "input-name error"
+                  : "input-name"
+              }
             />
-          } 
-          label={<Typography sx={{color:'#374150'}}>I am a REALTOR</Typography>} />
-          <FormControlLabel 
-          value="Buyer" 
-          onChange={(e)=> setUserType(e.target.value)} 
-          control={
-            <Radio
-            sx={{
-              color: grey[500],
-              '&.Mui-checked': {
-                color: 'primary',
-              },
-            }}
+            {errors.firstname && touched.firstname && (
+              <div className="input-feedback">{errors.firstname}</div>
+            )}
+            <input
+              id="lastname"
+              placeholder="Last Name"
+              type="text"
+              value={values.lastname}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={
+                errors.lastname && touched.lastname
+                  ? "input-name error"
+                  : "input-name"
+              }
             />
-          } 
-          label={<Typography sx={{color:'#374150'}}>I am a Home Buyer</Typography>} />
-          </RadioGroup>
-        </div>
-        </ColumnContainer>
-        <Button onClick={() => PostData()}>Send</Button>
-     </Container>
-     </ThemeProvider>
-     
-   )
-}
+            {errors.lastname && touched.lastname && (
+              <div className="input-feedback">{errors.lastname}</div>
+            )}
+            </NameContainer>
+            <div className="input-container">
+            <input
+                id="email"
+                placeholder="Enter your email"
+                type="text"
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                errors.email && touched.email
+                    ? "text-input error"
+                    : "text-input"
+                }
+            />
+            {errors.email && touched.email && (
+                <div className="input-feedback">{errors.email}</div>
+            )}
+            </div>
+            <input
+            id="phonenumber"
+            placeholder="Phone Number"
+            value={values.phonenumber}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={
+                errors.phonenumber && touched.phonenumber
+                ? "text-input error"
+                : "text-input"
+            }
+            />
+            {errors.phonenumber && touched.phonenumber && (
+            <div className="input-feedback">{errors.phonenumber}</div>
+            )}
 
+            <input
+                id="brokerage"
+                placeholder="Brokerage"
+                value={values.brokerage}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className="text-input"
+            />
+            <textarea
+                id="message"
+                placeholder="Comment"
+                type="text"
+                value={values.message}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                errors.message && touched.message
+                    ? "text-area error"
+                    : "text-area"
+                }
+            />
+            {errors.message && touched.message && (
+                <div className="input-feedback">{errors.message}</div>
+            )}
+        <div style={{display: (values.subject === 'request MLS' || values.subject === 'request MLS') ? 'flex' : 'none', flexDirection: 'column'}}>
+            <RadioGroup
+            column
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+            defaultValue="Realtor"
+          >
+              <FormControlLabel 
+              value='Realtor' 
+              name="userType"
+              checked={values.userType === "Realtor"}
+              onChange={() => setFieldValue("userType", "Realtor")}
+              control={
+                <Radio
+                sx={{
+                  color: grey[500],
+                  '&.Mui-checked': {
+                    color: 'primary',
+                  },
+                }}
+                />
+              } 
+              label={<Typography sx={{color:'#374150'}}>I am a REALTOR</Typography>}
+               />
+              <FormControlLabel 
+              value="Buyer" 
+              name="userType"
+              checked={values.userType === "Buyer"}
+              onChange={() => setFieldValue("userType", "Buyer")}
+              control={
+                <Radio
+                sx={{
+                  color: grey[500],
+                  '&.Mui-checked': {
+                    color: 'primary',
+                  },
+                }}
+                />
+              } 
+              label={<Typography sx={{color:'#374150'}}>I am a Home Buyer</Typography>} 
+              />
+              </RadioGroup>
+            </div>
+            <button type="submit" disabled={isSubmitting}>
+              Submit
+            </button>
+          </form>
+        );
+      }}
+    </Formik>
+  </div>
+    
+);
 
-export default Message
+export default Formfield;

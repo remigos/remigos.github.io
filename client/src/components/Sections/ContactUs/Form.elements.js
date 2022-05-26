@@ -30,9 +30,7 @@ export const NameContainer = styled.div`
     width:100%;
     justify-content: space-between;
 `
-export const Inputs = styled.div`
-    width:100%;
-`
+
 export const RadioGroup = styled.div`
     width: 100%;
     display:flex;
@@ -49,62 +47,8 @@ export const Text = styled.p`
     color:#374150;
     margin:20px 0px;
 `
-export const FormButton = styled.button`
-    width: 100%;
-    background-color: #28B8A7;
-    height:48px;
-    justify-content: center;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    border:none;
-    border-radius: 6px;
-    margin-top: 20px;
-    cursor:pointer;
-
-    :hover {
-        color: #28B8A7;
-        background-color: #DCF8F4;
-    }
-
-    :focus {
-        border: 1.5px solid #135A51;
-        background-color: #28B8A7;
-        color: #fff;
-
-    }
-`
-export const TextField = styled.input`
+export const InputContainer = styled.div`
+    flex-direction: column;
     width:100%;
-    height:60px;
-    border:1px solid #E5E7EB;
-    border-radius: 6px;
-    padding:10px;
-    margin-bottom:10px;
-    padding:0px 10px;
-    margin-top:10px;
-    font-size:14px;
 `
-export const TextFieldName = styled.input`
-    width:47%;
-    height:60px;
-    border:1px solid #E5E7EB;
-    border-radius: 6px;
-    padding:10px;
-    margin-bottom:10px;
-    padding:0px 10px;
-    margin-top:30px;
-    font-size:14px;
 
-`
-export const TextArea = styled.textarea`
-    width:100%;
-    height:150px;
-    border:1px solid #E5E7EB;
-    border-radius: 6px;
-    padding:10px;
-    margin-bottom:20px;
-    margin-top:10px;
-    font-size:14px;
-
-`
