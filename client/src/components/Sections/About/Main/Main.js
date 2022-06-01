@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Image } from './Main.elements'
-import people from '../../../../assets/About/main_people.jpeg'
+import people from '../../../../images/About/main_people.jpeg'
 
 const Main = () => {
     return (

@@ -1,13 +1,53 @@
 import React, { useState } from 'react'
 import { Nav, LeftContainer, RightContainer, Image, ButtonSignIn, ButtonRegister } from './Navbar.elements'
-import Logo from '../../../assets/Logo.png'
+import Logo from '../../../images/Logo.png'
 import Stack from '@mui/material/Stack';
-import { NavLink } from 'react-router-dom'
 import './navbar.css'
-import Menu from '../../../assets/Icon/Hamburger.png'
-import Close from '../../../assets/Icon/close.png'
+import Menu from '../../../images/Icon/Hamburger.png'
+import Close from '../../../images/Icon/close.png'
+import { Link } from "gatsby"
+import styled from "styled-components"
+
 
 const Navbar = () => {
+
+  const NavItem = styled(Link)`
+  text-decoration: none;
+  margin: 0 1vw;
+  transition: all 200ms ease-in;
+  position: relative;
+    width: 105px;
+    height: 88px;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    line-height: 20px;
+    color: #374150;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  :after {
+    position: absolute;
+    color: transparent;
+    background: #00AEEF;
+    transition: all 0.4s ease-in;
+    border-bottom: 2px solid #00AEEF;
+
+  }
+
+  :hover {
+    color: #00AEEF;
+    border-bottom: 2px solid #00AEEF;
+  }
+  
+  @media screen and (max-width:768px) {
+    align-items: left;
+
+  }
+  `
+
+const LogoLink = styled(Link)`
+
+`
   const [open, setOpen] = useState(false);
 
 	const handleClick = () => {
@@ -19,26 +59,26 @@ const Navbar = () => {
 	}; 
     return (
         <Nav>
-            <div onClick={handleClick} className="nav-icon">
+            <div onClick={handleClick} className="nav-icon" aria-hidden="true">
                 {open ? <img src={Close} alt="close" width="25"/> : <img src={Menu} alt="Menu" width="25" />}
             </div>
-            <NavLink to="/dev-website">
-                <Image src={Logo} alt='logo'/>
-            </NavLink>
+            <LogoLink to="/">           
+             <Image src={Logo} alt='logo'/>
+            </LogoLink>
             <ul className={open ? 'nav-links active' : 'nav-links'} end>  
             <LeftContainer>
                 <li className="nav-item">
-                <NavLink
+                <NavItem
                   exact
                   className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
-                  to="/dev-website"
+                  to="/"
                   onClick={closeMenu}
                 >
                   Home
-                </NavLink>
+                </NavItem>
                 </li>
                 <li className="nav-item">
-                <NavLink
+                <NavItem
                 exact
                   className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
                   to="/realtors"
@@ -47,10 +87,10 @@ const Navbar = () => {
                     <p>
                         REALTORS
                   </p>
-                </NavLink>
+                </NavItem>
                 </li>
                 <li className="nav-item">
-                <NavLink
+                <NavItem
                 exact
                   className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
                   to="/buyers"
@@ -60,10 +100,10 @@ const Navbar = () => {
                     <p>
                         Buyers
                     </p>
-                </NavLink>
+                </NavItem>
                 </li>
                 <li className="nav-item">
-                <NavLink
+                <NavItem
                 exact
                 className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
                 to="/about-us"
@@ -72,7 +112,7 @@ const Navbar = () => {
               <p>
               About
               </p>
-              </NavLink>
+              </NavItem>
               </li>
             </LeftContainer>
             <RightContainer>

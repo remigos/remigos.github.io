@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Background, Image, ImageContainer } from './Main.elements'
-import circle from '../../../../assets/Buyer/circleBg.png'
-import bg from '../../../../assets/Buyer/Bg.png'
+import circle from '../../../../images/Buyer/circleBg.png'
+import bg from '../../../../images/Buyer/Bg.png'
 import Fade from 'react-reveal'
 
 const Main = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
-import yellow from '../../../../assets/About/yellow.jpeg'
-import { Subtitle, Text } from '../../../../globalStyles'
+import yellow from '../../../../images/About/yellow.jpeg'
+import { Subtitle, Text } from '../../../globalStyles'
 import { Container, LeftContainer, BottomContent, RightContainer, ImageContainer, BackgroundImage, Content } from './InfoTwo.elements'
 import Fade from 'react-reveal'
 const InfoTwo = () => {

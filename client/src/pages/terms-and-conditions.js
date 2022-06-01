@@ -1,9 +1,16 @@
 import React from 'react'
-import { Content, Title, TextItalic, Paragraph, Subtitle, Span, Bold, Link } from './TermsAndConditions.elements'
-import { Container } from '../../globalStyles' 
+import { Content, Title, TextItalic, Paragraph, Subtitle, Span, Bold, Link } from '../components/TermsAndConditions.elements'
+import { Container } from '../components/globalStyles' 
+import GlobalStyle from '../components/globalStyles'
+import Seo from '../components/Seo'
+import Layout from '../components/Layout/layout'
+
 const TermsAndConditions = () => {
     return (
+        <Layout>
         <Container>
+        <GlobalStyle/>
+        <Seo/>
         <Content>
             <Title>Terms of Use</Title>
             <TextItalic>Last Updated: April 10, 2022</TextItalic>
@@ -178,6 +185,7 @@ const TermsAndConditions = () => {
             <Paragraph><Bold>Austin MLS (ACTRIS)</Bold> Information provided from the Austin Board of REALTORS® / ACTRIS All information provided is deemed reliable but is not guaranteed and should be independently verified. The Austin Board of REALTORS®, ACTRIS and their affiliates provide the MLS and all content therein “AS IS” and without any warranty, express or implied. IDX information is provided exclusively for consumers’ personal, non-commercial use, and it may not be used for any purpose other than to identify prospective properties consumers may be interested in purchasing. Data is deemed reliable but is not guaranteed accurate by the MLS. <a href="https://trec.texas.gov/forms/consumer-protection-notice"><Span>Texas Real Estate Commission Consumer Protection Notice</Span></a></Paragraph>
         </Content>
         </Container>
+        </Layout>
     )
 }
 

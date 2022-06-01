@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Image, ImageContainer } from './Main.elements'
-import FaQ from '../../../../assets/FaQ/Main.png'
+import FaQ from '../../../../images/FaQ/Main.png'
 
 const Main = () => {
     return (

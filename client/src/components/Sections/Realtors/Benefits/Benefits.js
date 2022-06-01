@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, TopContainer, BottomContainer, Title, Subtitle, Card, Icon, Text, CardsContainer} from './Benefits.elements'
-import Client from '../../../../assets/Icon/Clients.png'
-import Deals from '../../../../assets/Icon/deals.png'
-import Org from '../../../../assets/Icon/Organization.png'
+import Client from '../../../../images/Icon/Clients.png'
+import Deals from '../../../../images/Icon/deals.png'
+import Org from '../../../../images/Icon/Organization.png'
 import SimpleSlider from './Carousel'
 import Fade from 'react-reveal'
 

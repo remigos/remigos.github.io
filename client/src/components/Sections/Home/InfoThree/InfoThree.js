@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, TopContainer, BottomContainer, Title, Subtitle, Card, Icon, Text, CardsContainer} from './InfoThree.elements'
-import home from '../../../../assets/Icon/Home.png'
-import share from '../../../../assets/Icon/Share.png'
-import checks from '../../../../assets/Icon/Checks.png'
+import home from '../../../../images/Icon/Home.png'
+import share from '../../../../images/Icon/Share.png'
+import checks from '../../../../images/Icon/Checks.png'
 import SimpleSlider from './Carousel'
 import Fade from 'react-reveal/Fade';
 

@@ -7,7 +7,7 @@ export const Nav = styled.nav`
 	color: #000;
 	display: flex;
 	align-items: center;
-    padding: 0 2rem;
+    padding: 0 4rem;
     border-bottom: 1px solid #E5E7EB;
     position: sticky;
     top:0;
@@ -16,7 +16,8 @@ export const Nav = styled.nav`
     @media screen and (max-width:768px) {
         position: sticky;
         justify-content: space-between;
-        align-items: center;
+        align-items: left;
+        padding: 0 2rem;
 
     }
 `;
@@ -53,7 +54,7 @@ export const Image = styled.img`
     }
   @media screen and (max-width:768px){
       width: 105px; 
-      margin-right:125px;
+      margin-right:250px;
 
   }
 

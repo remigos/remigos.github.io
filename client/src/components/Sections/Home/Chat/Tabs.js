@@ -6,9 +6,9 @@ import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
 import { LeftPanel, RightPanel, Title, Text, Button, Image } from './Chat.elements'
-import ShareView from '../../../../assets/Home/ShareView.png'
-import ChatView from '../../../../assets/Home/ChatView.png'
-import FeedbackView from '../../../../assets/Home/FeedbackView.png'
+import ShareView from '../../../../images/Home/ShareView.png'
+import ChatView from '../../../../images/Home/ChatView.png'
+import FeedbackView from '../../../../images/Home/FeedbackView.png'
 import Fade from 'react-reveal'
 import './Icons.css'
 

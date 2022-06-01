@@ -1,6 +1,6 @@
 import React from 'react'
-import InfoOne from '../../../../assets/Buyer/InfoThree.jpg'
-import { Subtitle, Text } from '../../../../globalStyles'
+import InfoOne from '../../../../images/Buyer/InfoThree.jpg'
+import { Subtitle, Text } from '../../../globalStyles'
 import { Container, LeftContainer,BottomContent, RightContainer, ImageContainer, BackgroundImage, Content } from './InfoThree.elements'
 import Fade from 'react-reveal'
 

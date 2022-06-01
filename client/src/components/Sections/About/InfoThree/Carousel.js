@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { Subtitle, Card, Icon, Text} from './InfoThree.elements'
-import Focus from '../../../../assets/Icon/Focus.png'
-import Light from '../../../../assets/Icon/Light.png'
-import LightHome from '../../../../assets/Icon/LightHome.png'
+import Focus from '../../../../images/Icon/Focus.png'
+import Light from '../../../../images/Icon/Light.png'
+import LightHome from '../../../../images/Icon/LightHome.png'
 import './Carousel.css'
 
 export default class SimpleSlider extends Component {

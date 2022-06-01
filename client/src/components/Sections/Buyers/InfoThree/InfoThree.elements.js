@@ -38,7 +38,7 @@ export const ImageContainer = styled.div`
 export const BackgroundImage = styled.img`
   position: relative;
   width:100%;
-  max-width:670px;
+  max-width:600px;
   height:auto;
   display: flex;
   z-index:1;

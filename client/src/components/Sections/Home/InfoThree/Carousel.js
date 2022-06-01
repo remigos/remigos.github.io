@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { Subtitle, Card, Icon, Text} from './InfoThree.elements'
-import home from '../../../../assets/Icon/Home.png'
-import share from '../../../../assets/Icon/Share.png'
-import checks from '../../../../assets/Icon/Checks.png'
+import home from '../../../../images/Icon/Home.png'
+import share from '../../../../images/Icon/Share.png'
+import checks from '../../../../images/Icon/Checks.png'
 import './Carousel.css'
 
 export default class SimpleSlider extends Component {

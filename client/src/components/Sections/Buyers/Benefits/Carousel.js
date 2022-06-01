@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { Subtitle, Card, Icon, Text} from './Benefits.elements'
-import Com from '../../../../assets/Icon/communication.png'
-import HomeSearch from '../../../../assets/Icon/HomeSearch.png'
-import HomeList from '../../../../assets/Icon/HomeList.png'
-import Shop from '../../../../assets/Icon/Shop.png'
-import Catalog from '../../../../assets/Icon/catalog.png'
+import Com from '../../../../images/Icon/communication.png'
+import HomeSearch from '../../../../images/Icon/HomeSearch.png'
+import HomeList from '../../../../images/Icon/HomeList.png'
+import Shop from '../../../../images/Icon/Shop.png'
+import Catalog from '../../../../images/Icon/catalog.png'
 import './Carousel.css'
 
 export default class SimpleSlider extends Component {

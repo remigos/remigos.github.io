@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { Card, LeftContainer, RightContainer, Image, Name, Icon } from './InfoFour.elements'
-import Caitlin from '../../../../assets/About/Caitlin_profile.png'
-import Hunter from '../../../../assets/About/Hunter_profile.png'
-import Katie from '../../../../assets/About/Katie_profile.png'
+import Caitlin from '../../../../images/About/Caitlin_profile.png'
+import Hunter from '../../../../images/About/Hunter_profile.png'
+import Katie from '../../../../images/About/Katie_profile.png'
 
-import { Text } from '../../../../globalStyles'
+import { Text } from '../../../globalStyles'
 import './Carousel.css'
-import quotation from '../../../../assets/About/quotationMark.png'
+import quotation from '../../../../images/About/quotationMark.png'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -16,6 +16,8 @@ function SampleNextArrow(props) {
       className={className}
       style={{ ...style, display: "none"}}
       onClick={onClick}
+      onKeyDown={onClick}
+      aria-hidden="true"
     />
   );
 }
@@ -27,6 +29,8 @@ function SamplePrevArrow(props) {
       className={className}
       style={{ ...style, display: "none"}}
       onClick={onClick}
+      onKeyDown={onClick}
+      aria-hidden="true"
     />
   );
 }

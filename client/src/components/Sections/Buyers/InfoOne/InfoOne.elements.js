@@ -38,7 +38,7 @@ export const ImageContainer = styled.div`
 export const BackgroundImage = styled.img`
   position: relative;
   width:100%;
-  max-width:670px;
+  max-width:600px;
   height:auto;
   display: flex;
   z-index:1;
@@ -50,24 +50,6 @@ export const BackgroundImage = styled.img`
  }
 `
 
-export const Image = styled.img`
-      position:absolute;
-      z-index: 2;
-      width:100%;
-      max-width:500px;
-      top:50px;
-      left:50px;
-      @media screen and (max-width:960px) {
-        width: 100%;
-        min-width: 280px;
-        top:40px;
-        left:100px;
-      }
-      @media screen and (max-width:768px) {
-        max-width:280px;
-        left:40px;
-      }
-`
 export const Content = styled.div`
     max-width: 1800px;
     width:100%;
@@ -121,8 +103,7 @@ export const Subtitle = styled.p`
 export const BottomContent = styled.div`
     display: flex;
     width:100%;
-    align-items:center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     @media screen and (max-width:960px) {
         flex-direction: column-reverse;

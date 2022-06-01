@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import people from '../../../assets/ContactUs/people.jpg'
+import people from '../../../images/ContactUs/people.jpg'
 import { Container, Content, LeftContainer, ImageContainer, Image, RightContainer } from './Contact.elements'
 //import Directions from './Directions/Directions'
-import {useLocation} from 'react-router-dom';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import { FormContainer, Text, NameContainer, InputContainer} from './Form.elements'
-import { Title } from '../../../globalStyles'
+import { Title } from '../../globalStyles'
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -21,7 +20,7 @@ import "./Form.css";
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
-const Main = () => {
+const Main = ({ data }) => {
     const theme = createMuiTheme({
         typography: {
           fontFamily: [
@@ -56,9 +55,10 @@ const Main = () => {
       const [alert, setAlert] = useState(false);
       const [open, setOpen] = useState(true);
 
-const location = useLocation();
+      const subject = data
 
-const value = location.state ? location.state.subject : 'General'
+const value = subject ? 'request MLS' : 'General';
+console.log(subject)
     return (
         <Container>
         <Content>
@@ -222,8 +222,8 @@ const value = location.state ? location.state.subject : 'General'
                          onBlur={handleBlur}
                          className={
                            errors.lastname && touched.lastname
-                             ? "input-name error"
-                             : "input-name"
+                             ? "input-lastname error"
+                             : "input-lastname"
                          }
                        />
                        {errors.lastname && touched.lastname && (

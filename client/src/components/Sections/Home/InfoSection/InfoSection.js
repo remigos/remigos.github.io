@@ -1,12 +1,12 @@
 import React from 'react'
-import { Container } from '../../../../globalStyles'
+import { Container } from '../../../globalStyles'
 import { Button, Title, RightContent, Text, BottomContent, LeftContent,BackgroundImage,Image2,Image1,Image3,Content,ImageContainer } from './InfoSection.elements'
-import msg from '../../../../assets/Home/ChatBox.png'
-import cards from '../../../../assets/Home/Card.png'
-import msgBuyer from '../../../../assets/Home/ChatBoxBuyer.png'
+import msg from '../../../../images/Home/ChatBox.png'
+import cards from '../../../../images/Home/Card.png'
+import msgBuyer from '../../../../images/Home/ChatBoxBuyer.png'
 import Fade from 'react-reveal/Fade';
-
-const InfoSection = ({lightBg, imgStart, lightText,lightTextDesc, description,headline, start, img, alt}) => {
+import img from '../../../../images/Home/Home.png'
+const InfoSection = () => {
 
     return (
         <Container>

@@ -113,7 +113,7 @@ export const Button = styled.button`
     border-radius: 6px;
     color: #fff;
     background-color: #28B8A7;
-    font-weight: 600;
+    font-weight:700;
     font-size: 16px;
     line-height: 24px;
     border: 1px solid transparent;

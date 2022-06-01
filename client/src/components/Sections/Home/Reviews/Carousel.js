@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import './Carousel.css'
 import { Card } from './Reviews.elements'
-import quotationMarks from '../../../../assets/Icon/quotationMarks.png'
-import avatar_peter from '../../../../assets/Home/Avatar/avatar_peter.jpg'
-import avatar_catherine from '../../../../assets/Home/Avatar/avatar_catherine.jpg'
-import avatar_judy from '../../../../assets/Home/Avatar/avatar_judy.jpg'
-import avatar_alexa from '../../../../assets/Home/Avatar/avatar_alexa.jpg'
-import avatar_michael from '../../../../assets/Home/Avatar/avatar_michael.jpg'
-import avatar_janet from '../../../../assets/Home/Avatar/avatar_janet.jpg'
-import avatar_laura from '../../../../assets/Home/Avatar/avatar_laura.jpg'
-import avatar_jordan from '../../../../assets/Home/Avatar/avatar_jordan.jpg'
+import quotationMarks from '../../../../images/Icon/quotationMarks.png'
+import avatar_peter from '../../../../images/Home/Avatar/avatar_peter.jpg'
+import avatar_catherine from '../../../../images/Home/Avatar/avatar_catherine.jpg'
+import avatar_judy from '../../../../images/Home/Avatar/avatar_judy.jpg'
+import avatar_alexa from '../../../../images/Home/Avatar/avatar_alexa.jpg'
+import avatar_michael from '../../../../images/Home/Avatar/avatar_michael.jpg'
+import avatar_janet from '../../../../images/Home/Avatar/avatar_janet.jpg'
+import avatar_laura from '../../../../images/Home/Avatar/avatar_laura.jpg'
+import avatar_jordan from '../../../../images/Home/Avatar/avatar_jordan.jpg'
 
 
 function NextArrow(props) {
@@ -20,7 +20,8 @@ function NextArrow(props) {
       className={className}
       style={{ ...style, display: "none"}}
       onClick={onClick}
-    />
+      onKeyDown={onClick}
+      aria-hidden="true"    />
   );
 }
 
@@ -31,7 +32,8 @@ function PrevArrow(props) {
       className={className}
       style={{ ...style, display: "none"}}
       onClick={onClick}
-    />
+      onKeyDown={onClick}
+      aria-hidden="true"    />
   );
 }
 
@@ -75,12 +77,12 @@ export default class Carousel extends Component {
       <div className='top_content'> 
           <h2 className="title">What our customer say</h2>
           <div style={{ textAlign: "center" }}>
-            <button className="button" onClick={this.previous}>
+            <button className="button" onClick={this.previous} onKeyDown={this.previous}>
             <span class="material-symbols-outlined">
             arrow_back_ios
             </span>
             </button>
-            <button className="button" onClick={this.next}>
+            <button className="button" onClick={this.next} onKeyDown={this.next}>
                 <span class="material-symbols-outlined">
                 arrow_forward_ios
                 </span>
