@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          working-directory: client
+          working-dir: client
           access-token: ${{ secrets.ACCESS_TOKEN }}
       - run: touch CNAME
       - run: echo 'www.remigo.com' > CNAME
