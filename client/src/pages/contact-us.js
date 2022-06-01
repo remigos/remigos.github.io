@@ -2,7 +2,7 @@ import React from 'react'
 import { MainContact } from '../components'
 import Layout from '../components/Layout/layout'
 import GlobalStyle from '../components/globalStyles'
-import Seo from '../components/Seo'
+import Seo from '../components/seo'
 
 const ContactUs = ({ location }) => {
     const { state = {} } = location

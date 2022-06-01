@@ -1,7 +1,7 @@
 import * as React from "react"
 import {InfoSection, InfoOne, InfoTwo, InfoThree, Reviews, Chat, Market } from '../components';
 import GlobalStyle from '../components/globalStyles'
-import Seo from '../components/Seo'
+import Seo from '../components/seo'
 import Layout from '../components/Layout/layout'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";

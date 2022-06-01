@@ -2,7 +2,7 @@ import React from 'react'
 import { Content, Title, TextItalic, Paragraph, Subtitle, Span, Bold, Link } from '../components/TermsAndConditions.elements'
 import { Container } from '../components/globalStyles' 
 import GlobalStyle from '../components/globalStyles'
-import Seo from '../components/Seo'
+import Seo from '../components/seo'
 import Layout from '../components/Layout/layout'
 
 const TermsAndConditions = () => {
