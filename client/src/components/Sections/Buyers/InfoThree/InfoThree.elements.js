@@ -46,7 +46,7 @@ export const BackgroundImage = styled.img`
     max-width:770px;
 }
  @media screen and (max-width:768px) {
-     max-width:350px;
+     min-width:350px;
  }
 `
 export const Content = styled.div`
@@ -105,7 +105,7 @@ export const BottomContent = styled.div`
     justify-content: space-between;
     flex-direction: row;
     @media screen and (max-width:960px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 0;
     }
 `

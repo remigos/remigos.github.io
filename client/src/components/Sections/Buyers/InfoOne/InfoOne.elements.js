@@ -16,7 +16,7 @@ export const Container = styled.div`
     @media screen and (max-width:600px) {
         flex-direction: column;
         padding: 100px 20px 80px 20px;
-        justify-content: center;
+        justify-content: flex-start;
     }
 `
 export const RightContainer = styled.div`
@@ -38,7 +38,7 @@ export const ImageContainer = styled.div`
 export const BackgroundImage = styled.img`
   position: relative;
   width:100%;
-  max-width:600px;
+  max-width:670px;
   height:auto;
   display: flex;
   z-index:1;
@@ -50,6 +50,24 @@ export const BackgroundImage = styled.img`
  }
 `
 
+export const Image = styled.img`
+      position:absolute;
+      z-index: 2;
+      width:100%;
+      max-width:500px;
+      top:50px;
+      left:50px;
+      @media screen and (max-width:960px) {
+        width: 100%;
+        min-width: 280px;
+        top:40px;
+        left:100px;
+      }
+      @media screen and (max-width:768px) {
+        max-width:280px;
+        left:40px;
+      }
+`
 export const Content = styled.div`
     max-width: 1800px;
     width:100%;
@@ -85,7 +103,6 @@ export const Title = styled.p`
         font-size: 26px;
         line-height: 32px;
         margin-bottom: 0px;
-        margin-left:20px;
     }
 `
 export const Subtitle = styled.p`
@@ -103,10 +120,27 @@ export const Subtitle = styled.p`
 export const BottomContent = styled.div`
     display: flex;
     width:100%;
-    justify-content: space-between;
+    align-items:center;
+    justify-content: center;
     flex-direction: row;
     @media screen and (max-width:960px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 0;
+    }
+`
+export const TopContent = styled.div`
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 0 0 90px 0;
+    width:100%;
+    max-width:1050px;
+    margin-top:-150px;
+
+    @media screen and (max-width:768px) {
+        padding: 0 0 25px 0;
+        justify-content:flex-start;
+        align-items:left;
+
     }
 `

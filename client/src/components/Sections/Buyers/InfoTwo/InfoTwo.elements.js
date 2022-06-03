@@ -14,7 +14,7 @@ export const Container = styled.div`
         justify-content: center;
     }
     @media screen and (max-width:768px) {
-        padding: 0px 20px;
+        padding: 0px 0px;
     }
 `
 export const LeftContainer = styled.div`
@@ -49,7 +49,7 @@ export const ImageContainer = styled.div`
 export const BackgroundImage = styled.img`
   position: relative;
   width:100%;
-  max-width:600px;
+  max-width:670px;
   height:auto;
   display:flex;
   left:0;

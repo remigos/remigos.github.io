@@ -17,9 +17,9 @@ import { styled } from '@mui/material/styles';
 import { Formik } from "formik";
 import * as Yup from "yup";
 import "./Form.css";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
-
 const Main = ({ data }) => {
     const theme = createMuiTheme({
         typography: {
@@ -45,7 +45,7 @@ const Main = ({ data }) => {
         }
       })
   
-      const Item = styled(Alert)(({ theme }) => ({
+      const Item = styled(Alert)(() => ({
         height: '72px',
         justifyContent: 'center', 
         alignItems: 'center',
@@ -54,11 +54,11 @@ const Main = ({ data }) => {
       }));
       const [alert, setAlert] = useState(false);
       const [open, setOpen] = useState(true);
-
-      const subject = data
-
-const value = subject ? 'request MLS' : 'General';
-console.log(subject)
+      const [opacity, setOpacity] = useState(false);
+      const [buttonColor, setButtonColor] = useState('#28B8A7')
+      const [buttonText, setButtonText] = useState('#fff')
+      const subject = data;
+      const value = subject ? 'request MLS' : 'General';
     return (
         <Container>
         <Content>
@@ -97,8 +97,10 @@ console.log(subject)
                }}
                  onSubmit={async (values, {resetForm}) => {
                    await new Promise(resolve => setTimeout(resolve, 500));
-                   resetForm({})
-                   
+                   setOpacity(true)
+                   setButtonColor('#E5E7EB')
+                   setButtonText('#777')
+
                    var data = {
                     firstname: values.firstname,
                     lastname:values.lastname,
@@ -123,6 +125,10 @@ console.log(subject)
                   .then(() => {
                       setAlert(true)
                       resetForm({})
+                      setOpacity(false)
+                      setButtonColor('#28B8A7')
+                      setButtonText('#fff')
+
                       setTimeout(() => {
                         setAlert(false)
                     }, 4000);
@@ -153,6 +159,7 @@ console.log(subject)
                    } = props;
                    return (
                      <form onSubmit={handleSubmit}>
+                     <div style={{opacity: (opacity ? 0.4 : 1)}}>
                      <RadioGroup
                           row
                           aria-labelledby="demo-row-radio-buttons-group-label"
@@ -332,8 +339,9 @@ console.log(subject)
                          />
                          </RadioGroup>
                        </div>
-                       <button type="submit" className="form-button" disabled={isSubmitting}>
-                         Submit
+                       </div>
+                       <button type="submit" className="form-button" disabled={isSubmitting} style={{backgroundColor: buttonColor, color: buttonText, textAlign:'center', justifyContent:'center'}}>
+                         {opacity ? <div style={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center'}}><p style={{marginRight: '8px'}}>Sending...</p><p> </p><CircularProgress size={18} thickness={6}/></div>: <p>Submit</p>}
                        </button>
                      </form>
                    );

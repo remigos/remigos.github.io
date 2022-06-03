@@ -58,7 +58,7 @@ const Benefits = () => {
                 </Fade>
                 <Card></Card>
                 </CardsContainer> 
-               <SimpleSlider />
+                    <SimpleSlider />
                </BottomContainer> 
                </Content>
         </Container>

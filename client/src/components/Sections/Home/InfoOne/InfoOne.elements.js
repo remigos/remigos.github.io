@@ -9,7 +9,7 @@ export const Container = styled.div`
     background-color: #fff;
     align-items: center;
     @media screen and (max-width:960px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 0px 70px;
         justify-content: center;
     }

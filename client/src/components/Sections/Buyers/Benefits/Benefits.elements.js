@@ -59,10 +59,10 @@ export const Card = styled.div`
     padding: 0px 20px;
     margin: 0px 30px;
     @media screen and (max-width:768px) {
-        width: 230px;
-        margin: 30px 10px;
-        padding: 0px 10px;
-
+        width: 300px;
+        margin: 20px 0px;
+        padding: 0px 30px;
+        align-items: center;
     }
 `
 
