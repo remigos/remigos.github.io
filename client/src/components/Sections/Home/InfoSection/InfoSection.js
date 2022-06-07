@@ -25,7 +25,9 @@ const InfoSection = () => {
                 </LeftContent>
                 <RightContent>
                     <ImageContainer>
+                    <Fade delay={150}>
                     <BackgroundImage src={img} alt="Home"/>
+                    </Fade>
                     <Fade left delay={300}>
                     <Image1 src={msg} alt="message-realtor"/>
                     </Fade>

@@ -45,7 +45,7 @@ export const Text = styled.p`
     font-weight: 300;
     line-height: 28px;
     color:#374150;
-    margin:20px 0px;
+    margin:15px 0px;
 `
 export const InputContainer = styled.div`
     flex-direction: column;

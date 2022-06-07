@@ -28,7 +28,7 @@ const Main = ({ data }) => {
             'sans-serif'
           ].join(','),
           fontSize: 14,
-          color:grey[500]
+          color:grey[300]
         },
         palette: {
           primary: {
@@ -39,7 +39,7 @@ const Main = ({ data }) => {
           MuiFormControlLabel: {
             label: {
               fontSize: 14,
-              color:grey[500]
+              color:grey[300]
             },
           },
         }
@@ -81,7 +81,7 @@ const Main = ({ data }) => {
             <ThemeProvider theme={theme}>
             <FormContainer>
                <Title>Contact Us</Title>
-               <Text>Have an inquiry or some feedback for us? Fill out the from below to contact out team.</Text>
+               <Text>Have a market you would like to see Remigo next? Drop us a line and let us know! After that, we’ll keep you posted!</Text>
                <div>
                <Formik
                  initialValues={{ 
@@ -105,7 +105,7 @@ const Main = ({ data }) => {
                     firstname: values.firstname,
                     lastname:values.lastname,
                     phonenumber:values.phonenumber,
-                    brokerage:values.brokerage,
+                    brokerage:" ",
                     email:values.email,
                     subject:values.subject,
                     message:values.message,
@@ -140,7 +140,6 @@ const Main = ({ data }) => {
                    email: Yup.string().email().required("Email is required"),
                    firstname: Yup.string().required("First name is required"),
                    lastname: Yup.string().required("Last name is required"),
-                   brokerage: Yup.string(),
                    phonenumber: Yup.string().matches(phoneRegExp, 'Phone number is not valid'),
                    message: Yup.string().required("Please write a message").max(600, 'This message exceed 600 characters')
            
@@ -165,6 +164,7 @@ const Main = ({ data }) => {
                           aria-labelledby="demo-row-radio-buttons-group-label"
                           name="row-radio-buttons-group"
                           defaultValue={value}
+                          style={{margin: '7px 0px'}}
                         >
                           <FormControlLabel
                           type="radio"
@@ -172,10 +172,11 @@ const Main = ({ data }) => {
                            name="subject"
                            checked={values.subject === "General"}
                            onChange={() => setFieldValue("subject", "General")}
+                           style={{marginRight:'70px'}}
                            control={
                              <Radio
                              sx={{
-                              color: grey[500],
+                              color: grey[300],
                               '&.Mui-checked': {
                                 color: 'primary',
                               },
@@ -192,7 +193,7 @@ const Main = ({ data }) => {
                            control={
                              <Radio 
                              sx={{
-                              color: grey[500],
+                              color: grey[300],
                               '&.Mui-checked': {
                                 color: 'primary',
                               },
@@ -241,7 +242,7 @@ const Main = ({ data }) => {
                        <div className="input-container">
                        <input
                            id="email"
-                           placeholder="Enter your email"
+                           placeholder="Email Address"
                            type="text"
                            value={values.email}
                            onChange={handleChange}
@@ -258,7 +259,7 @@ const Main = ({ data }) => {
                        </div>
                        <input
                        id="phonenumber"
-                       placeholder="Phone Number"
+                       placeholder="Phone"
                        value={values.phonenumber}
                        onChange={handleChange}
                        onBlur={handleBlur}
@@ -271,15 +272,7 @@ const Main = ({ data }) => {
                        {errors.phonenumber && touched.phonenumber && (
                        <div className="input-feedback">{errors.phonenumber}</div>
                        )}
-           
-                       <input
-                           id="brokerage"
-                           placeholder="Brokerage"
-                           value={values.brokerage}
-                           onChange={handleChange}
-                           onBlur={handleBlur}
-                           className="text-input"
-                       />
+                       <p style={{color:'#374150', fontSize:'16px', marginTop:'20px', fontWeight: '300'}}>Enter in the Market(s) you would like to see us in next.</p>
                        <textarea
                            id="message"
                            placeholder="Comment"
@@ -308,17 +301,18 @@ const Main = ({ data }) => {
                          name="userType"
                          checked={values.userType === "Realtor"}
                          onChange={() => setFieldValue("userType", "Realtor")}
+                         style={{marginBottom: '-10px'}}
                          control={
                            <Radio
                            sx={{
-                             color: grey[500],
+                             color: grey[300],
                              '&.Mui-checked': {
                                color: 'primary',
                              },
                            }}
                            />
                          } 
-                         label={<Typography sx={{color:'#374150'}}>I am a REALTOR</Typography>}
+                         label={<Typography sx={{color:'#616161'}}>I am a REALTOR</Typography>}
                           />
                          <FormControlLabel 
                          value="Buyer" 
@@ -328,20 +322,20 @@ const Main = ({ data }) => {
                          control={
                            <Radio
                            sx={{
-                             color: grey[500],
+                             color: grey[300],
                              '&.Mui-checked': {
                                color: 'primary',
                              },
                            }}
                            />
                          } 
-                         label={<Typography sx={{color:'#374150'}}>I am a Home Buyer</Typography>} 
+                         label={<Typography sx={{color:'#616161'}}>I am a Home Buyer</Typography>} 
                          />
                          </RadioGroup>
                        </div>
                        </div>
                        <button type="submit" className="form-button" disabled={isSubmitting} style={{backgroundColor: buttonColor, color: buttonText, textAlign:'center', justifyContent:'center'}}>
-                         {opacity ? <div style={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center'}}><p style={{marginRight: '8px'}}>Sending...</p><p> </p><CircularProgress size={18} thickness={6}/></div>: <p>Submit</p>}
+                         {opacity ? <div style={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center'}}><p style={{marginRight: '8px'}}>Sending...</p><p> </p><CircularProgress size={18} thickness={6}/></div>: <p>Send</p>}
                        </button>
                      </form>
                    );
