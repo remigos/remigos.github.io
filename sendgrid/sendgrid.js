@@ -17,13 +17,13 @@ module.exports.handler = async (event) => {
     let resp;
     resp = await transporter.sendMail({
         to:'support@remigo.com',
-        from: 'remigo.team@gmail.com',
+        from: 'support@remigo.com',
         subject:subject,
         html:`<h3>Name: ${firstname}, ${lastname}</h3>
             <h5>user type: ${userType}</h5>
             <h5>email: ${email}</h5>
             <h5>phone number: ${phonenumber}</h5>
-            <h5>Borkerage: ${brokerage}</h5>
+            <h5>Brokerage: ${brokerage}</h5>
             <p>message: ${message}</p>`
     })
     return {

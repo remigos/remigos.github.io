@@ -80,8 +80,6 @@ const Main = ({ data }) => {
             <RightContainer>
             <ThemeProvider theme={theme}>
             <FormContainer>
-               <Title>Contact Us</Title>
-               <Text>Have a market you would like to see Remigo next? Drop us a line and let us know! After that, we’ll keep you posted!</Text>
                <div>
                <Formik
                  initialValues={{ 
@@ -158,6 +156,9 @@ const Main = ({ data }) => {
                    } = props;
                    return (
                      <form onSubmit={handleSubmit}>
+                     <Title>Contact Us</Title>
+                      <Text style={{display: (values.subject === 'request MLS') ? 'flex' : 'none'}}>Have a market you would like to see Remigo next? Drop us a line and let us know! After that, we’ll keep you posted!</Text>
+                      <Text style={{display: (values.subject === 'request MLS') ? 'none' : 'flex'}}>We appreciate all questions and comments. We will respond to support requests as soon as possible.</Text>
                      <div style={{opacity: (opacity ? 0.4 : 1)}}>
                      <RadioGroup
                           row
@@ -272,7 +273,17 @@ const Main = ({ data }) => {
                        {errors.phonenumber && touched.phonenumber && (
                        <div className="input-feedback">{errors.phonenumber}</div>
                        )}
-                       <p style={{color:'#374150', fontSize:'16px', marginTop:'20px', fontWeight: '300'}}>Enter in the Market(s) you would like to see us in next.</p>
+                       <div style={{display: (values.subject === 'request MLS') ? 'none' : 'flex'}}>
+                       <input
+                       id="brokerage"
+                       placeholder="Brokerage"
+                       value={values.brokerage}
+                       onChange={handleChange}
+                       onBlur={handleBlur}
+                       className="text-input"
+                       />
+                       </div>
+                        <p style={{color:'#374150', fontSize:'16px', marginTop:'20px', fontWeight: '300', display: (values.subject === 'request MLS' || values.subject === 'request MLS') ? 'flex' : 'none'}}>Enter in the Market(s) you would like to see us in next.</p>
                        <textarea
                            id="message"
                            placeholder="Comment"
@@ -289,7 +300,7 @@ const Main = ({ data }) => {
                        {errors.message && touched.message && (
                            <div className="input-feedback">{errors.message}</div>
                        )}
-                   <div style={{display: (values.subject === 'request MLS' || values.subject === 'request MLS') ? 'flex' : 'none', flexDirection: 'column'}}>
+                   <div style={{display: (values.subject === 'request MLS') ? 'flex' : 'none', flexDirection: 'column'}}>
                        <RadioGroup
                        column
                        aria-labelledby="demo-row-radio-buttons-group-label"

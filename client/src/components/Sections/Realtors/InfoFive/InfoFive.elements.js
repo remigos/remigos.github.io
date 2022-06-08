@@ -147,6 +147,7 @@ export const Button = styled.button`
     justify-content:center;
     color:#00AEEF;
     font-weight: 600;
+    font-size:16px;
     cursor: pointer;
     margin-bottom:50px;
     border:1px solid #00AEFF;

@@ -12,10 +12,7 @@ import styled from "styled-components"
 const Navbar = () => {
 
   const NavItem = styled(Link)`
-  text-decoration: none;
-  margin: 0 1vw;
-  transition: all 200ms ease-in;
-  position: relative;
+    text-decoration: none;
     width: 105px;
     height: 88px;
     border-bottom: 2px solid transparent;
@@ -35,8 +32,8 @@ const Navbar = () => {
   }
 
   :hover {
-    color: #00AEEF;
-    border-bottom: 2px solid #00AEEF;
+    color: #00AEFF;
+    border-bottom: 2px solid #00AEFF;
   }
   
   @media screen and (max-width:768px) {
@@ -56,7 +53,12 @@ const LogoLink = styled(Link)`
 
 	const closeMenu = () => {
 		setOpen(false);
-	}; 
+  }; 
+  
+  function isActive( {isCurrent} ) {
+    return isCurrent ? {className: "navbar__link--active"} : null
+}
+
     return (
         <Nav>
             <div onClick={handleClick} className="nav-icon" aria-hidden="true">
@@ -69,8 +71,7 @@ const LogoLink = styled(Link)`
             <LeftContainer>
                 <li className="nav-item">
                 <NavItem
-                  exact
-                  className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
+                  getProps={isActive}
                   to="/"
                   onClick={closeMenu}
                 >
@@ -79,8 +80,8 @@ const LogoLink = styled(Link)`
                 </li>
                 <li className="nav-item">
                 <NavItem
-                exact
-                  className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
+                getProps={isActive}
+
                   to="/realtors"
                   onClick={closeMenu}
                 >
@@ -91,8 +92,8 @@ const LogoLink = styled(Link)`
                 </li>
                 <li className="nav-item">
                 <NavItem
-                exact
-                  className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
+                getProps={isActive}
+
                   to="/buyers"
                   onClick={closeMenu}
 
@@ -104,8 +105,8 @@ const LogoLink = styled(Link)`
                 </li>
                 <li className="nav-item">
                 <NavItem
-                exact
-                className={(navData) => navData.isActive ? "navbar__link--active" : "navbar__link" }
+                getProps={isActive}
+
                 to="/about-us"
                 onClick={closeMenu}
               >
