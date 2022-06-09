@@ -5,8 +5,9 @@ import GlobalStyle from '../components/globalStyles'
 import Seo from '../components/seo'
 
 const ContactUs = ({ location }) => {
-    const { state = {} } = location
+    const { state = {} } = location;
     const { subject } = state
+
     return (
         <>
         <GlobalStyle/>

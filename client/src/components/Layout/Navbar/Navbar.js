@@ -44,7 +44,7 @@ const Navbar = () => {
 
 const LogoLink = styled(Link)`
 
-`
+` 
   const [open, setOpen] = useState(false);
 
 	const handleClick = () => {

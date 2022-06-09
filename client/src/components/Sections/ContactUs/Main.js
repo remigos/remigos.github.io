@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import people from '../../../images/ContactUs/people.jpg'
-import { Container, Content, LeftContainer, ImageContainer, Image, RightContainer } from './Contact.elements'
 //import Directions from './Directions/Directions'
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
-import { FormContainer, Text, NameContainer, InputContainer} from './Form.elements'
+import { FormContainer, Text, NameContainer, InputContainer, Container, Content, LeftContainer, ImageContainer, Image, RightContainer} from './Form.elements'
 import { Title } from '../../globalStyles'
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -59,6 +58,7 @@ const Main = ({ data }) => {
       const [buttonText, setButtonText] = useState('#fff')
       const subject = data;
       const value = subject ? 'request MLS' : 'General';
+      
     return (
         <Container>
         <Content>
@@ -98,17 +98,18 @@ const Main = ({ data }) => {
                    setOpacity(true)
                    setButtonColor('#E5E7EB')
                    setButtonText('#777')
-
+                  
                    var data = {
                     firstname: values.firstname,
                     lastname:values.lastname,
                     phonenumber:values.phonenumber,
-                    brokerage:" ",
+                    brokerage:values.brokerage,
                     email:values.email,
                     subject:values.subject,
                     message:values.message,
                     userType:values.userType
                   }
+                  
                       fetch("https://o8crk98988.execute-api.us-east-1.amazonaws.com/serverless_lambda_stage/sendgrid",{
                       method:"post",
                       mode: 'no-cors',
