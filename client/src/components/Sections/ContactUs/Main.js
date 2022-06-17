@@ -137,11 +137,10 @@ const Main = ({ data }) => {
                    }}
                  validationSchema={Yup.object().shape({
                    email: Yup.string().email().required("Email is required"),
-                   firstname: Yup.string().required("First name is required"),
-                   lastname: Yup.string().required("Last name is required"),
+                   firstname: Yup.string().required("First name is required").matches(/^[0-9a-zA-Z]+$/, 'Please enter a validate First Name'),
+                   lastname: Yup.string().required("Last name is required").matches(/^[0-9a-zA-Z]+$/, 'Please enter a validate Last Name'),
                    phonenumber: Yup.string().matches(phoneRegExp, 'Phone number is not valid'),
                    message: Yup.string().required("Please write a message").max(600, 'This message exceed 600 characters')
-           
                  })}
                >
                  {props => {

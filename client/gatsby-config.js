@@ -1,3 +1,4 @@
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
@@ -29,7 +30,7 @@ module.exports = {
   {
     resolve: "gatsby-plugin-google-tagmanager",
     options: {
-      id: "GTM-P7ZFGK3",
+      id: process.env.GTM_API_KEY,
 
       includeInDevelopment: false,
 

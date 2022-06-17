@@ -49,7 +49,7 @@ const Footer = () => {
                             <IconImg onClick={()=> window.open('https://www.linkedin.com/company/remigo/', '_blank')}>
                                 <Icon src={In} alt="Linkedin"/>
                             </IconImg>
-                            <IconImg>
+                            <IconImg onClick={()=> window.open('https://www.youtube.com/channel/UCHF8fqCVN9yOci2gRhlf5-g', '_blank')}>
                                 <Icon src={Youtube} alt="Youtube"/>
                             </IconImg>
                         </IconContent>

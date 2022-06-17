@@ -1,8 +1,7 @@
 const nodemailer = require('nodemailer')
 const sendGridTransport = require('nodemailer-sendgrid-transport');
-
 //Create it locally
-const SENDGRID_API_KEY= require('./config/keys.js')
+const {SENDGRID_API_KEY} = require('./config/keys.js')
 
 module.exports.handler = async (event) => {
 
@@ -17,7 +16,7 @@ module.exports.handler = async (event) => {
     let resp;
     resp = await transporter.sendMail({
         to:'support@remigo.com',
-        from: 'support@remigo.com',
+        from: 'Remigo <support@remigo.com>',
         subject:subject,
         html:`<h3>Name: ${firstname}, ${lastname}</h3>
             <h5>user type: ${userType}</h5>
